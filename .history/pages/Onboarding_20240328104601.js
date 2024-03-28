@@ -1,7 +1,6 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
-import ButtonPrimary from "@/components/ButtonPrimary";
-import ButtonSecondary from "@/components/ButtonSecondary";
+import Button from "@/components/ButtonPrimary";
 import Navbar from "@/components/Navbar";
 import Tabbar from "@/components/Tabbar";
 
@@ -16,9 +15,8 @@ export default function Onboarding() {
       </Head>
       <main className={`${styles.main}`}>
         <div className={styles.mainContainer}>
-          <ButtonPrimary />
-          <ButtonSecondary />
-
+          <Button />
+                
 
 
         </div>

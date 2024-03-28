@@ -1,0 +1,32 @@
+.button {
+	text-align: center;
+	color: white;
+	font-size: 16px;
+	font-family: Nunito;
+	font-weight: 400;
+	word-wrap: break-word;
+}
+
+.secondary {
+	width: 120px;
+	height: 36px;
+	padding-left: 37px;
+	padding-right: 37px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	left: 20px;
+	top: 88px;
+	position: absolute;
+	background: white;
+	border-radius: 20px;
+	overflow: hidden;
+	border: 1px #006075 solid;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	display: inline-flex;
+}
+
+.secondary .button {
+	color: #006075;
+}

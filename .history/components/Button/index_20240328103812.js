@@ -1,0 +1,15 @@
+import styles
+export default function Button() {
+	return (
+		<>
+			<div>
+				<div className="primary">
+					<div className="button">Button</div>
+				</div>
+				<div className="secondary">
+					<div className="button">Button</div>
+				</div>
+			</div>
+		</>
+	)
+}

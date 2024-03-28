@@ -1,0 +1,60 @@
+.button {
+	width: 173px;
+	height: 156px;
+	position: relative;
+	border-radius: 5px;
+	overflow: hidden;
+	border: 1px #9747ff dotted;
+}
+
+.primaru {
+	width: 120px;
+	height: 36px;
+	padding-left: 37px;
+	padding-right: 37px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	left: 20px;
+	top: 20px;
+	position: absolute;
+	background: #006075;
+	border-radius: 20px;
+	overflow: hidden;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	display: inline-flex;
+}
+
+.Property1Secondary {
+	width: 120px;
+	height: 36px;
+	padding-left: 37px;
+	padding-right: 37px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	left: 20px;
+	top: 88px;
+	position: absolute;
+	background: white;
+	border-radius: 20px;
+	overflow: hidden;
+	border: 1px #006075 solid;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	display: inline-flex;
+}
+
+.Button {
+	text-align: center;
+	color: white;
+	font-size: 16px;
+	font-family: Nunito;
+	font-weight: 400;
+	word-wrap: break-word;
+}
+
+.Property1Secondary .Button {
+	color: #006075;
+}

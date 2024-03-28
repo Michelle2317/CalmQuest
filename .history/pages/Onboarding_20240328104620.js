@@ -17,7 +17,6 @@ export default function Onboarding() {
       <main className={`${styles.main}`}>
         <div className={styles.mainContainer}>
           <ButtonPrimary />
-          <ButtonSecondary />
 
 
 
