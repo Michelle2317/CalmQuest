@@ -5,6 +5,12 @@
 	--light-blue: #c9f5ff;
 	--dark-turquoise: #006075;
 	/* --ombre: linear-gradient(180deg, #E7ECFF 0%, #D8FFFA 100%); */
+	/* font size */
+	--title1: 36px;
+	--title2: 32px;
+	--body2: 16px;
+	--body-3-small: 14px;
+	--body-1-large: 18px;
 }
 
 * {
