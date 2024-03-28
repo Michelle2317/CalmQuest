@@ -24,14 +24,10 @@
 
 
 /*Onboarding*/
-.placeholder {
+.logo {
 	padding-top: 200px;
 }
 
-.calmQuest {
-	margin-top: -220px;
-}
-
-.getStartedButton {
-	
+.title {
+	padding-bottom: 250px;
 }

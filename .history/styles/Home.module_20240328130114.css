@@ -29,9 +29,10 @@
 }
 
 .calmQuest {
-	margin-top: -220px;
+
 }
 
 .getStartedButton {
-	
+	position: relative;
+	padding-top: -20px;
 }

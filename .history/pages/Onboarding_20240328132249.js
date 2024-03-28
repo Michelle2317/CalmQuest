@@ -76,10 +76,10 @@ export default function Onboarding() {
             <button className={styles.getStartedButton} onClick={nextClick}>Next</button>
           )}
           {currentScreen === 4 && (
-          <Link href="/">
-            <button className={styles.getStartedButton}>Let's Go!</button>
-          </Link>
-          )}
+        <Link href="/">
+          <button className={styles.getStartedButton}>Let's Go!</button>
+        </Link>
+        )}
         </div>        
       </main>
     </>

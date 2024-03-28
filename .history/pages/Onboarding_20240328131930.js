@@ -6,7 +6,6 @@ import Navbar from "@/components/Navbar";
 import Tabbar from "@/components/Tabbar";
 import Image from "next/image";
 import { useState } from "react";
-import Link from "next/link";
 
 export default function Onboarding() {
   const [currentScreen, setCurrentScreen] = useState(0);
@@ -76,9 +75,7 @@ export default function Onboarding() {
             <button className={styles.getStartedButton} onClick={nextClick}>Next</button>
           )}
           {currentScreen === 4 && (
-          <Link href="/">
-            <button className={styles.getStartedButton}>Let's Go!</button>
-          </Link>
+            <button className={styles.getStartedButton} onClick={() => console.log("Finished")}>Finish</button>
           )}
         </div>        
       </main>

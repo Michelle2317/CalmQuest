@@ -6,43 +6,44 @@ import Navbar from "@/components/Navbar";
 import Tabbar from "@/components/Tabbar";
 import Image from "next/image";
 import { useState } from "react";
-import Link from "next/link";
 
 export default function Onboarding() {
   const [currentScreen, setCurrentScreen] = useState(0);
 
   const screen1 = () => (
     <div>
-      <h2>Personalize your experience</h2>
-      <p>TSelect and unlock special icons, and frames</p>
+      <h2>Screen 1</h2>
+      <p>This is the content of screen 1.</p>
     </div>
   );
 
   const screen2 = () => (
     <div>
-      <h2>Journaling, brainstorming, and prompts</h2>
-      <p>Express your thoughts and feelings, or choose a prompt from our collection to write about </p>
+      <h2>Screen 2</h2>
+      <p>This is the content of screen 2.</p>
     </div>
   );
 
   const screen3 = () => (
     <div>
-      <h2>Mental Health and Rewards</h2>
-      <p>Check in on your mental health and unlock rewards </p>
+      <h2>Screen 3</h2>
+      <p>This is the content of screen 3.</p>
     </div>
   );
 
   const screen4 = () => (
     <div>
-      <h2>Are you ready to start your journey?</h2>
+      <h2>Screen 4</h2>
+      <p>This is the content of screen 4.</p>
     </div>
   );
 
   const getStartedClick = () => {
-    setCurrentScreen(1);
+    setCurrentScreen(1); // Start with screen 1
   };
 
   const nextClick = () => {
+    console.log("Next button clicked"); // Debugging
     if (currentScreen < 4) {
       setCurrentScreen(currentScreen + 1);
     }
@@ -65,6 +66,7 @@ export default function Onboarding() {
             height={190}
             className={styles.placeholder}
           />
+          <h1 className={styles.calmQuest}>CalmQuest</h1>
           {currentScreen === 0 && (
             <button className={styles.getStartedButton} onClick={getStartedClick}>Get Started</button>
           )}
@@ -76,9 +78,7 @@ export default function Onboarding() {
             <button className={styles.getStartedButton} onClick={nextClick}>Next</button>
           )}
           {currentScreen === 4 && (
-          <Link href="/">
-            <button className={styles.getStartedButton}>Let's Go!</button>
-          </Link>
+            <button className={styles.getStartedButton} onClick={() => console.log("Finished")}>Finish</button>
           )}
         </div>        
       </main>

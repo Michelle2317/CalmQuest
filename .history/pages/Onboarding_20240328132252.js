@@ -79,7 +79,7 @@ export default function Onboarding() {
           <Link href="/">
             <button className={styles.getStartedButton}>Let's Go!</button>
           </Link>
-          )}
+        )}
         </div>        
       </main>
     </>

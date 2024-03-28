@@ -75,11 +75,11 @@ export default function Onboarding() {
           {currentScreen > 0 && currentScreen < 4 && (
             <button className={styles.getStartedButton} onClick={nextClick}>Next</button>
           )}
-          {currentScreen === 4 && (
-          <Link href="/">
-            <button className={styles.getStartedButton}>Let's Go!</button>
-          </Link>
-          )}
+        {currentScreen === 4 && (
+        <Link href="/">
+          <a className={styles.getStartedButton}>Let's Go!</a>
+  </Link>
+)}
         </div>        
       </main>
     </>

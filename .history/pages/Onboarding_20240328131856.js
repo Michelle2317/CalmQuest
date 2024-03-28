@@ -6,7 +6,6 @@ import Navbar from "@/components/Navbar";
 import Tabbar from "@/components/Tabbar";
 import Image from "next/image";
 import { useState } from "react";
-import Link from "next/link";
 
 export default function Onboarding() {
   const [currentScreen, setCurrentScreen] = useState(0);
@@ -27,22 +26,24 @@ export default function Onboarding() {
 
   const screen3 = () => (
     <div>
-      <h2>Mental Health and Rewards</h2>
-      <p>Check in on your mental health and unlock rewards </p>
+      <h2>Screen 3</h2>
+      <p>This is the content of screen 3.</p>
     </div>
   );
 
   const screen4 = () => (
     <div>
-      <h2>Are you ready to start your journey?</h2>
+      <h2>Screen 4</h2>
+      <p>This is the content of screen 4.</p>
     </div>
   );
 
   const getStartedClick = () => {
-    setCurrentScreen(1);
+    setCurrentScreen(1); // Start with screen 1
   };
 
   const nextClick = () => {
+    console.log("Next button clicked"); // Debugging
     if (currentScreen < 4) {
       setCurrentScreen(currentScreen + 1);
     }
@@ -76,9 +77,7 @@ export default function Onboarding() {
             <button className={styles.getStartedButton} onClick={nextClick}>Next</button>
           )}
           {currentScreen === 4 && (
-          <Link href="/">
-            <button className={styles.getStartedButton}>Let's Go!</button>
-          </Link>
+            <button className={styles.getStartedButton} onClick={() => console.log("Finished")}>Finish</button>
           )}
         </div>        
       </main>
