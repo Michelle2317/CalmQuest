@@ -1,4 +1,4 @@
-
+import Link from 'next/link'
 import styles from './ButtonPrimary.module.css'
 import React from 'react'
 import ButtonSecondary from '../ButtonSecondary'
