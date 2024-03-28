@@ -27,7 +27,7 @@ export default function Tabbar() {
         </div>
         <div className={styles.journalContainer}>
           <Image
-            src={`/images/journalPrimary.svg`}
+            src={`/images/journalPrimary.svg}
             alt="journal icon"
             width={30}
             height={30}
@@ -37,7 +37,7 @@ export default function Tabbar() {
         </div>
         <div className={styles.profileContainer}>
           <Image
-            src={`/images/profilePrimary.svg`}
+            src={/images/profilePrimary.svg}
             alt="profile icon"
             width={30}
             height={30}
