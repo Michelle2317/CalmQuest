@@ -1,0 +1,23 @@
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 6rem;
+	min-height: 20vh;
+}
+
+.mainContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 414px;
+  height: 100vh;
+  max-height: 1200px;
+  background-color: var(--primary-background);
+  box-shadow: 0 1px 4px rgba(0,0,0,.16);
+  overflow-y: auto;
+  overflow-x: hidden;
+}

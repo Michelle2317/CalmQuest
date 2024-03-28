@@ -17,7 +17,7 @@
 	width: 430px;
 	height: 100vh;
 	max-height: 932px;
-	background-color: var(--gray);
+	background-color: var(--dark-turquoise);
 	overflow-y: auto;
 	overflow-x: hidden;
 }

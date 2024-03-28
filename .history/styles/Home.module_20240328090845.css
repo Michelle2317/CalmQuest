@@ -1,11 +1,10 @@
 .main {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  min-height: 20vh;
-  background-color: var(--white);
-  overflow-y: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 6rem;
+	min-height: 20vh;
 }
 
 .mainContainer {
@@ -15,9 +14,8 @@
 	justify-content: space-between;
 	align-items: center;
 	width: 430px;
-	height: 100vh;
 	max-height: 932px;
-	background-color: var(--gray);
+	background-color: var(--primary-background);
 	overflow-y: auto;
 	overflow-x: hidden;
 }

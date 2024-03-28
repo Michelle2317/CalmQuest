@@ -1,0 +1,13 @@
+:root {
+        --white: #fff;
+        --black: #000;
+        --gray: #d9d9d9;
+        --light-blue: #C9F5FF;
+        --ombre: rgb(231, 236, 255);
+
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
