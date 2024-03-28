@@ -4,7 +4,6 @@ import ButtonPrimary from "@/components/ButtonPrimary";
 import ButtonSecondary from "@/components/ButtonSecondary";
 import Navbar from "@/components/Navbar";
 import Tabbar from "@/components/Tabbar";
-import Image from "next/image";
 
 export default function Home() {
   return (

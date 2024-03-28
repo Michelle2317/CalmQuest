@@ -1,12 +1,13 @@
 .navbar {
 	width: 430px;
 	height: 98px;
-	padding-top: 1px;
+	padding-top: 49px;
+	padding-bottom: 5px;
 	padding-left: 13px;
 	padding-right: 132px;
 	background: #c9f5ff;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	gap: 89px;
 }
@@ -22,8 +23,9 @@
 }
 
 .calmQuest {
-	color: var(--black);
+	color: black;
 	font-size: 32px;
 	font-family: Nunito;
 	font-weight: 700;
+	word-wrap: break-word;
 }

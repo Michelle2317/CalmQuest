@@ -14,6 +14,7 @@ export default function Navbar() {
 					/>
 				<div className={styles.calmQuest}>CalmQuest</div>
 			</div>
+          <image src={`/images/placeholder.svg`} alt="logo" width="30" height="30" className={styles.logo} />
 		</>
 	)
 }

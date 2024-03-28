@@ -4,7 +4,6 @@ import Image from 'next/image'
 export default function Navbar() {
 	return (
 		<>
-			<div className={styles.navbar}>
 					<Image
 						src={`/images/hamburgerMenu.svg`}
 						alt="hamburger menu"
@@ -12,6 +11,7 @@ export default function Navbar() {
 						height="30"
 						className={styles.hamburgerMenuIcon}
 					/>
+			<div className={styles.navbar}>
 				<div className={styles.calmQuest}>CalmQuest</div>
 			</div>
 		</>

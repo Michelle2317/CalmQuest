@@ -12,6 +12,7 @@ export default function Navbar() {
 						height="30"
 						className={styles.hamburgerMenuIcon}
 					/>
+          <image src={``}
 				<div className={styles.calmQuest}>CalmQuest</div>
 			</div>
 		</>

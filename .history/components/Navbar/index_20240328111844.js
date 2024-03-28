@@ -13,6 +13,7 @@ export default function Navbar() {
 						className={styles.hamburgerMenuIcon}
 					/>
 				<div className={styles.calmQuest}>CalmQuest</div>
+          <image src={`/images/placeholder.svg`} alt="logo" width="30" height="30" className={styles.logo} />
 			</div>
 		</>
 	)

@@ -1,10 +1,8 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import ButtonPrimary from "@/components/ButtonPrimary";
-import ButtonSecondary from "@/components/ButtonSecondary";
 import Navbar from "@/components/Navbar";
 import Tabbar from "@/components/Tabbar";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -17,7 +15,7 @@ export default function Home() {
       </Head>
       <main className={`${styles.main}`}>
         <div className={styles.mainContainer}>
-          <Navbar />
+          
 
 
 

@@ -1,0 +1,38 @@
+.navbar {
+        width: 430px;
+        height: 98px;
+        padding-top: 49px;
+        padding-bottom: 5px;
+        padding-left: 13px;
+        padding-right: 132px;
+        background: #C9F5FF;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 89px;
+        display: inline-flex;
+      }
+      
+      .hamburger {
+        width: 30px;
+        height: 30px;
+        position: relative;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        display: flex;
+      }
+      
+      .Vector {
+        width: 19.69px;
+        height: 15px;
+        border: 3.56px black solid;
+      }
+      
+      .Calmquest {
+        color: black;
+        font-size: 32px;
+        font-family: Nunito;
+        font-weight: 700;
+        word-wrap: break-word;
+      }
+      

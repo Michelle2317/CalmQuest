@@ -5,6 +5,7 @@ export default function Navbar() {
 	return (
 		<>
 			<div className={styles.navbar}>
+				<div className={styles.hamburgerMenu}>
 					<Image
 						src={`/images/hamburgerMenu.svg`}
 						alt="hamburger menu"
@@ -12,6 +13,7 @@ export default function Navbar() {
 						height="30"
 						className={styles.hamburgerMenuIcon}
 					/>
+				</div>
 				<div className={styles.calmQuest}>CalmQuest</div>
 			</div>
 		</>

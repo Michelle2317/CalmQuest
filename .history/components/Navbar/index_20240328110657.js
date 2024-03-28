@@ -5,13 +5,15 @@ export default function Navbar() {
 	return (
 		<>
 			<div className={styles.navbar}>
+				<div className={styles.hamburgerMenu}>
 					<Image
 						src={`/images/hamburgerMenu.svg`}
 						alt="hamburger menu"
 						width="30"
-						height="30"
+						height="15"
 						className={styles.hamburgerMenuIcon}
 					/>
+				</div>
 				<div className={styles.calmQuest}>CalmQuest</div>
 			</div>
 		</>
