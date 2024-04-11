@@ -99,16 +99,15 @@ export default function ParentQuiz() {
                       alt="Check"
                       width={100}
                       height={100}
-                      className={styles.checkIcon}
               />
-              <h2 className={styles.checkDone}>Check-In Done!</h2>
+              <h2>Check-In Done!</h2>
               <p>{outcome}</p>
               {!seedsClaimed ? (
                 <button className={styles.primaryButtonQuiz} onClick={handleClaimSeeds}>
                   Claim 3x Seeds
                 </button>
               ) : (
-                <p className={styles.primaryButtonQuiz}>Seeds Claimed</p>
+                <p>Seeds Claimed</p>
               )}
               <button className={styles.primaryButtonQuiz} onClick={handleMoreActivities}>
                 More Activities

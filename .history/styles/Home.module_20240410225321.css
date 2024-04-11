@@ -251,7 +251,7 @@
 
 .checkIcon {
 	position: relative;
-	padding-left: 7.5rem;
+	padding-left: 7rem;
 	margin-top: -10rem;
 }
 
@@ -262,5 +262,4 @@
 	font-weight: 400;
 	text-align: center;
 	padding-top: 2rem;
-	padding-bottom: 2rem;
 }

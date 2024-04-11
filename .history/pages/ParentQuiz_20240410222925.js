@@ -2,9 +2,6 @@ import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import { useState } from "react";
 import ChildQuestions from "./ChildQuestions";
-import Navbar from "@/components/Navbar";
-import Tabbar from "@/components/Tabbar";
-import Image from "next/image";
 
 export default function ParentQuiz() {
   const [step, setStep] = useState(1);
@@ -33,6 +30,7 @@ export default function ParentQuiz() {
   const calculateOutcome = () => {
     const headspace = selectedAnswers[selectedAnswers.length - 1].answer;
     const totalScore = score;
+    // Logic to determine the outcome based on headspace and score
     if (totalScore >= 0 && totalScore <= 3) {
       setOutcome(`You're doing great about your ${headspace}! Keep it up!`);
     } else if (totalScore > 3 && totalScore <= 6) {
@@ -47,22 +45,15 @@ export default function ParentQuiz() {
   };
 
   const handleClaimSeeds = () => {
+    // Logic to handle claiming seeds
+    // Assuming claiming seeds gives 3 seeds
     setSeedsClaimed(true);
-  };
-
-  const handleMoreActivities = () => {
-
   };
 
   const handlePreviousStep = () => {
     if (step > 1) {
       setStep(step - 1);
     }
-  };
-
-  const handleSubmitQuiz = () => {
-    setQuizComplete(true);
-    calculateOutcome();
   };
 
   return (
@@ -75,7 +66,6 @@ export default function ParentQuiz() {
       </Head>
       <main className={`${styles.main}`}>
         <div className={styles.mainContainer}>
-        <Navbar />
           {!quizComplete && (
             <ChildQuestions
               question={
@@ -94,25 +84,13 @@ export default function ParentQuiz() {
           )}
           {quizComplete && (
             <div className={styles.outcomeContainer}>
-              <Image
-                      src= "/images/check.svg"
-                      alt="Check"
-                      width={100}
-                      height={100}
-                      className={styles.checkIcon}
-              />
-              <h2 className={styles.checkDone}>Check-In Done!</h2>
+              <h2>Outcome</h2>
               <p>{outcome}</p>
-              {!seedsClaimed ? (
-                <button className={styles.primaryButtonQuiz} onClick={handleClaimSeeds}>
-                  Claim 3x Seeds
+              {!seedsClaimed && (
+                <button className={styles.claimButton} onClick={handleClaimSeeds}>
+                  Claim 3 Seeds
                 </button>
-              ) : (
-                <p className={styles.primaryButtonQuiz}>Seeds Claimed</p>
               )}
-              <button className={styles.primaryButtonQuiz} onClick={handleMoreActivities}>
-                More Activities
-              </button>
             </div>
           )}
           <div className={styles.buttonContainer}>
@@ -122,14 +100,13 @@ export default function ParentQuiz() {
               </button>
             )}
             {!quizComplete ? (
-              <button className={`${styles.primaryButtonQuiz}`} onClick={step === 4 ? handleSubmitQuiz : handleNextStep}>
-                {step === 4 ? "Submit" : "Next"}
+              <button className={`${styles.primaryButtonQuiz}`} onClick={handleNextStep}>
+                Next
               </button>
             ) : (
               <></>
             )}
           </div>
-          <Tabbar />
         </div>
       </main>
     </>

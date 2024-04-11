@@ -3,9 +3,6 @@ import styles from "@/styles/Home.module.css";
 import { useState } from "react";
 import ChildQuestions from "./ChildQuestions";
 import Navbar from "@/components/Navbar";
-import Tabbar from "@/components/Tabbar";
-import Image from "next/image";
-
 export default function ParentQuiz() {
   const [step, setStep] = useState(1);
   const [previousAnswer, setPreviousAnswer] = useState(null);
@@ -50,10 +47,6 @@ export default function ParentQuiz() {
     setSeedsClaimed(true);
   };
 
-  const handleMoreActivities = () => {
-
-  };
-
   const handlePreviousStep = () => {
     if (step > 1) {
       setStep(step - 1);
@@ -75,7 +68,7 @@ export default function ParentQuiz() {
       </Head>
       <main className={`${styles.main}`}>
         <div className={styles.mainContainer}>
-        <Navbar />
+          <Navbar />
           {!quizComplete && (
             <ChildQuestions
               question={
@@ -94,25 +87,13 @@ export default function ParentQuiz() {
           )}
           {quizComplete && (
             <div className={styles.outcomeContainer}>
-              <Image
-                      src= "/images/check.svg"
-                      alt="Check"
-                      width={100}
-                      height={100}
-                      className={styles.checkIcon}
-              />
-              <h2 className={styles.checkDone}>Check-In Done!</h2>
+              <h2>Outcome</h2>
               <p>{outcome}</p>
-              {!seedsClaimed ? (
-                <button className={styles.primaryButtonQuiz} onClick={handleClaimSeeds}>
-                  Claim 3x Seeds
+              {!seedsClaimed && (
+                <button className={styles.claimButton} onClick={handleClaimSeeds}>
+                  Claim 3 Seeds
                 </button>
-              ) : (
-                <p className={styles.primaryButtonQuiz}>Seeds Claimed</p>
               )}
-              <button className={styles.primaryButtonQuiz} onClick={handleMoreActivities}>
-                More Activities
-              </button>
             </div>
           )}
           <div className={styles.buttonContainer}>
@@ -129,9 +110,9 @@ export default function ParentQuiz() {
               <></>
             )}
           </div>
-          <Tabbar />
         </div>
       </main>
+      <Tabbar />
     </>
   );
 }

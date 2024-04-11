@@ -251,16 +251,6 @@
 
 .checkIcon {
 	position: relative;
-	padding-left: 7.5rem;
-	margin-top: -10rem;
-}
-
-.checkDone {
-	color: var(--black);
-	font-family: 'Merriweather', serif;
-	font-size: 1.9em;
-	font-weight: 400;
-	text-align: center;
-	padding-top: 2rem;
-	padding-bottom: 2rem;
+	padding-left: 8rem;
+	
 }
