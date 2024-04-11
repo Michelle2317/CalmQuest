@@ -344,14 +344,14 @@ export default function ChildQuestions({ question, onSelect, previousAnswer, han
                 <div
                   className={`${styles.rectangle} ${selectedOptions.includes("Envy") ? styles.selectedEmoji : ""}`}
                   onClick={() => handleMultiSelect("Envy")}
-                  tabIndex={5}
+                  tabIndex={0}
                 >
                   Envy
                 </div>
                 <div
                   className={`${styles.rectangle} ${selectedOptions.includes("Hatred") ? styles.selectedEmoji : ""}`}
                   onClick={() => handleMultiSelect("Hatred")}
-                  tabIndex={6}
+                  tabIndex={0}
                 >
                   Hatred
                 </div>

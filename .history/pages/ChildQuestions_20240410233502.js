@@ -316,42 +316,42 @@ export default function ChildQuestions({ question, onSelect, previousAnswer, han
                 <div
                   className={`${styles.rectangle} ${selectedOptions.includes("Rage") ? styles.selectedEmoji : ""}`}
                   onClick={() => handleMultiSelect("Rage")}
-                  tabIndex={1}
+                  tabIndex={0}
                 >
                   Rage
                 </div>
                 <div
                   className={`${styles.rectangle} ${selectedOptions.includes("Frustrated") ? styles.selectedEmoji : ""}`}
                   onClick={() => handleMultiSelect("Frustrated")}
-                  tabIndex={2}
+                  tabIndex={0}
                 >
                   Frustrated
                 </div>
                 <div
                   className={`${styles.rectangle} ${selectedOptions.includes("Irritated") ? styles.selectedEmoji : ""}`}
                   onClick={() => handleMultiSelect("Irritated")}
-                  tabIndex={3}
+                  tabIndex={0}
                 >
                   Irritated
                 </div>
                 <div
                   className={`${styles.rectangle} ${selectedOptions.includes("Resented") ? styles.selectedEmoji : ""}`}
                   onClick={() => handleMultiSelect("Resented")}
-                  tabIndex={4}
+                  tabIndex={0}
                 >
                   Resented
                 </div>
                 <div
                   className={`${styles.rectangle} ${selectedOptions.includes("Envy") ? styles.selectedEmoji : ""}`}
                   onClick={() => handleMultiSelect("Envy")}
-                  tabIndex={5}
+                  tabIndex={0}
                 >
                   Envy
                 </div>
                 <div
                   className={`${styles.rectangle} ${selectedOptions.includes("Hatred") ? styles.selectedEmoji : ""}`}
                   onClick={() => handleMultiSelect("Hatred")}
-                  tabIndex={6}
+                  tabIndex={0}
                 >
                   Hatred
                 </div>

@@ -183,7 +183,7 @@ export default function ChildQuestions({ question, onSelect, previousAnswer, han
                 <div
                   className={`${styles.rectangle} ${selectedOptions.includes("Content") ? styles.selectedEmoji : ""}`}
                   onClick={() => handleMultiSelect("Content")}
-                  tabIndex={6}
+                  tabIndex={0}
                 >
                   Content
                 </div>
@@ -204,42 +204,42 @@ export default function ChildQuestions({ question, onSelect, previousAnswer, han
                 <div
                   className={`${styles.rectangle} ${selectedOptions.includes("Grief") ? styles.selectedEmoji : ""}`}
                   onClick={() => handleMultiSelect("Grief")}
-                  tabIndex={1}
+                  tabIndex={0}
                 >
                   Grief
                 </div>
                 <div
                   className={`${styles.rectangle} ${selectedOptions.includes("Lonely") ? styles.selectedEmoji : ""}`}
                   onClick={() => handleMultiSelect("Lonely")}
-                  tabIndex={2}
+                  tabIndex={0}
                 >
                   Lonely
                 </div>
                 <div
                   className={`${styles.rectangle} ${selectedOptions.includes("Melancholic") ? styles.selectedEmoji : ""}`}
                   onClick={() => handleMultiSelect("Melancholic")}
-                  tabIndex={3}
+                  tabIndex={0}
                 >
                   Melancholic
                 </div>
                 <div
                   className={`${styles.rectangle} ${selectedOptions.includes("Despair") ? styles.selectedEmoji : ""}`}
                   onClick={() => handleMultiSelect("Despair")}
-                  tabIndex={4}
+                  tabIndex={0}
                 >
                   Despair
                 </div>
                 <div
                   className={`${styles.rectangle} ${selectedOptions.includes("Regret") ? styles.selectedEmoji : ""}`}
                   onClick={() => handleMultiSelect("Regret")}
-                  tabIndex={5}
+                  tabIndex={0}
                 >
                   Regret
                 </div>
                 <div
                   className={`${styles.rectangle} ${selectedOptions.includes("Disappointed") ? styles.selectedEmoji : ""}`}
                   onClick={() => handleMultiSelect("Disappointed")}
-                  tabIndex={6}
+                  tabIndex={0}
                 >
                   Disappointed
                 </div>
@@ -260,42 +260,42 @@ export default function ChildQuestions({ question, onSelect, previousAnswer, han
                 <div
                   className={`${styles.rectangle} ${selectedOptions.includes("Nervous") ? styles.selectedEmoji : ""}`}
                   onClick={() => handleMultiSelect("Nervous")}
-                  tabIndex={1}
+                  tabIndex={0}
                 >
                   Nervous
                 </div>
                 <div
                   className={`${styles.rectangle} ${selectedOptions.includes("Dread") ? styles.selectedEmoji : ""}`}
                   onClick={() => handleMultiSelect("Dread")}
-                  tabIndex={2}
+                  tabIndex={0}
                 >
                   Dread
                 </div>
                 <div
                   className={`${styles.rectangle} ${selectedOptions.includes("Panic") ? styles.selectedEmoji : ""}`}
                   onClick={() => handleMultiSelect("Panic")}
-                  tabIndex={3}
+                  tabIndex={0}
                 >
                   Panic
                 </div>
                 <div
                   className={`${styles.rectangle} ${selectedOptions.includes("Anxiety") ? styles.selectedEmoji : ""}`}
                   onClick={() => handleMultiSelect("Anxiety")}
-                  tabIndex={4}
+                  tabIndex={0}
                 >
                   Anxiety
                 </div>
                 <div
                   className={`${styles.rectangle} ${selectedOptions.includes("Unease") ? styles.selectedEmoji : ""}`}
                   onClick={() => handleMultiSelect("Unease")}
-                  tabIndex={5}
+                  tabIndex={0}
                 >
                   Unease
                 </div>
                 <div
                   className={`${styles.rectangle} ${selectedOptions.includes("Fright") ? styles.selectedEmoji : ""}`}
                   onClick={() => handleMultiSelect("Fright")}
-                  tabIndex={6}
+                  tabIndex={0}
                 >
                   Fright
                 </div>
@@ -316,42 +316,42 @@ export default function ChildQuestions({ question, onSelect, previousAnswer, han
                 <div
                   className={`${styles.rectangle} ${selectedOptions.includes("Rage") ? styles.selectedEmoji : ""}`}
                   onClick={() => handleMultiSelect("Rage")}
-                  tabIndex={1}
+                  tabIndex={0}
                 >
                   Rage
                 </div>
                 <div
                   className={`${styles.rectangle} ${selectedOptions.includes("Frustrated") ? styles.selectedEmoji : ""}`}
                   onClick={() => handleMultiSelect("Frustrated")}
-                  tabIndex={2}
+                  tabIndex={0}
                 >
                   Frustrated
                 </div>
                 <div
                   className={`${styles.rectangle} ${selectedOptions.includes("Irritated") ? styles.selectedEmoji : ""}`}
                   onClick={() => handleMultiSelect("Irritated")}
-                  tabIndex={3}
+                  tabIndex={0}
                 >
                   Irritated
                 </div>
                 <div
                   className={`${styles.rectangle} ${selectedOptions.includes("Resented") ? styles.selectedEmoji : ""}`}
                   onClick={() => handleMultiSelect("Resented")}
-                  tabIndex={4}
+                  tabIndex={0}
                 >
                   Resented
                 </div>
                 <div
                   className={`${styles.rectangle} ${selectedOptions.includes("Envy") ? styles.selectedEmoji : ""}`}
                   onClick={() => handleMultiSelect("Envy")}
-                  tabIndex={5}
+                  tabIndex={0}
                 >
                   Envy
                 </div>
                 <div
                   className={`${styles.rectangle} ${selectedOptions.includes("Hatred") ? styles.selectedEmoji : ""}`}
                   onClick={() => handleMultiSelect("Hatred")}
-                  tabIndex={6}
+                  tabIndex={0}
                 >
                   Hatred
                 </div>

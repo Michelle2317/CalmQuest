@@ -265,7 +265,7 @@
 	padding-bottom: 2rem;
 }
 
-.claimedSeeds {
+.primaryButtonQuiz {
 	text-align: center;
 	color: var(--white);
 	font-size: 16px;
@@ -274,7 +274,7 @@
 	word-wrap: break-word;
 	width: 160px;
 	height: 48px;
-	background: var(--dark-gray);
+	background: var(--dark-turquoise);
 	border: 1px var(--dark-turquoise) solid;
 	border-radius: 20px;
 	overflow: hidden;

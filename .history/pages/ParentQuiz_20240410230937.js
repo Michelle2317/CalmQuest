@@ -108,7 +108,7 @@ export default function ParentQuiz() {
                   Claim 3x Seeds
                 </button>
               ) : (
-                <p className={styles.claimedSeeds}>Seeds Claimed</p>
+                <p className={styles.primaryButtonQuiz}>Seeds Claimed</p>
               )}
               <button className={styles.primaryButtonQuiz} onClick={handleMoreActivities}>
                 More Activities
@@ -117,7 +117,9 @@ export default function ParentQuiz() {
           )}
           <div className={styles.buttonContainer}>
             {step > 1 && !quizComplete && (
-              <button className={`${styles.secondaryButtonQuiz}`} onClick={handlePreviousStep}>Back</button>
+              <button className={`${styles.secondaryButtonQuiz}`} onClick={handlePreviousStep}>
+                Back
+              </button>
             )}
             {!quizComplete ? (
               <button className={`${styles.primaryButtonQuiz}`} onClick={step === 4 ? handleSubmitQuiz : handleNextStep}>

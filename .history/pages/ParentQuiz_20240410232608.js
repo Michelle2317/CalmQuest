@@ -117,7 +117,8 @@ export default function ParentQuiz() {
           )}
           <div className={styles.buttonContainer}>
             {step > 1 && !quizComplete && (
-              <button className={`${styles.secondaryButtonQuiz}`} onClick={handlePreviousStep}>Back</button>
+              <button className={`${styles.secondaryButtonQuiz}`} onClick={handlePreviousStep}>Back
+              </button>
             )}
             {!quizComplete ? (
               <button className={`${styles.primaryButtonQuiz}`} onClick={step === 4 ? handleSubmitQuiz : handleNextStep}>

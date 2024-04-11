@@ -76,56 +76,30 @@ export default function ParentQuiz() {
       <main className={`${styles.main}`}>
         <div className={styles.mainContainer}>
         <Navbar />
-          {!quizComplete && (
-            <ChildQuestions
-              question={
-                step === 1
-                  ? "How are you today?"
-                  : step === 2
-                  ? "How do you feel?"
-                  : step === 3
-                  ? "Describe your feelings?"
-                  : "What's taking up most of your headspace right now?"
-              }
-              onSelect={handleAnswerSelect}
-              previousAnswer={previousAnswer}
-              handleNextStep={handleNextStep}
-            />
-          )}
-          {quizComplete && (
-            <div className={styles.outcomeContainer}>
-              <Image
-                      src= "/images/check.svg"
-                      alt="Check"
-                      width={100}
-                      height={100}
-                      className={styles.checkIcon}
-              />
-              <h2 className={styles.checkDone}>Check-In Done!</h2>
-              <p>{outcome}</p>
-              {!seedsClaimed ? (
-                <button className={styles.primaryButtonQuiz} onClick={handleClaimSeeds}>
-                  Claim 3x Seeds
-                </button>
-              ) : (
-                <p className={styles.claimedSeeds}>Seeds Claimed</p>
-              )}
-              <button className={styles.primaryButtonQuiz} onClick={handleMoreActivities}>
-                More Activities
-              </button>
-            </div>
-          )}
-          <div className={styles.buttonContainer}>
-            {step > 1 && !quizComplete && (
-              <button className={`${styles.secondaryButtonQuiz}`} onClick={handlePreviousStep}>Back</button>
-            )}
-            {!quizComplete ? (
-              <button className={`${styles.primaryButtonQuiz}`} onClick={step === 4 ? handleSubmitQuiz : handleNextStep}>
-                {step === 4 ? "Submit" : "Next"}
-              </button>
-            ) : (
-              <></>
-            )}
+        {quizComplete && (
+  <div className={styles.outcomeContainer}>
+    <Image
+      src="/images/check.svg"
+      alt="Check"
+      width={100}
+      height={100}
+      className={styles.checkIcon}
+    />
+    <h2 className={styles.checkDone}>Check-In Done!</h2>
+    <p>{outcome}</p>
+    {!seedsClaimed ? (
+      <button className={styles.primaryButtonQuiz} onClick={handleClaimSeeds}>
+        Claim 3x Seeds
+      </button>
+    ) : (
+      <p className={styles.primaryButtonQuiz}>Seeds Claimed</p>
+    )}
+    <button className={styles.primaryButtonQuiz} onClick={handleMoreActivities}>
+      More Activities
+    </button>
+  </div>
+)}
+
           </div>
           <Tabbar />
         </div>

@@ -274,7 +274,7 @@
 	word-wrap: break-word;
 	width: 160px;
 	height: 48px;
-	background: var(--dark-gray);
+	background: var(--dark);
 	border: 1px var(--dark-turquoise) solid;
 	border-radius: 20px;
 	overflow: hidden;
