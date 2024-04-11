@@ -14,6 +14,7 @@ export default function ParentQuiz() {
 	const [score, setScore] = useState(0)
 	const [outcome, setOutcome] = useState('')
 	const [seedsClaimed, setSeedsClaimed] = useState(false)
+	const [answerSelected, setAnswerSelected] = useState(false);
 
 	const handleAnswerSelect = (answer) => {
 		let points = 0
@@ -135,15 +136,10 @@ export default function ParentQuiz() {
 									? 'Describe your feelings?'
 									: "What's taking up most of your headspace right now?"
 							}
-							onSelect={
-								handleAnswerSelect
-							}
-							previousAnswer={
-								previousAnswer
-							}
-							handleNextStep={
-								handleNextStep
-							}
+							onSelect={handleAnswerSelect}
+							onAnswerSelect={() => setAnswerSelected(true)}
+							previousAnswer={previousAnswer}
+							handleNextStep={handleNextStep}
 							outcome={outcome}
 							hasNextStep={selectedAnswers.length > 0 || step > 1}
 					  />
@@ -183,17 +179,14 @@ export default function ParentQuiz() {
 								tabindex="0">Back
 							</button>
 						)}
-						{!quizComplete ? (
-							<button
-								className={`${styles.primaryButtonQuiz}`}
-								onClick={step === 4 ? handleSubmitQuiz : handleNextStep}
-								tabindex="0"
-							  >
-								{step === 4 ? 'Submit' : 'Next'}
+						{!quizComplete && answerSelected && (
+						<button
+							className={`${styles.primaryButtonQuiz}`}
+							onClick={step === 4 ? handleSubmitQuiz : handleNextStep}
+							tabIndex="0"
+						>
+						{step === 4 ? 'Submit' : 'Next'}
 							</button>
-						) : (
-							<>
-              						</>
 						)}
 					</div>
 					<Tabbar />

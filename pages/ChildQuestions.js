@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Tabbar from "@/components/Tabbar";
 import { useState } from "react";
 
-export default function ChildQuestions({ question, onSelect, previousAnswer, handleNextStep }) {
+export default function ChildQuestions({ question, onSelect, previousAnswer, handleNextStep, onAnswerSelect }) {
   const [selectedOption, setSelectedOption] = useState(null);
   const [isClicked, setIsClicked] = useState(false);
 
@@ -13,6 +13,7 @@ export default function ChildQuestions({ question, onSelect, previousAnswer, han
     setSelectedOption(option);
     setIsClicked(true);
     onSelect(option);
+    onAnswerSelect();
   };
 
   const [selectedOptions, setSelectedOptions] = useState([]);
