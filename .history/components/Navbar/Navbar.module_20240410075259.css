@@ -1,0 +1,29 @@
+.navbar {
+	width: 430px;
+	height: 78px;
+	padding-top: 1px;
+	padding-left: 13px;
+	padding-right: 132px;
+	background: #c9f5ff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 89px;
+}
+
+.hamburgerMenuIcon {
+	width: 30px;
+	height: 30px;
+	position: relative;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	display: flex;
+}
+
+.calmQuest {
+	color: var(--black);
+	font-size: 32px;
+	font-family: Nunito;
+	font-weight: 700;
+}
