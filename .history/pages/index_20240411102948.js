@@ -3,8 +3,6 @@ import styles from "@/styles/Home.module.css";
 import Navbar from "@/components/Navbar";
 import Tabbar from "@/components/Tabbar";
 import Image from "next/image";
-import Link from "next/link"
-import ButtonPrimary from "@/components/ButtonPrimary";
 
 export default function Home() {
   return (
@@ -20,8 +18,8 @@ export default function Home() {
           <Navbar />
           <div className={styles.mainContent}>
             <Image
-              src={`/images/mascots/mascotNormal.svg`}
-              alt="mascot image"
+              src={`/images/placeholder.svg`}
+              alt="placeholder image"
               width="431"
               height="280"
               className={styles.placeholder}
@@ -32,48 +30,43 @@ export default function Home() {
               <h1 className={styles.mainHello}>Hello Lorem</h1>
               <p className={styles.mainQuote}>"A really inspiring quote" -random</p>
             </div>
-            
-            <Link href="/ParentQuiz" className={styles.quizLink}>
-              <ButtonPrimary title="Check-In">
-                <Image
-                  src={`/images/checkinPrimary.svg`}
-                  alt="check in image"
-                  width="25"
-                  height="25"
-                  className={styles.checkIn}
-                />
-                <h2 className={styles.checkIn}>Check-in</h2>
-              </ButtonPrimary>
-            </Link>
-            
+            <Image
+              src={`/images/checkinPrimary.svg`}
+              alt="check in image"
+              width="25"
+              height="25"
+              className={styles.checkIn}
+            />
+            <h2 className={styles.checkIn}>Check-in</h2>
           </div>
           <div className={styles.journalingContainer}>
             <p className={styles.prompt}>Journaling Prompt</p>
-            <p className={styles.quote}>What do you want to be when you grow up?</p>
-            <ButtonPrimary className={styles.write} title="Write&nbsp;&nbsp;&nbsp;&gt;"/>
+            <p className={styles.quote}>Lorem ipsum dolor sit amet<br/> consectetur. Et ultrices sed tellus erat.</p>
+            <p className={styles.write}>Write &gt;</p>
           </div>
           <h4 className={styles.explore}>Let's Explore</h4>
           <div className={styles.exerciseCarousel}>
-            
-            <div className={styles.exerciseCard}>
-              <Image
-              src={`/images/icons/mindfulPrimary.svg`}
-              alt="mindfulness image"
-              width="64"
-              height="64"
-              />
-              <p>Mindfulness<br/>Exercises</p>
-            </div>
-
-            <div className={styles.exerciseCard}>
-              <Image
-              src={`/images/icons/meditationPrimary.svg`}
-              alt="meditation image"
-              width="64"
-              height="64"
-              />
-              <p>Meditation<br/>Exercises</p>
-            </div>
+            <Image
+              src={`/images/placeholder.svg`}
+              alt="placeholder image"
+              width="191"
+              height="152"
+              className={styles.placeholder}
+            />
+            <Image
+              src={`/images/placeholder.svg`}
+              alt="placeholder image"
+              width="191"
+              height="152"
+              className={styles.placeholder}
+            />
+            <Image
+              src={`/images/placeholder.svg`}
+              alt="placeholder image"
+              width="191"
+              height="152"
+              className={styles.placeholder}
+            />
           </div>
           <Tabbar />
         </div>

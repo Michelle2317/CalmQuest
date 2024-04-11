@@ -50,22 +50,21 @@
 }
 
 .journalingContainer {
-	height: 128px;
 	width: 398px;
-	background-color: var(--light-blue);
 }
 
 .explore,
 .prompt {
 	font-size: var(--body-1-large);
 	font-weight: bold;
-	padding: 14px;
 }
 
 .quote {
 	font-size: var(--body2);
-	padding: 14px;
-	padding-top: 0;
+}
+
+.write {
+	text-align: right;
 }
 
 .exerciseCarousel {

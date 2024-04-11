@@ -49,31 +49,33 @@ export default function Home() {
           </div>
           <div className={styles.journalingContainer}>
             <p className={styles.prompt}>Journaling Prompt</p>
-            <p className={styles.quote}>What do you want to be when you grow up?</p>
-            <ButtonPrimary className={styles.write} title="Write&nbsp;&nbsp;&nbsp;&gt;"/>
+            <p className={styles.quote}>Lorem ipsum dolor sit amet<br/> consectetur. Et ultrices sed tellus erat.</p>
+            <ButtonPrimary className={styles.write} title="Write&nbsp;&nbsp;&nbsp;&gt;">
+            </ButtonPrimary>
           </div>
           <h4 className={styles.explore}>Let's Explore</h4>
           <div className={styles.exerciseCarousel}>
-            
-            <div className={styles.exerciseCard}>
-              <Image
-              src={`/images/icons/mindfulPrimary.svg`}
-              alt="mindfulness image"
-              width="64"
-              height="64"
-              />
-              <p>Mindfulness<br/>Exercises</p>
-            </div>
-
-            <div className={styles.exerciseCard}>
-              <Image
-              src={`/images/icons/meditationPrimary.svg`}
-              alt="meditation image"
-              width="64"
-              height="64"
-              />
-              <p>Meditation<br/>Exercises</p>
-            </div>
+            <Image
+              src={`/images/placeholder.svg`}
+              alt="placeholder image"
+              width="191"
+              height="152"
+              className={styles.placeholder}
+            />
+            <Image
+              src={`/images/placeholder.svg`}
+              alt="placeholder image"
+              width="191"
+              height="152"
+              className={styles.placeholder}
+            />
+            <Image
+              src={`/images/placeholder.svg`}
+              alt="placeholder image"
+              width="191"
+              height="152"
+              className={styles.placeholder}
+            />
           </div>
           <Tabbar />
         </div>

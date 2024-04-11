@@ -61,6 +61,7 @@ export default function Home() {
               alt="mindfulness image"
               width="64"
               height="64"
+              className={styles.placeholder}
               />
               <p>Mindfulness<br/>Exercises</p>
             </div>
@@ -71,6 +72,7 @@ export default function Home() {
               alt="meditation image"
               width="64"
               height="64"
+              className={styles.placeholder}
               />
               <p>Meditation<br/>Exercises</p>
             </div>

@@ -68,6 +68,10 @@
 	padding-top: 0;
 }
 
+.write {
+	align-content: right;
+}
+
 .exerciseCarousel {
 	display: flex;
 	flex-direction: row;

@@ -49,7 +49,7 @@ export default function Home() {
           </div>
           <div className={styles.journalingContainer}>
             <p className={styles.prompt}>Journaling Prompt</p>
-            <p className={styles.quote}>What do you want to be when you grow up?</p>
+            <p className={styles.quote}>Lorem ipsum dolor sit amet<br/> consectetur. Et ultrices sed tellus erat.</p>
             <ButtonPrimary className={styles.write} title="Write&nbsp;&nbsp;&nbsp;&gt;"/>
           </div>
           <h4 className={styles.explore}>Let's Explore</h4>
@@ -61,6 +61,7 @@ export default function Home() {
               alt="mindfulness image"
               width="64"
               height="64"
+              className={styles.placeholder}
               />
               <p>Mindfulness<br/>Exercises</p>
             </div>
@@ -71,6 +72,7 @@ export default function Home() {
               alt="meditation image"
               width="64"
               height="64"
+              className={styles.placeholder}
               />
               <p>Meditation<br/>Exercises</p>
             </div>

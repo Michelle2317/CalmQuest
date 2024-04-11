@@ -59,6 +59,7 @@
 .prompt {
 	font-size: var(--body-1-large);
 	font-weight: bold;
+	justify-content: left;
 	padding: 14px;
 }
 
@@ -66,6 +67,10 @@
 	font-size: var(--body2);
 	padding: 14px;
 	padding-top: 0;
+}
+
+.write {
+	text-align: right;
 }
 
 .exerciseCarousel {

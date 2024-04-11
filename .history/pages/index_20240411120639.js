@@ -49,30 +49,31 @@ export default function Home() {
           </div>
           <div className={styles.journalingContainer}>
             <p className={styles.prompt}>Journaling Prompt</p>
-            <p className={styles.quote}>What do you want to be when you grow up?</p>
+            <p className={styles.quote}>Lorem ipsum dolor sit amet<br/> consectetur. Et ultrices sed tellus erat.</p>
             <ButtonPrimary className={styles.write} title="Write&nbsp;&nbsp;&nbsp;&gt;"/>
           </div>
           <h4 className={styles.explore}>Let's Explore</h4>
           <div className={styles.exerciseCarousel}>
             
-            <div className={styles.exerciseCard}>
+            <div>
               <Image
               src={`/images/icons/mindfulPrimary.svg`}
               alt="mindfulness image"
               width="64"
               height="64"
+              className={styles.placeholder}
               />
-              <p>Mindfulness<br/>Exercises</p>
+              <p>Mindfulness Exercises</p>
             </div>
-
-            <div className={styles.exerciseCard}>
+            <div>
               <Image
               src={`/images/icons/meditationPrimary.svg`}
               alt="meditation image"
               width="64"
               height="64"
+              className={styles.placeholder}
               />
-              <p>Meditation<br/>Exercises</p>
+              <p>Meditation Exercises</p>
             </div>
           </div>
           <Tabbar />
