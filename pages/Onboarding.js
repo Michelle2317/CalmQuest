@@ -80,8 +80,7 @@ export default function Onboarding() {
             <button className={styles.getStartedButton}>Let's Go!</button>
           </Link>
           )}
-          <ButtonPrimary />
-          <ButtonSecondary />
+          
         </div>        
       </main>
     </>
