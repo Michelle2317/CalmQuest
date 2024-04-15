@@ -18,7 +18,7 @@
 
 .homeContainer,
 .shopContainer,
-.journalContainer,
+.exerciseContainer,
 .profileContainer {
 	display: flex;
 	flex-direction: column;

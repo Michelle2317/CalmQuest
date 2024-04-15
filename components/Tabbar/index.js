@@ -31,16 +31,16 @@ export default function Tabbar() {
             <p>Shop</p>
           </Link>
         </div>
-        <div className={styles.journalContainer}>
-          <Link href="/ParentQuiz" className={styles.linkStyling}>
+        <div className={styles.exerciseContainer}>
+          <Link href="/Exercise" className={styles.linkStyling}>
             <Image
-              src={`/images/journalPrimary.svg`}
-              alt="journal icon"
+              src={`/images/icons/mindfulPrimary.svg`}
+              alt="mindful icon"
               width={30}
               height={30}
               className={styles.journalPrimary}
             />
-            <p>Journal</p>
+            <p>Exercise</p>
           </Link>
         </div>
         <div className={styles.profileContainer}>
