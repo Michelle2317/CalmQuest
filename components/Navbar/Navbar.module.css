@@ -4,7 +4,7 @@
 	padding-top: 1px;
 	padding-left: 13px;
 	padding-right: 132px;
-	background: #c9f5ff;
+	background: var(--light-blue);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -23,7 +23,7 @@
 
 .calmQuest {
 	color: var(--black);
-	font-size: 32px;
-	font-family: Nunito;
+	font-size: var(--headingTwo);
+	font-family: var(--nunito);
 	font-weight: 700;
 }
