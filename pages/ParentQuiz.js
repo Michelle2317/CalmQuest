@@ -103,7 +103,9 @@ export default function ParentQuiz() {
 		setSeedsClaimed(true)
 	}
 
-	const handleMoreActivities = () => {}
+	const toShop = () => {
+		window.location.href = '/Shop';
+	}
 
 	const handlePreviousStep = () => {
 		if (step > 1) {
@@ -158,11 +160,29 @@ export default function ParentQuiz() {
 							<h2 className={styles.checkDone}>Check-In Done!</h2>
 							<p className={`${styles.outcomeMessage}`}>{outcome}</p>
 							{!seedsClaimed ? (
-								<button className={styles.primaryButtonQuizLeft} onClick={handleClaimSeeds}>Claim 3x Seeds</button>
+								<div className={styles.seedContainer}>
+									<Image 
+										src="/images/seed.svg"
+										alt="Seed"
+										width={36}
+										height={36}
+									/>
+									<div className={styles.seedAmount}>3x</div>
+									<button className={styles.seedButton} onClick={handleClaimSeeds}>Claim</button>
+								</div>
 							) : (
-								<p className={styles.claimedSeeds}>Seeds Claimed</p>
+								<div className={styles.seedContainer}>
+									<Image 
+										src="/images/seed.svg"
+										alt="Seed"
+										width={36}
+										height={36}
+									/>
+									<div className={styles.seedAmount}>3x</div>
+									<button className={styles.claimedSeeds}>Claimed</button>
+								</div>
 							)}
-							<button className={styles.primaryButtonQuizRight} onClick={handleMoreActivities}>More Activities</button>
+							<button className={styles.toShopButton} onClick={toShop}>Go to Shop</button>
 						</div>
 					)}
 					<div className={styles.buttonContainer}>
