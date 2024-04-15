@@ -81,7 +81,7 @@ export default function ParentQuiz() {
 	const calculateOutcome = () => {
 		const headspace = selectedAnswers[selectedAnswers.length - 1].answer.toString()
 		const totalScore = score
-		let message = ''
+		let message = ""
 
 		if (totalScore >= 0 && totalScore <= 3) {
 			message = `You're doing a great job about your ${headspace.toLowerCase()}! Keep it up and you'll do wonders!`
@@ -145,8 +145,7 @@ export default function ParentQuiz() {
 					  />
 				  )}
 					{quizComplete && (
-						<div
-							className={styles.outcomeContainer}>
+						<div className={styles.outcomeContainer}>
 							<Image
 								src="/images/check.svg"
 								alt="Check"
@@ -157,18 +156,11 @@ export default function ParentQuiz() {
 							<h2 className={styles.checkDone}>Check-In Done!</h2>
 							<p className={`${styles.outcomeMessage}`}>{outcome}</p>
 							{!seedsClaimed ? (
-								<button
-									className={styles.primaryButtonQuizLeft}
-									onClick={handleClaimSeeds}>	Claim 3x Seeds
-								</button>
+								<button className={styles.primaryButtonQuizLeft} onClick={handleClaimSeeds}>Claim 3x Seeds</button>
 							) : (
-								<p
-									className={styles.claimedSeeds}>Seeds Claimed</p>
+								<p className={styles.claimedSeeds}>Seeds Claimed</p>
 							)}
-							<button
-								className={styles.primaryButtonQuizRight}
-								onClick={handleMoreActivities}>More Activities
-							</button>
+							<button className={styles.primaryButtonQuizRight} onClick={handleMoreActivities}>More Activities</button>
 						</div>
 					)}
 					<div className={styles.buttonContainer}>
@@ -176,17 +168,16 @@ export default function ParentQuiz() {
 							<button
 								className={`${styles.secondaryButtonQuiz}`}
 								onClick={handlePreviousStep}
-								tabindex="0">Back
+								tabIndex="0">Back
 							</button>
 						)}
 						{!quizComplete && answerSelected && (
 						<button
 							className={`${styles.primaryButtonQuiz}`}
 							onClick={step === 4 ? handleSubmitQuiz : handleNextStep}
-							tabIndex="0"
-						>
+							tabIndex="0">
 						{step === 4 ? 'Submit' : 'Next'}
-							</button>
+						</button>
 						)}
 					</div>
 					<Tabbar />

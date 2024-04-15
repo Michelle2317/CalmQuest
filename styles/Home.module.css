@@ -6,8 +6,7 @@
 	min-height: 20vh;
 	background-color: var(--gray);
 	overflow-y: hidden;
-	font-family: 'Nunito', sans-serif;
-
+	font-family: var(--nunito);
 }
 
 .mainContainer {
@@ -24,10 +23,7 @@
 	overflow-x: hidden;
 }
 
-.getStartedButton {
-}
-
-/*home content*/
+/* home page */
 .helloContainer {
 	display: flex;
 	flex-direction: row;
@@ -36,17 +32,16 @@
 }
 
 .mainHello {
-	font-size: var(--title2);
+	font-size: var(--headingTwo);
 }
 
 .mainQuote,
 .checkIn {
-	font-size: var(--body-3-small);
+	font-size: var(--bodySmall);
 }
 
 .quizLink {
 	text-decoration: none;
-
 }
 
 .journalingContainer {
@@ -57,13 +52,13 @@
 
 .explore,
 .prompt {
-	font-size: var(--body-1-large);
+	font-size: var(--bodyRegular);
 	font-weight: bold;
 	padding: 14px;
 }
 
 .quote {
-	font-size: var(--body2);
+	font-size: var(--bodySmall);
 	padding: 14px;
 	padding-top: 0;
 }
@@ -87,30 +82,34 @@
 .questionOne,
 .questionTwo {
 	color: var(--black);
-	font-family: 'Merriweather', serif;
-	font-size: 1.9em;
+	font-family: var(--merriweather);
+	font-size: var(--headingTwo);
 	font-weight: 400;
 	text-align: center;
+	margin-top: 12rem;
 }
 
-.questionDescription {
-	font-family: 'Nunito', sans-serif;
-	font-size: 1rem;
+.questionFour {
+	color: var(--black);
+	font-family: var(--merriweather);
+	font-size: var(--headingThree);
 	font-weight: 400;
+	text-align: center;
+	margin-top: 12rem;
+	width: 90%;
 }
 
 .questionTwoDescription {
-	font-family: 'Nunito', sans-serif;
-	font-size: 1rem;
+	font-family: var(--nunito);
+	font-size: var(--bodyRegular);
 	font-weight: 400;
-	margin-top: -4rem;
 }
 
 .questionThreeDescription {
-	font-family: 'Nunito', sans-serif;
-	font-size: 1rem;
+	font-family: var(--nunito);
+	font-size: var(--bodyRegular);
 	font-weight: 400;
-	margin-top: -5rem;
+	margin-top: -7rem;
 }
 
 .emojis {
@@ -118,16 +117,11 @@
 	display: inline-flex;
 	position: relative;
 	justify-content: center;
-	padding-bottom: 10rem;
-}
-
-.questionOneNext {
-	position: absolute;
-	margin-top: 28rem;
+	padding-bottom: 20rem;
 }
 
 .quizNext {
-	position: absolute;
+	position: relative;
 	margin-top: 30rem;
 	margin-left: 8rem;
 }
@@ -139,14 +133,12 @@
 }
 
 .emojisEmotion {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	margin-top: -4rem;
+	padding-bottom: 9rem;
 }
 
 .emotionContainer {
 	display: flex;
+	justify-content: center;
 }
 
 .emotionRegular {
@@ -166,11 +158,12 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	padding-bottom: 10rem;
 }
 
 .titleEmotion {
 	position: absolute;
-	margin-top: -5rem;
+	margin-top: -6rem;
 }
 
 .rectangle {
@@ -182,69 +175,57 @@
 	justify-content: center;
 	align-items: center;
 	border-radius: 0.5rem;
-	font-family: 'Nunito', sans-serif;
+	font-family: var(--nunito);
 }
 
 .buttonContainer {
-	position: absolute;
-	margin-top: 34.5rem;
+	position: relative;
+	padding-bottom: 4rem;
 }
 
 .primaryButtonQuiz {
-	text-align: center;
 	color: var(--white);
-	font-size: 16px;
-	font-family: 'Nunito', sans-serif;
+	font-size: var(--regularButton);
+	font-family: var(--nunito);
 	font-weight: 400;
-	word-wrap: break-word;
 	width: 160px;
 	height: 48px;
 	background: var(--dark-turquoise);
 	border: 1px var(--dark-turquoise) solid;
 	border-radius: 20px;
-	overflow: hidden;
 	justify-content: center;
 	align-items: center;
-	gap: 10px;
-	display: inline-flex;
 	margin-left: 0.5rem;
+	display: inline-flex;
 }
 
 .primaryButtonQuiz:hover {
-	text-align: center;
 	color: var(--dark-turquoise);
-	font-size: 16px;
-	font-family: 'Nunito', sans-serif;
+	font-size: var(--regularButton);
+	font-family: var(--nunito);
 	font-weight: 400;
-	word-wrap: break-word;
 	width: 160px;
 	height: 48px;
 	background: var(--light-blue);
 	border: 1px var(--dark-turquoise) solid;
 	border-radius: 20px;
-	overflow: hidden;
 	justify-content: center;
 	align-items: center;
-	gap: 10px;
 	display: inline-flex;
 }
 
 .secondaryButtonQuiz {
-	text-align: center;
 	color: var(--white);
-	font-size: 16px;
-	font-family: 'Nunito', sans-serif;
+	font-size: var(--regularButton);
+	font-family: var(--nunito);
 	font-weight: 400;
-	word-wrap: break-word;
 	width: 160px;
 	height: 48px;
 	border-radius: 20px;
 	background-color: var(--black);
-	overflow: hidden;
 	border: 1px var(--black) solid;
 	justify-content: center;
 	align-items: center;
-	gap: 10px;
 	display: inline-flex;
 }
 
@@ -254,47 +235,39 @@
 	color: var(--black);
 	background: var(--white);
 	border-radius: 20px;
-	overflow: hidden;
 	border: 1px var(--black) solid;
 	justify-content: center;
 	align-items: center;
-	gap: 10px;
 	display: inline-flex;
 }
 
 .primaryButtonQuizLeft {
-	text-align: center;
 	color: var(--white);
-	font-size: 16px;
-	font-family: 'Nunito', sans-serif;
+	font-size: var(--regularButton);
+	font-family: var(--nunito);
 	font-weight: 400;
-	word-wrap: break-word;
 	width: 160px;
 	height: 48px;
 	background: var(--dark-turquoise);
 	border: 1px var(--dark-turquoise) solid;
 	border-radius: 20px;
-	overflow: hidden;
 	justify-content: center;
 	align-items: center;
-	display: inline-flex;
 	margin-left: 3rem;
 	margin-top: 2rem;
+	display: inline-flex;
 }
 
 .primaryButtonQuizLeft:hover {
-	text-align: center;
 	color: var(--dark-turquoise);
-	font-size: 16px;
-	font-family: 'Nunito', sans-serif;
+	font-size: var(--regularButton);
+	font-family: var(--nunito);
 	font-weight: 400;
-	word-wrap: break-word;
 	width: 160px;
 	height: 48px;
 	background: var(--light-blue);
 	border: 1px var(--dark-turquoise) solid;
 	border-radius: 20px;
-	overflow: hidden;
 	justify-content: center;
 	align-items: center;
 	display: inline-flex;
@@ -303,18 +276,15 @@
 }
 
 .primaryButtonQuizRight {
-	text-align: center;
 	color: var(--white);
-	font-size: 16px;
-	font-family: 'Nunito', sans-serif;
+	font-size: var(--regularButton);
+	font-family: var(--nunito);
 	font-weight: 400;
-	word-wrap: break-word;
 	width: 160px;
 	height: 48px;
 	background: var(--dark-turquoise);
 	border: 1px var(--dark-turquoise) solid;
 	border-radius: 20px;
-	overflow: hidden;
 	justify-content: center;
 	align-items: center;
 	display: inline-flex;
@@ -323,28 +293,20 @@
 }
 
 .primaryButtonQuizRight:hover {
-	text-align: center;
 	color: var(--dark-turquoise);
-	font-size: 16px;
-	font-family: 'Nunito', sans-serif;
+	font-size: var(--regularButton);
+	font-family: var(--nunito);
 	font-weight: 400;
-	word-wrap: break-word;
 	width: 160px;
 	height: 48px;
 	background: var(--light-blue);
 	border: 1px var(--dark-turquoise) solid;
 	border-radius: 20px;
-	overflow: hidden;
 	justify-content: center;
 	align-items: center;
 	display: inline-flex;
 	margin-left: 0.5rem;
 	margin-top: 2rem;
-}
-
-.secondary,
-.button {
-	color: var(--dark-turquoise);
 }
 
 .checkIcon {
@@ -355,8 +317,8 @@
 
 .checkDone {
 	color: var(--black);
-	font-family: 'Merriweather', serif;
-	font-size: 1.9em;
+	font-family: var(--merriweather);
+	font-size: var(--headingTwo);
 	font-weight: 400;
 	text-align: center;
 	padding-top: 2rem;
@@ -366,8 +328,8 @@
 .claimedSeeds {
 	text-align: center;
 	color: var(--white);
-	font-size: 16px;
-	font-family: 'Nunito', sans-serif;
+	font-size: var(--regularButton);
+	font-family: var(--nunito);
 	font-weight: 400;
 	width: 160px;
 	height: 48px;
@@ -386,4 +348,21 @@
 	text-align: center;
 	width: 90%;
 	padding-left: 1rem;
+}
+
+.primaryButtonQuiz:focus {
+	outline: none;
+	box-shadow: 0 0 0 0.15rem var(--dark-gray);
+}
+
+.secondaryButtonQuiz:focus {
+	outline: none;
+	box-shadow: 0 0 0 0.15rem var(--dark-gray);
+}
+
+.primaryButtonQuizLeft:focus,
+.primaryButtonQuizRight:focus,
+.claimedSeeds:focus {
+	outline: none;
+	box-shadow: 0 0 0 0.15rem var(--dark-gray);
 }

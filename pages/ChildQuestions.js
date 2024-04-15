@@ -1,11 +1,9 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import Image from "next/image";
-import Navbar from "@/components/Navbar";
-import Tabbar from "@/components/Tabbar";
 import { useState } from "react";
 
-export default function ChildQuestions({ question, onSelect, previousAnswer, handleNextStep, onAnswerSelect }) {
+export default function ChildQuestions({ question, onSelect, previousAnswer, onAnswerSelect }) {
   const [selectedOption, setSelectedOption] = useState(null);
   const [isClicked, setIsClicked] = useState(false);
 
@@ -28,15 +26,24 @@ export default function ChildQuestions({ question, onSelect, previousAnswer, han
 
   const handleKeyDown = (e, option) => {
     if (e.key === 'Enter') {
-      if (selectedOptions.includes(option)) {
-        const updatedOptions = selectedOptions.filter((selectedOption) => selectedOption !== option);
-        setSelectedOptions(updatedOptions);
+      e.preventDefault();
+  
+      if (question !== "Describe your feelings?") {
+        setSelectedOption(option);
+        onSelect(option);
+        onAnswerSelect();
       } else {
-        setSelectedOptions([...selectedOptions, option]);
+        const updatedOptions = selectedOptions.includes(option)
+          ? selectedOptions.filter((selectedOption) => selectedOption !== option)
+          : [...selectedOptions, option];
+  
+        setSelectedOptions(updatedOptions);
+        onSelect(updatedOptions);
+        onAnswerSelect();
       }
     }
   };
-
+  
   return (
     <>
       <Head>
@@ -47,8 +54,7 @@ export default function ChildQuestions({ question, onSelect, previousAnswer, han
       </Head>
       <main className={`${styles.main}`}>
         <div className={styles.mainContainer}>
-          <Navbar />
-          <h2 className={styles.questionOne}>{question}</h2>
+          <h2 className={`${styles.questionOne} ${question === "What's taking up most of your headspace right now?" ? styles.questionFour : ""}`}>{question}</h2>
           {question === "How are you today?" && (
               <>
                 <div className={styles.emojis}>
@@ -456,7 +462,6 @@ export default function ChildQuestions({ question, onSelect, previousAnswer, han
             </div>
           </>
         )}
-        <Tabbar />
         </div>
       </main>
     </>
