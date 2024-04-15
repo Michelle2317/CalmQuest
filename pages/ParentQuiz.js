@@ -62,6 +62,7 @@ export default function ParentQuiz() {
 		}
 		setSelectedAnswers([...selectedAnswers, { answer, points }])
 		setScore(score + points)
+		setAnswerSelected(true);
 
 		if (step === 4) {
 			calculateOutcome()
@@ -72,6 +73,7 @@ export default function ParentQuiz() {
 	const handleNextStep = () => {
 		if (step < 4) {
 			setStep(step + 1)
+			setAnswerSelected(false); 
 		} else {
 			setQuizComplete(true)
 			calculateOutcome()
@@ -175,7 +177,8 @@ export default function ParentQuiz() {
 						<button
 							className={`${styles.primaryButtonQuiz}`}
 							onClick={step === 4 ? handleSubmitQuiz : handleNextStep}
-							tabIndex="0">
+							tabIndex="0"
+						>
 						{step === 4 ? 'Submit' : 'Next'}
 						</button>
 						)}
