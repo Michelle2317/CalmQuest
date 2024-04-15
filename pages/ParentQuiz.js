@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar'
 import Tabbar from '@/components/Tabbar'
 import Image from 'next/image'
 import { useState } from 'react'
+import DottedProgressBar from '@/components/DottedProgressBar'
 
 export default function ParentQuiz() {
 	const [step, setStep] = useState(1)
@@ -148,6 +149,7 @@ export default function ParentQuiz() {
 							hasNextStep={selectedAnswers.length > 0 || step > 1}
 					  />
 				  )}
+					{ !quizComplete && <DottedProgressBar currentStep={step} /> }
 					{quizComplete && (
 						<div className={styles.outcomeContainer}>
 							<Image

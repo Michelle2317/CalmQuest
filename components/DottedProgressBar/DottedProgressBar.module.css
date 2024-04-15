@@ -1,0 +1,17 @@
+.progressBar {
+	display: flex;
+	justify-content: space-between;
+	width: 15%;
+	margin-bottom: 1.5rem;
+}
+
+.dot {
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background-color: var(--grey);
+}
+
+.activeDot {
+	background-color: var(--dark-turquoise);
+}

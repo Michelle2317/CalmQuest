@@ -4,7 +4,7 @@
 	justify-content: center;
 	align-items: center;
 	min-height: 20vh;
-	background-color: var(--gray);
+	background-color: var(--grey);
 	overflow-y: hidden;
 	font-family: var(--nunito);
 }
@@ -325,18 +325,18 @@
 
 .primaryButtonQuiz:focus {
 	outline: none;
-	box-shadow: 0 0 0 0.15rem var(--dark-gray);
+	box-shadow: 0 0 0 0.15rem var(--dark-grey);
 }
 
 .secondaryButtonQuiz:focus {
 	outline: none;
-	box-shadow: 0 0 0 0.15rem var(--dark-gray);
+	box-shadow: 0 0 0 0.15rem var(--dark-grey);
 }
 
 .primaryButtonQuizLeft:focus,
 .primaryButtonQuizRight:focus {
 	outline: none;
-	box-shadow: 0 0 0 0.15rem var(--dark-gray);
+	box-shadow: 0 0 0 0.15rem var(--dark-grey);
 }
 
 .claimedSeeds:focus {
@@ -383,7 +383,7 @@
 	width: 5rem;
 	height: 2rem;
 	padding: 0.75rem 2rem;
-	background: var(--dark-gray);
+	background: var(--dark-grey);
 	color: var(--white);
 	font-family: var(--nunito);
 	font-size: var(--bodyRegular);
@@ -393,7 +393,7 @@
 	align-items: center;
 	gap: 10px;
 	display: inline-flex;
-	border: 1px var(--dark-gray) solid;
+	border: 1px var(--dark-grey) solid;
 }
 
 .toShopButton {
