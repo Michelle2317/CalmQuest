@@ -95,7 +95,7 @@
 	font-size: var(--headingTwo);
 	font-weight: 400;
 	text-align: center;
-	margin-top: 12rem;
+	margin-top: 15rem;
 }
 
 .questionFour {
@@ -104,7 +104,7 @@
 	font-size: var(--headingThree);
 	font-weight: 400;
 	text-align: center;
-	margin-top: 12rem;
+	margin-top: 16rem;
 	width: 90%;
 }
 
@@ -112,13 +112,14 @@
 	font-family: var(--nunito);
 	font-size: var(--bodyRegular);
 	font-weight: 400;
+	padding-bottom: 4rem;
 }
 
 .questionThreeDescription {
 	font-family: var(--nunito);
 	font-size: var(--bodyRegular);
 	font-weight: 400;
-	margin-top: -7rem;
+	margin-top: -10rem;
 }
 
 .emojis {
@@ -126,11 +127,11 @@
 	display: inline-flex;
 	position: relative;
 	justify-content: center;
-	padding-bottom: 20rem;
+	padding-bottom: 24rem;
 }
 
 .emojisEmotion {
-	padding-bottom: 9rem;
+	padding-bottom: 15rem;
 }
 
 .emotionContainer {
@@ -155,7 +156,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	padding-bottom: 10rem;
+	padding-bottom: 15rem;
 }
 
 .titleEmotion {
