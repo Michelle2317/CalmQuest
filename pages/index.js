@@ -5,8 +5,33 @@ import Tabbar from "@/components/Tabbar";
 import Image from "next/image";
 import Link from "next/link"
 import ButtonPrimary from "@/components/ButtonPrimary";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function Home() {
+
+  const [data, setData] = useState();
+
+  var apiKey = process.env.NEXT_PUBLIC_API;
+  var type = "inspirational";
+  const url = `https://api.api-ninjas.com/v1/quotes?category=${type}`;
+  const headers = {'X-Api-Key': `${apiKey}`}
+
+  const getInspiration = () => {
+      axios.get(url, { headers })
+      .then((response) => {
+        // console.clear();
+        setData(response.data);
+        console.log(response.data);
+      }).catch(err => {
+        console.log(err)
+      })
+  }
+  
+  useEffect (() => {
+    getInspiration();
+  },[]);
+
   return (
     <>
       <Head>
@@ -30,7 +55,18 @@ export default function Home() {
           <div className={styles.helloContainer}>
             <div className={styles.helloContainerLeft}>
               <h1 className={styles.mainHello}>Hello Lorem</h1>
-              <p className={styles.mainQuote}>"A really inspiring quote" -random</p>
+              <div className={styles.mainQuote}>
+                {
+                  data && data.map((d,index) => {
+                    return(
+                      <div key={index}>
+                        <div>&#34;{d.quote}&#34;</div>
+                        <div>&#126;{d.author}</div>
+                      </div>
+                    )
+                  })
+                }
+              </div>
             </div>
             
             <Link href="/ParentQuiz" className={styles.quizLink}>
