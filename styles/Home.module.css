@@ -31,15 +31,6 @@
 	gap: 48px;
 }
 
-.helloContainerLeft {
-	padding-left: 2rem;
-}
-
-.helloInspiration {
-	display: flex;
-	flex-direction: row;
-}
-
 .mainHello {
 	font-size: var(--headingTwo);
 }
