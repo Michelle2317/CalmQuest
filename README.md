@@ -14,3 +14,7 @@ Node.js:
 1. npm install next@latest 
 2. npm run dev 
 ```
+Axios:
+```
+1. npm i axios
+```

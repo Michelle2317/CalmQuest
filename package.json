@@ -11,6 +11,7 @@
   "dependencies": {
     "axios": "^1.6.8",
     "example": "^0.0.0",
+    "nex": "^2.0.22",
     "next": "^14.2.1",
     "package_name": "^1.0.0",
     "react": "^18",
