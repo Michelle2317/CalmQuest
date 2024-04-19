@@ -1,10 +1,7 @@
 import styles from './ButtonSecondary.module.css'
 import React from 'react'
 
-export default function ButtonSecondary({
-	title="default",
-	
-}) 
+export default function ButtonSecondary() 
 	{
 	return (
 		<>
