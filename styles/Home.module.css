@@ -143,6 +143,7 @@
 
 .exerciseLink {
 	text-decoration: none;
+	color: var(--black);
 }
 
 .exerciseLink:hover {
