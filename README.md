@@ -15,6 +15,10 @@ Node.js:
 2. npm run dev 
 ```
 Axios:
-```
 1. npm i axios
 ```
+Chart.js:
+1. npm install --save chart.js react-chartjs-2
+```
+## Reference
+Chart: https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310009604&pickMembers%5B0%5D=1.1&pickMembers%5B1%5D=3.1&pickMembers%5B2%5D=4.5&cubeTimeFrame.startYear=2020&cubeTimeFrame.endYear=2022&referencePeriods=20200101%2C20220101

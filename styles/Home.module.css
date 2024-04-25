@@ -23,6 +23,11 @@
 	overflow-x: hidden;
 }
 
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
 /* home page */
 .mascotNormal {
 	margin-top: -1rem;

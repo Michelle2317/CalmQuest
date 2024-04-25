@@ -10,12 +10,14 @@
   },
   "dependencies": {
     "axios": "^1.6.8",
+    "chart.js": "^4.4.2",
     "example": "^0.0.0",
     "nex": "^2.0.22",
-    "next": "^14.2.1",
+    "next": "^14.2.3",
     "package_name": "^1.0.0",
     "react": "^18",
     "react-axios": "^2.0.6",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18"
   }
 }
