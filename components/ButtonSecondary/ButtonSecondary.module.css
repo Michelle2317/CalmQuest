@@ -5,8 +5,8 @@
 	font-family: Nunito;
 	font-weight: 400;
 	word-wrap: break-word;
-	width: 120px;
-	height: 36px;
+	width: 160px;
+	height: 48px;
 	border-radius: 20px;
 	background-color: var(--black);
 	overflow: hidden;
@@ -18,8 +18,8 @@
 }
 
 .secondaryButton:hover {
-	width: 120px;
-	height: 36px;
+	width: 160px;
+	height: 48px;
 	color: var(--black);
 	background: var(--white);
 	border-radius: 20px;

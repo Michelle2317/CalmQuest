@@ -258,20 +258,13 @@
 }
 
 .buttonContainer {
-	position: relative;
-	padding-bottom: 4rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 5rem;
 }
 
 .primaryButtonQuiz {
-	color: var(--white);
-	font-size: var(--regularButton);
-	font-family: var(--nunito);
-	font-weight: 400;
-	width: 160px;
-	height: 48px;
-	background: var(--dark-turquoise);
-	border: 1px var(--dark-turquoise) solid;
-	border-radius: 20px;
 	justify-content: center;
 	align-items: center;
 	margin-left: 0.5rem;
@@ -279,57 +272,27 @@
 }
 
 .primaryButtonQuiz:hover {
-	color: var(--dark-turquoise);
-	font-size: var(--regularButton);
-	font-family: var(--nunito);
-	font-weight: 400;
-	width: 160px;
-	height: 48px;
-	background: var(--light-blue);
-	border: 1px var(--dark-turquoise) solid;
-	border-radius: 20px;
 	justify-content: center;
 	align-items: center;
+	margin-left: 0.5rem;
 	display: inline-flex;
 }
 
 .secondaryButtonQuiz {
-	color: var(--white);
-	font-size: var(--regularButton);
-	font-family: var(--nunito);
-	font-weight: 400;
-	width: 160px;
-	height: 48px;
-	border-radius: 20px;
-	background-color: var(--black);
-	border: 1px var(--black) solid;
 	justify-content: center;
 	align-items: center;
+	margin-left: 0.5rem;
 	display: inline-flex;
 }
 
 .secondaryButtonQuiz:hover {
-	width: 160px;
-	height: 48px;
-	color: var(--black);
-	background: var(--white);
-	border-radius: 20px;
-	border: 1px var(--black) solid;
 	justify-content: center;
 	align-items: center;
+	margin-left: 0.5rem;
 	display: inline-flex;
 }
 
 .primaryButtonQuizLeft {
-	color: var(--white);
-	font-size: var(--regularButton);
-	font-family: var(--nunito);
-	font-weight: 400;
-	width: 160px;
-	height: 48px;
-	background: var(--dark-turquoise);
-	border: 1px var(--dark-turquoise) solid;
-	border-radius: 20px;
 	justify-content: center;
 	align-items: center;
 	margin-left: 3rem;
@@ -338,15 +301,6 @@
 }
 
 .primaryButtonQuizLeft:hover {
-	color: var(--dark-turquoise);
-	font-size: var(--regularButton);
-	font-family: var(--nunito);
-	font-weight: 400;
-	width: 160px;
-	height: 48px;
-	background: var(--light-blue);
-	border: 1px var(--dark-turquoise) solid;
-	border-radius: 20px;
 	justify-content: center;
 	align-items: center;
 	display: inline-flex;
@@ -355,15 +309,6 @@
 }
 
 .primaryButtonQuizRight {
-	color: var(--white);
-	font-size: var(--regularButton);
-	font-family: var(--nunito);
-	font-weight: 400;
-	width: 160px;
-	height: 48px;
-	background: var(--dark-turquoise);
-	border: 1px var(--dark-turquoise) solid;
-	border-radius: 20px;
 	justify-content: center;
 	align-items: center;
 	display: inline-flex;
@@ -372,15 +317,6 @@
 }
 
 .primaryButtonQuizRight:hover {
-	color: var(--dark-turquoise);
-	font-size: var(--regularButton);
-	font-family: var(--nunito);
-	font-weight: 400;
-	width: 160px;
-	height: 48px;
-	background: var(--light-blue);
-	border: 1px var(--dark-turquoise) solid;
-	border-radius: 20px;
 	justify-content: center;
 	align-items: center;
 	display: inline-flex;
@@ -433,6 +369,11 @@
 .claimedSeeds:focus {
 	outline: none;
 	box-shadow: 0 0 0 0.15rem var(--black);
+}
+
+.toShopButton:focus {
+	outline: none;
+	box-shadow: 0 0 0 0.15rem var(--dark-grey);
 }
 
 .seedContainer {
@@ -489,34 +430,7 @@
 
 .toShopButton {
 	margin-top: 2rem;
-	margin-left: 8rem;
-	color: var(--white);
-	font-size: var(--regularButton);
-	font-family: var(--nunito);
-	font-weight: 400;
-	width: 160px;
-	height: 48px;
-	background: var(--dark-turquoise);
-	border: 1px var(--dark-turquoise) solid;
-	border-radius: 20px;
-	justify-content: center;
-	align-items: center;
-	display: inline-flex;
-}
-
-.toShopButton:hover {
-	color: var(--dark-turquoise);
-	font-size: var(--regularButton);
-	font-family: var(--nunito);
-	font-weight: 400;
-	width: 160px;
-	height: 48px;
-	background: var(--light-blue);
-	border: 1px var(--dark-turquoise) solid;
-	border-radius: 20px;
-	justify-content: center;
-	align-items: center;
-	display: inline-flex;
+	margin-left: 8.5rem;
 }
 
 /* About page */

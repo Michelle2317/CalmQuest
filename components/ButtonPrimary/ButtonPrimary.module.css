@@ -5,8 +5,8 @@
 	font-family: Nunito;
 	font-weight: 400;
 	word-wrap: break-word;
-	width: 120px;
-	height: 36px;
+	width: 160px;
+	height: 48px;
 	background: var(--dark-turquoise);
 	border: 1px var(--dark-turquoise) solid;
 	border-radius: 20px;
@@ -24,8 +24,8 @@
 	font-family: Nunito;
 	font-weight: 400;
 	word-wrap: break-word;
-	width: 120px;
-	height: 36px;
+	width: 160px;
+	height: 48px;
 	background: var(--light-blue);
 	border: 1px var(--dark-turquoise) solid;
 	border-radius: 20px;

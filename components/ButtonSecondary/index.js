@@ -1,12 +1,11 @@
 import styles from './ButtonSecondary.module.css'
-import React from 'react'
 
-export default function ButtonSecondary() 
+export default function ButtonSecondary({ title = 'default', onClick, className }) 
 	{
 	return (
 		<>
 			<div className={styles.secondary}>
-				<button className={styles.secondaryButton}>{title}</button>
+				<button className={`${styles.secondaryButton} ${className}`} onClick={onClick}>{title}</button>
 			</div>
 		</>
 	)
