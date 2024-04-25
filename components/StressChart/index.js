@@ -61,9 +61,34 @@ export default function StressChart() {
                                         text: 'Perceived life stress, by age group'
                                 },
                                 maintainAspectRatio: false,
-                                responsive: true
-                        }
-                })     
+                                responsive: true,
+                                },
+                        scales: {
+                                y: {
+                                        display: true,
+                                        title: {
+                                                display: true,
+                                                text: "Age"
+                                        },
+                                        ticks: {
+                                                autoSkip: false,
+                                        },
+
+                                },
+                                x: {
+                                        display: true,
+                                        title: {
+                                                display: true,
+                                                text: "Number of people"
+                                        },
+                                        ticks: {
+                                                autoSkip: false
+                                        },
+
+                                }
+                                },
+                },
+        )     
         })
 
         return (
