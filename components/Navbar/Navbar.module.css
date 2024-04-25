@@ -27,3 +27,29 @@
 	font-family: var(--nunito);
 	font-weight: 700;
 }
+
+/*Dropdown Menu*/
+.dropdownMenu {
+	background-color: var(--light-blue);
+	position: absolute;
+	left: 0%;
+	top: 7%;
+	height: 20%;
+	width: 30%;
+	border-radius: 5%;
+}
+
+.dropMenuLink{
+	text-decoration: none;
+	color: var(--black);
+	margin-left: 10%;
+	
+}
+
+.dropMenuListStyle {
+	margin-bottom: 5%;
+}
+
+.dropDownIcon {
+	
+}

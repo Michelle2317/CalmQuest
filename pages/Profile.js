@@ -3,6 +3,7 @@ import styles from "@/styles/Home.module.css";
 import Tabbar from "@/components/Tabbar";
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
+import Image from "next/image";
 
 export default function Profile() {
     return(

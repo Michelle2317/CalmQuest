@@ -1,16 +1,22 @@
 import styles from "./Tabbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from 'next/router'
 
 
 export default function Tabbar() {
+    const router = useRouter();
+    
+    const selectedPage = (href) => {
+      return router.pathname === href;
+    }
   return (
     <>
       <div className={styles.tabbar}>
         <div className={styles.homeContainer}>
-          <Link href="/" className={styles.linkStyling}>
+          <Link href="/" className={styles.linkStyling} passHref>
             <Image
-              src={`/images/homeSecondary.svg`}
+              src={ selectedPage('/') ? `/images/homeSecondary.svg` : `/images/homePrimary.svg`}
               alt="home"
               width={30}
               height={30}
@@ -20,9 +26,9 @@ export default function Tabbar() {
           </Link>
         </div>
         <div className={styles.shopContainer}>
-          <Link href="/Shop" className={styles.linkStyling}>
+          <Link href="/Shop" className={styles.linkStyling} passHref>
             <Image
-              src={`/images/shopPrimary.svg`}
+              src={ selectedPage('/Shop') ? `/images/shopSecondary.svg` : `/images/shopPrimary.svg`}
               alt="shop icon"
               width={30}
               height={30}
@@ -32,9 +38,9 @@ export default function Tabbar() {
           </Link>
         </div>
         <div className={styles.exerciseContainer}>
-          <Link href="/Exercise" className={styles.linkStyling}>
+          <Link href="/Exercise" className={styles.linkStyling} passHref>
             <Image
-              src={`/images/icons/mindfulPrimary.svg`}
+              src={ selectedPage('/Exercise') ? `/images/icons/mindfulSecondary.svg` : `/images/icons/mindfulPrimary.svg`}
               alt="mindful icon"
               width={30}
               height={30}
@@ -44,9 +50,9 @@ export default function Tabbar() {
           </Link>
         </div>
         <div className={styles.profileContainer}>
-          <Link href="/Profile" className={styles.linkStyling}>
+          <Link href="/Profile" className={styles.linkStyling} passHref>
             <Image
-              src={`/images/profilePrimary.svg`}
+              src={ selectedPage('/Profile') ? `/images/profileSecondary.svg` : `/images/profilePrimary.svg`}
               alt="profile icon"
               width={30}
               height={30}
