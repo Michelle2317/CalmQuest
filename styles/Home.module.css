@@ -28,6 +28,63 @@
 	flex-direction: row;
 }
 
+/* Onboarding */
+.onboardingContainer {
+	background-color: var(--ombre);
+}
+
+.verticalLogo {
+	padding-top: 15rem;
+}
+
+.getStartedButton {
+	color: var(--white);
+	font-size: var(--regularButton);
+	font-family: var(--nunito);
+	font-weight: 400;
+	width: 160px;
+	height: 48px;
+	background: var(--dark-turquoise);
+	border: 1px var(--dark-turquoise) solid;
+	border-radius: 20px;
+	justify-content: center;
+	align-items: center;
+	margin-left: 0.5rem;
+	display: inline-flex;
+	margin-bottom: 15rem;
+}
+
+.getStartedButton:hover {
+	color: var(--dark-turquoise);
+	font-size: var(--regularButton);
+	font-family: var(--nunito);
+	font-weight: 400;
+	width: 160px;
+	height: 48px;
+	background: var(--light-blue);
+	border: 1px var(--dark-turquoise) solid;
+	border-radius: 20px;
+	justify-content: center;
+	align-items: center;
+	display: inline-flex;
+}
+
+.features {
+	padding-top: 3rem;
+	text-align: center;
+}
+
+.featuresText {
+	padding-top: 2rem;
+	text-align: center;
+	max-width: 70%;
+}
+
+.onboardingIcon {
+	padding-left: 5rem;
+	padding-top: 14rem;
+}
+
 /* home page */
 .mascotNormal {
 	margin-top: -1rem;

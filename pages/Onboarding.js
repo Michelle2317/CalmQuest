@@ -2,8 +2,6 @@ import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import ButtonPrimary from "@/components/ButtonPrimary";
 import ButtonSecondary from "@/components/ButtonSecondary";
-import Navbar from "@/components/Navbar";
-import Tabbar from "@/components/Tabbar";
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
@@ -13,30 +11,110 @@ export default function Onboarding() {
 
   const screen1 = () => (
     <div>
-      <h2>Personalize your experience</h2>
-      <p>TSelect and unlock special icons, and frames</p>
+      <Image 
+        src={`/images/onboarding/personalize.svg`} 
+        alt="personalize icon" 
+        width={150} 
+        height={150} 
+        className={styles.onboardingIcon}
+      />
+      <h2 className={styles.features}>Personalize your experience</h2>
+      <p className={styles.featuresText}>Select and unlock special icons, and frames</p>
     </div>
   );
 
   const screen2 = () => (
     <div>
-      <h2>Journaling, brainstorming, and prompts</h2>
-      <p>Express your thoughts and feelings, or choose a prompt from our collection to write about </p>
+      <Image 
+        src={`/images/onboarding/brain.svg`} 
+        alt="brain icon" 
+        width={150} 
+        height={150} 
+        className={styles.onboardingIcon}
+      />
+      <h2 className={styles.features}>Mindfulness and Meditation Exercises</h2>
+      <p className={styles.featuresText}>Explore quick and calming mindfulness and meditation exercises</p>
     </div>
   );
 
   const screen3 = () => (
     <div>
-      <h2>Mental Health and Rewards</h2>
-      <p>Check in on your mental health and unlock rewards </p>
+      <Image 
+        src={`/images/onboarding/calendar.svg`} 
+        alt="calendar icon" 
+        width={150} 
+        height={150} 
+        className={styles.onboardingIcon}
+      />
+      <h2 className={styles.features}>Check-In and Rewards</h2>
+      <p className={styles.features}>Check in on your mental health and unlock rewards</p>
     </div>
   );
 
   const screen4 = () => (
     <div>
-      <h2>Are you ready to start your journey?</h2>
+      <div className={styles.createProfile}>Create Profile</div>
+      <div className={styles.selectIcon}>Select an Icon</div>
+      <div>
+        <div className={styles.iconBox}></div>
+        <Image 
+            src={`/images/onboarding/option1.svg`} 
+            alt="logo" 
+            width={150} 
+            height={150} 
+            className={styles.onboardingIcon}
+          />
+        <Image 
+            src={`/images/onboarding/option2.svg`} 
+            alt="logo" 
+            width={150} 
+            height={150} 
+            className={styles.onboardingIcon}
+          />
+        <Image 
+            src={`/images/onboarding/option3.svg`} 
+            alt="logo" 
+            width={150} 
+            height={150} 
+            className={styles.onboardingIcon}
+          />
+        <div className={styles.nameBox}>Enter your name</div>
+      </div>
     </div>
   );
+
+  const screen5 = () => (
+    <div>
+      <div className={styles.createProfile}>Create Profile</div>
+      <div className={styles.selectIcon}>Select an Icon</div>
+      <div>
+        <div className={styles.iconBox}></div>
+        <Image 
+            src={`/images/onboarding/option1.svg`} 
+            alt="logo" 
+            width={150} 
+            height={150} 
+            className={styles.onboardingIcon}
+          />
+        <Image 
+            src={`/images/onboarding/option2.svg`} 
+            alt="logo" 
+            width={150} 
+            height={150} 
+            className={styles.onboardingIcon}
+          />
+        <Image 
+            src={`/images/onboarding/option3.svg`} 
+            alt="logo" 
+            width={150} 
+            height={150} 
+            className={styles.onboardingIcon}
+          />
+        <div className={styles.nameBox}>Enter your name</div>
+      </div>
+    </div>
+  );
+
 
   const getStartedClick = () => {
     setCurrentScreen(1);
@@ -57,14 +135,16 @@ export default function Onboarding() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main}`}>
-        <div className={styles.mainContainer}>
-          <Image
-            src={`/images/placeholder.svg`}
-            alt="placeholder"
-            width={190}
-            height={190}
-            className={styles.placeholder}
-          />
+      <div className={`${styles.mainContainer} ${styles.onboardingContainer}`}>
+          {currentScreen === 0 && (
+            <Image
+              src={`/images/onboarding/verticalLogo.svg`}
+              alt="vertical logo"
+              width={258}
+              height={220}
+              className={styles.verticalLogo}
+            />
+          )}
           {currentScreen === 0 && (
             <button className={styles.getStartedButton} onClick={getStartedClick}>Get Started</button>
           )}
@@ -76,13 +156,12 @@ export default function Onboarding() {
             <button className={styles.getStartedButton} onClick={nextClick}>Next</button>
           )}
           {currentScreen === 4 && (
-          <Link href="/">
-            <button className={styles.getStartedButton}>Let's Go!</button>
-          </Link>
+            <Link href="/">
+              <button className={styles.getStartedButton}>Let's Go!</button>
+            </Link>
           )}
-          
         </div>        
       </main>
     </>
-  );
+  )
 }
