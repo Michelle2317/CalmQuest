@@ -24,6 +24,10 @@
 }
 
 /* home page */
+.mascotNormal {
+	margin-top: -1rem;
+}
+
 .helloContainer {
 	display: flex;
 	flex-direction: row;
@@ -44,32 +48,45 @@
 	font-size: var(--headingTwo);
 }
 
-.mainQuote,
-.checkIn {
+.mainQuote {
 	font-size: var(--bodySmall);
+	width: 94%;
 }
 
-.quizLink {
+.checkInCard {
+	width: 398px;
+	height: 88px;
+	background-color: var(--light-blue);
+	border-radius: 10px;
+	box-shadow: 0px 4px 4px var(--black-shadow-opacity);
+}
+
+.checkInText {
+	font-family: var(--nunito);
+	font-size: var(--bodyRegular);
+	padding-top: 1.6rem;
+	padding-left: 2rem;
+	width: 49%;
+}
+
+.checkInButtonContainer {
+	display: flex;
+	padding-left: 15rem;
+	margin-top: -2rem;
+}
+
+.explore {
+	padding-right: 18rem;
+}
+
+.exerciseLink {
 	text-decoration: none;
 }
 
-.journalingContainer {
-	height: 128px;
-	width: 398px;
-	background-color: var(--light-blue);
-}
-
-.explore,
-.prompt {
-	font-size: var(--bodyRegular);
-	font-weight: bold;
-	padding: 14px;
-}
-
-.quote {
-	font-size: var(--bodySmall);
-	padding: 14px;
-	padding-top: 0;
+.exerciseLink:hover {
+	text-decoration: none;
+	border: 0.2rem solid var(--dark-turquoise);
+	border-radius: 10px;
 }
 
 .exerciseCarousel {
@@ -85,6 +102,7 @@
 	height: 144px;
 	box-shadow: 0px 4px 4px var(--black-shadow-opacity);
 	align-content: center;
+	border-radius: 10px;
 }
 
 /* Quiz/Check-In */
@@ -446,7 +464,6 @@
 .goBackContainer {
 	padding-left: 8%;
 	padding-bottom: 5%;
-	
 }
 
 .goBackLink {
@@ -456,7 +473,7 @@
 
 .leftArrow {
 	width: 15px;
-	height: 15px;	
+	height: 15px;
 }
 
 .aboutUsParagraph {
@@ -467,6 +484,6 @@
 	margin-top: 5%;
 }
 
-.h2AboutUs{
+.h2AboutUs {
 	text-align: center;
 }

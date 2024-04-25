@@ -47,9 +47,9 @@ export default function Home() {
             <Image
               src={`/images/mascots/mascotNormal.svg`}
               alt="mascot image"
-              width="431"
-              height="280"
-              className={styles.placeholder}
+              width="177"
+              height="262"
+              className={styles.mascotNormal}
             />
           </div>
           <div className={styles.helloContainer}>
@@ -68,52 +68,50 @@ export default function Home() {
                 }
               </div>
             </div>
-            
-            <Link href="/ParentQuiz" className={styles.quizLink}>
-              <ButtonPrimary title="Check-In">
+          </div>
+          <div className={styles.checkInCard}>
+          <div className={styles.checkInText}>Take a moment to check on your mental health</div>
+          <div className={styles.checkInButtonContainer}>
+            <Link href="/ParentQuiz">
+              <ButtonPrimary title="Check-In" className={styles.checkInButton}>
                 <Image
                   src={`/images/checkinPrimary.svg`}
                   alt="check in image"
                   width="25"
                   height="25"
-                  className={styles.checkIn}
+                  className={styles.checkInIcon}
                 />
-                <h2 className={styles.checkIn}>Check-in</h2>
               </ButtonPrimary>
             </Link>
-            
           </div>
-          <div className={styles.journalingContainer}>
-            <p className={styles.prompt}>Journaling Prompt</p>
-            <p className={styles.quote}>What do you want to be when you grow up?</p>
-            <ButtonPrimary className={styles.write} title="Write&nbsp;&nbsp;&nbsp;&gt;"/>
           </div>
-          <h4 className={styles.explore}>Let's Explore</h4>
-          <div className={styles.exerciseCarousel}>
-            
-            <div className={styles.exerciseCard}>
-              <Image
-              src={`/images/icons/mindfulPrimary.svg`}
-              alt="mindfulness image"
-              width="64"
-              height="64"
-              />
-              <p>Mindfulness<br/>Exercises</p>
+            <h4 className={styles.explore}>Let's Explore</h4>
+            <div className={styles.exerciseCarousel}>
+              <Link href="/MindfulExercises" className={styles.exerciseLink}>
+                <div className={styles.exerciseCard}>
+                  <Image
+                  src={`/images/icons/mindfulPrimary.svg`}
+                  alt="mindfulness image"
+                  width="64"
+                  height="64"
+                  />
+                  <p>Mindfulness<br/>Exercises</p>
+                </div>
+              </Link>
+              <Link href="/MeditationExercises" className={styles.exerciseLink}>
+                <div className={styles.exerciseCard}>
+                  <Image
+                  src={`/images/icons/meditationPrimary.svg`}
+                  alt="meditation image"
+                  width="64"
+                  height="64"
+                  />
+                  <p>Meditation<br/>Exercises</p>
+                </div>
+              </Link>
             </div>
-
-            <div className={styles.exerciseCard}>
-              <Image
-              src={`/images/icons/meditationPrimary.svg`}
-              alt="meditation image"
-              width="64"
-              height="64"
-              />
-              <p>Meditation<br/>Exercises</p>
-            </div>
+            <Tabbar />
           </div>
-          <Tabbar />
-        </div>
-        
       </main>
     </>
   );
