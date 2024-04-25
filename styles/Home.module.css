@@ -69,6 +69,12 @@
 	display: inline-flex;
 }
 
+.personalizeIcon {
+	padding-left: 5.5rem;
+	padding-top: 14rem;
+	position: relative;
+}
+
 .features {
 	padding-top: 3rem;
 	text-align: center;
@@ -77,12 +83,38 @@
 .featuresText {
 	padding-top: 2rem;
 	text-align: center;
-	max-width: 70%;
 }
 
-.onboardingIcon {
-	padding-left: 5rem;
+.brainIcon {
+	padding-left: 3.5rem;
 	padding-top: 14rem;
+	position: relative;
+}
+
+.featuresBrain {
+	padding-top: 3rem;
+	text-align: center;
+}
+
+.featuresTextBrain {
+	padding-top: 2rem;
+	text-align: center;
+}
+
+.calendarIcon {
+	padding-left: 3.5rem;
+	padding-top: 14rem;
+	position: relative;
+}
+
+.featuresCalendar {
+	padding-top: 3rem;
+	text-align: center;
+}
+
+.featuresTextCalendar {
+	padding-top: 2rem;
+	text-align: center;
 }
 
 /* home page */
@@ -127,14 +159,19 @@
 	font-family: var(--nunito);
 	font-size: var(--bodyRegular);
 	padding-top: 1.6rem;
-	padding-left: 2rem;
+	padding-left: 1.5rem;
 	width: 49%;
 }
 
 .checkInButtonContainer {
 	display: flex;
-	padding-left: 15rem;
-	margin-top: -2rem;
+	padding-left: 14rem;
+	margin-top: -2.5rem;
+}
+
+.checkInButton {
+	width: 150px;
+	height: 45px;
 }
 
 .explore {
@@ -148,7 +185,7 @@
 
 .exerciseLink:hover {
 	text-decoration: none;
-	border: 0.2rem solid var(--dark-turquoise);
+	border: 0.1rem solid var(--dark-turquoise);
 	border-radius: 10px;
 }
 

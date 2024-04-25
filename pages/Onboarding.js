@@ -16,10 +16,10 @@ export default function Onboarding() {
         alt="personalize icon" 
         width={150} 
         height={150} 
-        className={styles.onboardingIcon}
+        className={styles.personalizeIcon}
       />
       <h2 className={styles.features}>Personalize your experience</h2>
-      <p className={styles.featuresText}>Select and unlock special icons, and frames</p>
+      <p className={styles.featuresText}>Select and unlock special <br /> icons, and frames</p>
     </div>
   );
 
@@ -30,10 +30,10 @@ export default function Onboarding() {
         alt="brain icon" 
         width={150} 
         height={150} 
-        className={styles.onboardingIcon}
+        className={styles.brainIcon}
       />
-      <h2 className={styles.features}>Mindfulness and Meditation Exercises</h2>
-      <p className={styles.featuresText}>Explore quick and calming mindfulness and meditation exercises</p>
+      <h2 className={styles.featuresBrain}>Mindfulness and<br />Meditation Exercises</h2>
+      <p className={styles.featuresTextBrain}>Explore quick and calming <br />  mindfulness and meditation exercises</p>
     </div>
   );
 
@@ -44,10 +44,10 @@ export default function Onboarding() {
         alt="calendar icon" 
         width={150} 
         height={150} 
-        className={styles.onboardingIcon}
+        className={styles.calendarIcon}
       />
-      <h2 className={styles.features}>Check-In and Rewards</h2>
-      <p className={styles.features}>Check in on your mental health and unlock rewards</p>
+      <h2 className={styles.featuresCalendar}>Check-In and Rewards</h2>
+      <p className={styles.featuresTextCalendar}>Check in on your mental health and <br /> unlock rewards</p>
     </div>
   );
 
@@ -146,18 +146,18 @@ export default function Onboarding() {
             />
           )}
           {currentScreen === 0 && (
-            <button className={styles.getStartedButton} onClick={getStartedClick}>Get Started</button>
+            <ButtonPrimary className={styles.getStartedButton} onClick={getStartedClick} title="Get Started"></ButtonPrimary>
           )}
           {currentScreen === 1 && screen1()}
           {currentScreen === 2 && screen2()}
           {currentScreen === 3 && screen3()}
           {currentScreen === 4 && screen4()}
           {currentScreen > 0 && currentScreen < 4 && (
-            <button className={styles.getStartedButton} onClick={nextClick}>Next</button>
+            <ButtonPrimary className={styles.getStartedButton} onClick={nextClick} title="Next"></ButtonPrimary>
           )}
           {currentScreen === 4 && (
             <Link href="/">
-              <button className={styles.getStartedButton}>Let's Go!</button>
+              <ButtonPrimary className={styles.getStartedButton} title="Let's Go!"></ButtonPrimary>
             </Link>
           )}
         </div>        
