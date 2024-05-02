@@ -508,3 +508,48 @@
 	margin-left: -60%;
 	margin-top: -40%;
 }
+
+/*Exercise*/
+
+.exerciseText {
+	color: var(--black);
+	font-family: var(--merriweather);
+	font-size: var(--headingTwo);
+	font-weight: 400;
+	position: absolute;
+	left: 16px;
+	top: 442px;
+}
+
+.exerciseBox {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 60px;
+	background-color: var(--light-blue);
+	width: 398px;
+	height: 80px;
+	border-radius: 8px;
+}
+
+.mindfulText {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	right: 30px;
+	gap: 8px;
+}
+
+.exerciseBoxList {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	position: absolute;
+	left: 16px;
+	top: 506px;
+
+}.mascotExercise {
+	position: absolute;
+	left: 126px;
+	top: 131px;
+}

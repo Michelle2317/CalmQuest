@@ -15,18 +15,65 @@ export default function Exercise() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
             <main className={`${styles.main}`}>
-                <div className={styles.mainContainer}>
+            <div className={styles.mainContainer}>
                 <Navbar/>
-            
+        
+                <Image
+                src={`/images/mascots/mascotHappy.svg`}
+                alt="profile UWU mascot"
+                width="177"
+                height="262"
+                className={styles.mascotExercise}
+                />
+                
+                <h2 className={`${styles.exerciseText}`}>Exercises</h2>
+                <div className={`${styles.exerciseBoxList}`}>
+                    <Link href="/MindfulExercises" className={styles.exerciseLink}>
+                    <div className={`${styles.exerciseBox}`}>
+                        <Image 
+                        src={`/images/icons/mindfulPrimary.svg`} 
+                        alt="exercise icon" 
+                        width={50} 
+                        height={50} 
+                        className={styles.dropdownIcon}
+                        />
+                        <div className={`${styles.mindfulText}`}>
+                            <h4>Mindfulness Exercises</h4>
+                            <p>Simple Exercises</p>
+                        </div>
+                        <Image 
+                        src={`/images/arrow.svg`} 
+                        alt="exercise icon" 
+                        width={20} 
+                        height={20} 
+                        className={styles.dropdownIcon}
+                        />
+                    </div>
+                    </Link>
 
-            <Image
-              src={`/images/mascots/mascotHappy.svg`}
-              alt="profile UWU mascot"
-              width="177"
-              height="262"
-              className={styles.mascotNormal}
-            />
-            
+                    <Link href="/MeditationExercises" className={styles.exerciseLink}>
+                    <div className={`${styles.exerciseBox}`}>
+                        <Image 
+                        src={`/images/icons/meditationPrimary.svg`} 
+                        alt="exercise icon" 
+                        width={50} 
+                        height={50} 
+                        className={styles.dropdownIcon}
+                        />
+                        <div className={`${styles.mindfulText}`}>
+                            <h4>Meditation Exercises</h4>
+                            <p>Breath in / breath out, etc.</p>
+                        </div>
+                        <Image 
+                        src={`/images/arrow.svg`} 
+                        alt="exercise icon" 
+                        width={20} 
+                        height={20} 
+                        className={styles.dropdownIcon}
+                        />
+                    </div>
+                </Link>
+            </div>
             <Tabbar/>
             </div>
         </main>
