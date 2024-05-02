@@ -139,9 +139,9 @@
 }
 
 .selectIcon {
-	width: 12.57813rem;
+	width: 14.56rem;
 	height: 1.9085rem;
-	left: 7.12rem;
+	left: 6rem;
 	top: 26.69rem;
 	position: absolute;
 	text-align: center;
@@ -154,7 +154,6 @@
 .chosenIcon {
 	width: 13.75rem;
 	height: 13.75rem;
-	border: 0.2rem solid var(--black);
 	border-radius: 50%;
 	margin-top: 11.38rem;
 	display: flex;
@@ -208,8 +207,8 @@
 }
 
 .onboardingIcon {
-	width: 5.82938rem;
-	height: 5.82938rem;
+	width: 13.75rem;
+	height: 13.75rem;
 }
 
 .perfectButton {

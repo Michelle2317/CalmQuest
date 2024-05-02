@@ -75,8 +75,8 @@ export default function Onboarding() {
   const screen4 = () => (
     <div className={styles.createProfilecontainer}>
       <div className={styles.createProfile}>Create Profile</div>
-      <div className={styles.selectIcon}>Select an Icon</div>
-      <div className={styles.chosenIcon} style={{ borderColor: chosenIcon ? 'black' : 'transparent' }}>
+      <div className={styles.selectIcon}>Select an Icon Below</div>
+      <div className={styles.chosenIcon}>
         {chosenIcon && (
           <Image 
             src={chosenIcon} 
