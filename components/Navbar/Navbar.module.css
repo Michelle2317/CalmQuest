@@ -43,7 +43,7 @@
 	align-content: center;
 }
 
-.screenOverlay{
+.screenOverlay {
 	position: absolute;
 	top: 8%;
 	left: 0;
@@ -53,13 +53,12 @@
 	z-index: 10;
 }
 
-.dropMenuLink{
+.dropMenuLink {
 	display: flex;
 	align-items: center;
 	text-decoration: none;
 	color: var(--black);
 	margin-left: 21%;
-	
 }
 
 .dropMenuListStyle {
@@ -75,6 +74,7 @@
 .ulDropdownMenu {
 	list-style-type: none;
 }
+
 .dropMenuButton {
 	width: 100%;
 	background-color: transparent;
