@@ -26,7 +26,7 @@ export default function Navbar() {
 			{isDropdownOpen && (
                 <div className={styles.dropdownMenu}>
                     <ul className={styles.ulDropdownMenu}>
-                        <li>
+                        <li className={styles.dropMenuListStyle}>
 							<Link href="/Shop" className={styles.dropMenuLink}>
 									<Image 
 										src={`/images/shopPrimary.svg`} 

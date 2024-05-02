@@ -17,7 +17,16 @@ export default function Profile() {
             <main className={`${styles.main}`}>
                 <div className={styles.mainContainer}>
                 <Navbar/>
-            <Link href="/About">About</Link>
+                <div className={styles.profileMainSection}>
+                <Image
+                src={`/images/onboarding/option1.svg`}
+                alt="profile avatar"
+                width="100"
+                height="100"
+                className={styles.profileAvatar}
+                />
+                <label for="inputFiel"></label>
+            </div>
             
             <Tabbar/>
             </div>

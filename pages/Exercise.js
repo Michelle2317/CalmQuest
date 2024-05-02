@@ -17,7 +17,15 @@ export default function Exercise() {
             <main className={`${styles.main}`}>
                 <div className={styles.mainContainer}>
                 <Navbar/>
-            <Link href="/About">About</Link>
+            
+
+            <Image
+              src={`/images/mascots/mascotHappy.svg`}
+              alt="profile UWU mascot"
+              width="177"
+              height="262"
+              className={styles.mascotNormal}
+            />
             
             <Tabbar/>
             </div>
