@@ -27,6 +27,7 @@
 	font-size: var(--headingTwo);
 	font-family: var(--nunito);
 	font-weight: 700;
+	text-decoration: none;
 }
 
 /*Dropdown Menu*/
