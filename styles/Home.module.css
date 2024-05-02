@@ -568,5 +568,57 @@
 }
 
 .exerciseBold {
-	font-weight: bold;
+	color: 'black';
+	font-Family: var(--nunito);
+	font-Weight: 700;
+}
+
+/* Five Sense */
+.fiveSenseText {
+	color: var(--black);
+	font-family: var(--merriweather);
+	font-size: var(--headingTwo);
+	font-weight: 400;
+	text-align: center;
+	position: absolute;
+	top: 120px;
+}
+
+.fiveSenseList {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	position: absolute;
+	top: 182px;
+	left: 16px;
+}
+
+.mascotFiveSense {
+	position: absolute;
+	top: 330px;
+	left: 127px;
+}
+
+.partyPopper {
+	position: absolute;
+	top: 366px;
+	left: 16px;
+}
+
+.fiveSenseButton {
+	position: relative;
+	top: 350px;
+	left: 125px;
+}
+
+.mascotBell {
+	position: absolute;
+	top: 131px;
+	left: 126px;
+}
+
+.bellVideo {
+	position: absolute;
+	top: 682px;
+	left: 96px;
 }

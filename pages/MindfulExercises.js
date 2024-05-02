@@ -32,7 +32,7 @@ export default function MindfulExercises() {
                         <p><span className={styles.exerciseBold}>Mindfulness</span> is about activating our senses to tune into what&apos;s happening with and around us. We can learn to be more aware about our surroundings and about how our bodies feels.
                         </p>
                     </div>
-                    <Link href="/MindfulExercises" className={styles.exerciseLink}>
+                    <Link href="/FiveSenses" className={styles.exerciseLink}>
                     <div className={`${styles.exerciseBox}`}>
                         <Image 
                         src={`/images/icons/eyeSecondary.svg`} 
@@ -56,7 +56,7 @@ export default function MindfulExercises() {
                         </div>
                     </Link>
 
-                    <Link href="/MeditationExercises" className={styles.exerciseLink}>
+                    <Link href="/MindfulBell" className={styles.exerciseLink}>
                     <div className={`${styles.exerciseBox}`}>
                         <Image 
                         src={`/images/icons/bellSecondary.svg`} 

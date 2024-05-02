@@ -47,7 +47,7 @@ export default function MeditationExercises() {
                                 </div>
                                 <Image 
                                 src={`/images/icons/arrow.svg`} 
-                                alt="exercise icon" 
+                                alt="arrow icon" 
                                 width={20} 
                                 height={20} 
                                 className={styles.exerciseArrow}
