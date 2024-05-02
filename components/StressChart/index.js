@@ -1,4 +1,3 @@
-import styles from "./StressChart.module.css";
 import { Bar } from "react-chartjs-2";
 import {
         Chart as ChartJS,
@@ -33,22 +32,22 @@ export default function StressChart() {
                                 {
                                         label: '2020',
                                         data: [665100, 1648600, 2005000, 1952300, 289600],
-                                        borderColor: 'rgb(100, 162, 235)',
-                                        backgroundColor: 'rgba(200, 80, 100, 0.7)',
+                                        borderColor: '#000000',
+                                        backgroundColor: '#FAE033',
                                         barThickness: 8
                                 },
                                 {
                                         label: '2021',
                                         data: [715900, 1657000, 2039200, 1844500, 348500],
                                         borderColor: 'rgb(53, 162, 235)',
-                                        backgroundColor: 'rgba(100, 200, 80, 0.7)',
+                                        backgroundColor: '#49962E',
                                         barThickness: 8
                                 },
                                 {
                                         label: '2022',
                                         data: [796800, 1871700, 2134600, 1978600, 390100],
                                         borderColor: 'rgb(53, 162, 235)',
-                                        backgroundColor: 'rgba(80, 100, 200, 0.7)',
+                                        backgroundColor: '#B37F4D',
                                         barThickness: 8
 
                                 }

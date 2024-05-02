@@ -27,7 +27,7 @@ export default function LearnMore () {
                             <h2 className={styles.h2AboutUs}>About Stress</h2>
                             <div className={styles.aboutUsParagraph}>
                             <p>
-                            Everyone experiences stress, and it&apos;s just a part of our everyday life. How we handle stress varies from person to person. Exploring different strategies to deal with stress can be immensely beneficial. Below is the most common ways some people deal with stress. It would be a great idea to try these out to de-stress if you haven&apos;t tried them yet.
+                            Everyone experiences stress as part of their everyday life. How we handle stress varies for each person. The graph below depicts the number of people with perceived life stress by age groups and how it changes throughout the years.
                             </p>
                             <StressChart/>
                         </div>
