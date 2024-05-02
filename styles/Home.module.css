@@ -117,6 +117,108 @@
 	text-align: center;
 }
 
+.createProfile {
+	width: 14rem;
+	height: 2.5rem;
+	left: 6.44rem;
+	top: 7.69rem;
+	position: absolute;
+	text-align: center;
+	color: var(--black);
+	font-size: var(--headingTwo);
+	font-family: var(--merriweather);
+}
+
+.selectIcon {
+	width: 12.57813rem;
+	height: 1.9085rem;
+	left: 7.12rem;
+	top: 26.69rem;
+	position: absolute;
+	text-align: center;
+	color: black;
+	font-weight: bold;
+	font-size: var(--headingFour);
+	font-family: var(--nunito);
+}
+
+.chosenIcon {
+	width: 13.75rem;
+	height: 13.75rem;
+	border: 0.2rem solid var(--black);
+	border-radius: 50%;
+	margin-top: 11.38rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.onboardingIcon {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.nameBox {
+	width: 14.375rem;
+	height: 2.8125rem;
+	left: 6.37rem;
+	top: 38.62rem;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 0.15rem solid var(--black);
+	color: var(--dark-grey);
+	border-radius: 0.5rem;
+	background-color: var(--white);
+	font-size: var(--headingFive);
+	font-family: var(--nunito);
+	word-wrap: break-word;
+}
+
+#nameInput {
+	height: 100%;
+	border: none;
+	background: transparent;
+	font-size: inherit;
+	font-family: inherit;
+	outline: none;
+	padding: 0 10px;
+	box-sizing: border-box;
+}
+
+.iconContainer {
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	left: 0;
+	top: 490px;
+	padding: 0 20px;
+}
+
+.iconBox {
+	width: 150px;
+	height: 150px;
+	border-radius: 10px;
+	padding-right: 2.5rem;
+	margin-top: -2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.onboardingIcon {
+	width: 5.82938rem;
+	height: 5.82938rem;
+}
+
+.perfectButton {
+	margin-top: 20rem;
+	margin-left: 2rem;
+}
+
 /* home page */
 .mascotNormal {
 	margin-top: -1rem;
@@ -554,14 +656,8 @@
 	position: absolute;
 	left: 16px;
 	top: 506px;
-}
 
-.exerciseArrow {
-	position: relative;
-	right: 0px;
-}
-
-.mascotExercise {
+}.mascotExercise {
 	position: absolute;
 	left: 126px;
 	top: 131px;
