@@ -27,7 +27,6 @@
 	font-size: var(--headingTwo);
 	font-family: var(--nunito);
 	font-weight: 700;
-	text-decoration: none;
 }
 
 /*Dropdown Menu*/
@@ -35,13 +34,22 @@
 	background-color: var(--light-blue);
 	position: absolute;
 	left: 0%;
-	top: 7%;
-	height: 21%;
+	top: 8%;
+	height: 29%;
 	width: 35%;
-	border-radius: 10%;
-	margin-left: 7%;
-	border-color: var(--dark-turquoise);
-	border-style: solid;	
+	margin-left: 0%;
+	z-index: 11;
+	align-content: center;
+}
+
+.screenOverlay{
+	position: absolute;
+	top: 8%;
+	left: 0;
+	width: 100%;
+	height: 92%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 10;
 }
 
 .dropMenuLink{
@@ -49,24 +57,31 @@
 	align-items: center;
 	text-decoration: none;
 	color: var(--black);
-	margin-left: 10%;
+	margin-left: 21%;
 	
 }
 
 .dropMenuListStyle {
-	margin-top: 4%;
+	margin-top: 8%;
 	margin-bottom: 8%;
 	margin-right: 8%;
 }
 
-.dropMenuLink:hover {
-	background-color: var(--white);
-}
-
 .dropdownIcon {
-	margin-right: 8%;
+	margin-right: 10%;
 }
 
 .ulDropdownMenu {
 	list-style-type: none;
+}
+.dropMenuButton {
+	width: 100%;
+	background-color: transparent;
+	border-style: none;
+}
+
+.dropMenuButton:hover {
+	width: 100%;
+	background-color: var(--white);
+	border-style: none;
 }

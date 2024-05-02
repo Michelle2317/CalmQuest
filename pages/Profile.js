@@ -15,18 +15,26 @@ export default function Profile() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
             <main className={`${styles.main}`}>
+        
                 <div className={styles.mainContainer}>
-                <Navbar/>
-                <div className={styles.profileMainSection}>
+                    <Navbar/>
+                    <div className={styles.profileMainSection}>
+                    <Image
+                    src={`/images/onboarding/option1.svg`}
+                    alt="profile avatar"
+                    width="100"
+                    height="100"
+                    className={styles.profileAvatar}
+                    />
+                    
+                </div>
                 <Image
-                src={`/images/onboarding/option1.svg`}
-                alt="profile avatar"
-                width="100"
-                height="100"
-                className={styles.profileAvatar}
+                src={`/images/mascots/mascotUWU.svg`}
+                alt="profile UWU mascot"
+                width="177"
+                height="262"
+                className={styles.mascotNormal}
                 />
-                <label for="inputFiel"></label>
-            </div>
             
             <Tabbar/>
             </div>

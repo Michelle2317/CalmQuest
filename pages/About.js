@@ -4,6 +4,7 @@ import Link from "next/link";
 import styles from '@/styles/Home.module.css';
 import Head from "next/head";
 import ButtonPrimary from "@/components/ButtonPrimary";
+import Image from "next/image";
 
 export default function About () {
     return(
@@ -17,15 +18,15 @@ export default function About () {
             <main className={`${styles.main}`}>
                 <div className={styles.mainContainer}>
                 <Navbar/>
-                    <div className={styles.aboutUsContainer}>
+                    <div>
                         <div className={styles.goBackContainer}>
                             <Link href="/" className={styles.goBackLink}>
-                                <img src="/images/icons/left arrow.svg" className={styles.leftArrow}></img>
+                                <img src="/images/leftArrow.svg" className={styles.leftArrow}></img>
                                 Go Back
                             </Link>
                         </div>
-                            <h2 className={styles.h2AboutUs}>About Us</h2>
-                            <div className={styles.aboutUsParagraph}>
+                        <h2 className={styles.h2AboutUs}>About Us</h2>
+                        <div className={styles.aboutUsParagraph}>
                             <p>
                             CalmQuest is a web app to help people deal with mental health. 
                             It includes features such as a journal in which people can 
@@ -35,14 +36,24 @@ export default function About () {
                             frame or icon from the shop. For more experiences, the user 
                             can engage in mindfulness and meditation exercises.
                             </p>
-                            <div className={styles.row}>
+                            <div className={styles.rowAboutUs}>
                                 <Link href="/Contact" className={styles.contactButton}>
                                     <ButtonPrimary title="Contact Us"/>
                                 </Link>
-                                <Link href="/LearnMore" className={styles.contactButton}>
+                                
+                                <Link href="/LearnMore" className={styles.learnMoreButton}>
                                     <ButtonPrimary title="Learn More"/>
                                 </Link>
                             </div>
+                            <div className={styles.aboutUsMascot}>
+                                <Image
+                                    src={`/images/mascots/mascotNormal.svg`}
+                                    width="177"
+                                    height="262"
+                                    className={styles.aboutUsMascotNormal}
+                                />
+                            </div>
+                                
                         </div>
                     </div>
                 <Tabbar/>

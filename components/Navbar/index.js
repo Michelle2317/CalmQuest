@@ -9,6 +9,7 @@ export default function Navbar() {
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
     };
+
 	return (
 		<>
 			<div className={styles.navbar}>
@@ -21,85 +22,100 @@ export default function Navbar() {
 							className={styles.hamburgerMenuIcon}
 						/>
 					</div>
-				<Link href="/" className={styles.calmQuest}><div>CalmQuest</div></Link>
+				<div className={styles.calmQuest}>CalmQuest</div>
 			</div>
 			{isDropdownOpen && (
-                <div className={styles.dropdownMenu}>
-                    <ul className={styles.ulDropdownMenu}>
-                        <li className={styles.dropMenuListStyle}>
-							<Link href="/Shop" className={styles.dropMenuLink}>
-									<Image 
-										src={`/images/shopPrimary.svg`} 
-										alt="shop bag icon" 
-										width={20} 
-										height={20} 
-										className={styles.dropdownIcon}
-									/>
-									Shop
-							</Link>
-						</li>
-						<li className={styles.dropMenuListStyle}>
-							<Link href="/Exercise" className={styles.dropMenuLink}>
-									<Image 
-										src={`/images/icons/mindfulPrimary.svg`} 
-										alt="exercise icon" 
-										width={20} 
-										height={20} 
-										className={styles.dropdownIcon}
-									/>
-									Exercises
-							</Link>
-						</li>
-						<li className={styles.dropMenuListStyle}>
-							<Link href="/ParentQuiz" className={styles.dropMenuLink}>
-									<Image 
-										src={`/images/checkInPrimary.svg`} 
-										alt="check in icon" 
-										width={20} 
-										height={20} 
-										className={styles.dropdownIcon}
-									/>
-									Check-In
-							</Link>
-						</li>
-						<li className={styles.dropMenuListStyle}>
-							<Link href="/Profile" className={styles.dropMenuLink}>
-									<Image 
-										src={`/images/profilePrimary.svg`} 
-										alt="profile icon" 
-										width={20} 
-										height={20} 
-										className={styles.dropdownIcon}
-									/>
-									Profile
-							</Link>
-						</li>
-						<li className={styles.dropMenuListStyle}>
-							<Link href="/About" className={styles.dropMenuLink}>
-									<Image 
-										src={`/images/about.svg`} 
-										alt="about icon" 
-										width={20} 
-										height={20} 
-										className={styles.dropdownIcon}
-									/>
-									About
-							</Link>
-						</li>
-						<li className={styles.dropMenuListStyle}>
-							<Link href="/Settings" className={styles.dropMenuLink}>
-									<Image 
-										src={`/images/settings.svg`} 
-										alt="settings icon" 
-										width={20} 
-										height={20} 
-										className={styles.dropdownIcon}
-									/>
-									Settings
-							</Link>
-						</li>
-                    </ul>
-                </div>
+				<>
+					<div className={styles.screenOverlay} onClick={toggleDropdown}></div>
+						<div className={styles.dropdownMenu}>
+							<ul className={styles.ulDropdownMenu}>
+								<button className={styles.dropMenuButton}>
+									<li className={styles.dropMenuListStyle}>
+										<Link href="/Shop" className={styles.dropMenuLink}>
+												<Image 
+													src={`/images/shopPrimary.svg`} 
+													alt="shop bag icon" 
+													width={20} 
+													height={20} 
+													className={styles.dropdownIcon}
+												/>
+												Shop
+										</Link>
+									</li>
+								</button>
+								<button className={styles.dropMenuButton}>
+									<li className={styles.dropMenuListStyle}>
+										<Link href="/Exercise" className={styles.dropMenuLink}>
+												<Image 
+													src={`/images/icons/mindfulPrimary.svg`} 
+													alt="exercise icon" 
+													width={20} 
+													height={20} 
+													className={styles.dropdownIcon}
+												/>
+												Exercises
+										</Link>
+									</li>
+								</button>
+								<button className={styles.dropMenuButton}>
+									<li className={styles.dropMenuListStyle}>
+										<Link href="/ParentQuiz" className={styles.dropMenuLink}>
+												<Image 
+													src={`/images/checkInPrimary.svg`} 
+													alt="check in icon" 
+													width={20} 
+													height={20} 
+													className={styles.dropdownIcon}
+												/>
+												Check-In
+										</Link>
+									</li>
+								</button>
+								<button className={styles.dropMenuButton}>
+									<li className={styles.dropMenuListStyle}>
+										<Link href="/Profile" className={styles.dropMenuLink}>
+												<Image 
+													src={`/images/profilePrimary.svg`} 
+													alt="profile icon" 
+													width={20} 
+													height={20} 
+													className={styles.dropdownIcon}
+												/>
+												Profile
+										</Link>
+									</li>
+								</button>
+								<button className={styles.dropMenuButton}>
+									<li className={styles.dropMenuListStyle}>
+										<Link href="/About" className={styles.dropMenuLink}>
+												<Image 
+													src={`/images/about.svg`} 
+													alt="about icon" 
+													width={20} 
+													height={20} 
+													className={styles.dropdownIcon}
+												/>
+												About
+										</Link>
+									</li>
+								</button>
+								<button className={styles.dropMenuButton}>
+									<li className={styles.dropMenuListStyle}>
+										<Link href="/Settings" className={styles.dropMenuLink}>
+												<Image 
+													src={`/images/settings.svg`} 
+													alt="settings icon" 
+													width={20} 
+													height={20} 
+													className={styles.dropdownIcon}
+												/>
+												Settings
+										</Link>
+									</li>
+								</button>
+							</ul>
+						</div>
+				</>
             )}
 		</>
 	)

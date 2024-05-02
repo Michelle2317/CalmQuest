@@ -3,6 +3,7 @@ import Tabbar from "@/components/Tabbar";
 import Link from "next/link";
 import styles from '@/styles/Home.module.css';
 import Head from "next/head";
+import Form from "@/components/Form";
 
 
 export default function Contact() {
@@ -17,16 +18,21 @@ export default function Contact() {
             <main className={`${styles.main}`}>
                 <div className={styles.mainContainer}>
                 <Navbar/>
-                    <div className={styles.goBackContainer}>
-                        <Link href="/About">
-                            {/* <img src="/images/icons/left arrow.svg" className={styles.leftArrow}></img> */}
-                            Go Back
-                        </Link>
+                    <div>
+                        <div className={styles.goBackContainer}>
+                            <Link href="/" className={styles.goBackLink}>
+                                <img src="/images/leftArrow.svg" className={styles.leftArrow}></img>
+                                Go Back
+                            </Link>
+                        </div>
                         
                             <h2>Contact Us</h2><div className={styles.contactUs}>
                             <p>
                             We’re here to help and answer any questions you might have.
                             </p>
+
+                            <Form/>
+                            
                         </div>
                     </div>
                 <Tabbar/>

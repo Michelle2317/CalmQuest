@@ -573,15 +573,6 @@
 }
 
 /* About page */
-.aboutUsContainer {
-	padding-bottom: 10%;
-}
-
-.goBackContainer {
-	padding-left: 8%;
-	padding-bottom: 5%;
-}
-
 .goBackLink {
 	text-decoration: none;
 	color: var(--black);
@@ -592,16 +583,43 @@
 	height: 15px;
 }
 
-.aboutUsParagraph {
-	text-align: left;
-	margin-left: 8%;
-	margin-right: 8%;
-	padding-bottom: 100%;
-	margin-top: 5%;
+.goBackContainer {
+	margin-top: -10%;
+	margin-left: 7%;
 }
 
 .h2AboutUs {
 	text-align: center;
+	margin-top: 7%;
+	margin-bottom: 5%;
+	font-family: var(--merriweather);
+	font-size: var(--headingOne);
+}
+
+.aboutUsParagraph {
+	text-align: left;
+	margin-left: 8%;
+	margin-right: 8%;
+	font-family: var(--nunito);
+	font-size: var(--bodyRegular);
+	line-height: 1.3;
+}
+
+.rowAboutUs {
+	display: flex;
+	justify-content: center;
+	margin-top: 5%;
+	padding-top: 3%;
+}
+
+.contactButton {
+	padding-right: 5%;
+}
+
+.aboutUsMascot {
+	justify-content: center;
+	display: flex;
+	margin-top: 10%;
 }
 
 /* Profile */
