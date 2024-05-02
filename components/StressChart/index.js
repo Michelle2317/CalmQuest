@@ -84,10 +84,12 @@ export default function StressChart() {
                                         display: true,
                                         title: {
                                                 display: true,
-                                                text: "Number of people"
+                                                text: "Number of people",
                                         },
                                         ticks: {
-                                                autoSkip: false
+                                                autoSkip: false,
+                                                min: 0,
+                                                max: 2500000
                                         },
 
                                 }
@@ -99,7 +101,7 @@ export default function StressChart() {
         return (
                 <>
                         <div>
-                                <Bar data={chartData} options={chartOptions} style={{width: "1000px", height: "2000px"}}/>
+                                <Bar data={chartData} options={chartOptions} style={{width: "1500px", height: "2000px"}}/>
                         </div>
                 </>
         )
