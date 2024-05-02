@@ -70,7 +70,7 @@
 }
 
 .personalizeIcon {
-	padding-left: 5.5rem;
+	padding-left: 6rem;
 	padding-top: 14rem;
 	position: relative;
 }
@@ -78,15 +78,18 @@
 .features {
 	padding-top: 3rem;
 	text-align: center;
+	font-family: var(--merriweather);
+	font-size: var(--headingFour);
 }
 
 .featuresText {
 	padding-top: 2rem;
 	text-align: center;
+	font-size: var(--bodyLargeRegular);
 }
 
 .brainIcon {
-	padding-left: 3.5rem;
+	padding-left: 6rem;
 	padding-top: 14rem;
 	position: relative;
 }
@@ -94,15 +97,18 @@
 .featuresBrain {
 	padding-top: 3rem;
 	text-align: center;
+	font-family: var(--merriweather);
+	font-size: var(--headingFour);
 }
 
 .featuresTextBrain {
-	padding-top: 2rem;
+	padding-top: 1rem;
 	text-align: center;
+	font-size: var(--bodyLargeRegular);
 }
 
 .calendarIcon {
-	padding-left: 3.5rem;
+	padding-left: 5rem;
 	padding-top: 14rem;
 	position: relative;
 }
@@ -110,11 +116,14 @@
 .featuresCalendar {
 	padding-top: 3rem;
 	text-align: center;
+	font-family: var(--merriweather);
+	font-size: var(--headingFour);
 }
 
 .featuresTextCalendar {
 	padding-top: 2rem;
 	text-align: center;
+	font-size: var(--bodyLargeRegular);
 }
 
 .createProfile {
@@ -649,7 +658,6 @@
 	width: 370px;
 	border-radius: 8px;
 	padding: 14px;
-
 }
 
 .exerciseBoxText {
@@ -674,8 +682,8 @@
 	position: absolute;
 	left: 16px;
 	top: 506px;
-
-}.mascotExercise {
+}
+.mascotExercise {
 	position: absolute;
 	left: 126px;
 	top: 131px;
@@ -683,8 +691,8 @@
 
 .exerciseBold {
 	color: 'black';
-	font-Family: var(--nunito);
-	font-Weight: 700;
+	font-family: var(--nunito);
+	font-weight: 700;
 }
 
 /* Five Sense */
