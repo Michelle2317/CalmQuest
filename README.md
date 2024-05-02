@@ -6,7 +6,7 @@
 - Cindy Tan
   
 ## Description
-- Our Web App (CalmQuest) is about creating a web app to help people deal with mental health. It includes features such as a journal in which people can express themselves, a well-being tracker, and motivational activities. The web app also includes a currency reward for completing activities, in which the user can buy an avatar frame or icon from the shop. For more experiences, the user can engage in mindfulness and meditation exercises.
+- CalmQuest is a mental wellness web app. Users can express themselves, complete daily check-ins, and mindfulness and meditation exercises. The web app also includes a currency reward for completing daily check-in, in which the user can buy an avatar frame or icon from the shop. 
 
 ## Packages Installed
 Node.js:
