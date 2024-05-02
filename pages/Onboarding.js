@@ -116,9 +116,10 @@ export default function Onboarding() {
           />
         </div>
       </div>
-      <div className={styles.nameBox} onClick={() => document.getElementById('inputName').focus()}>
+      <div onClick={() => document.getElementById('inputName').focus()}>
         <input 
           id="inputName" 
+          className={styles.nameInput}
           type="text" 
           value={inputName} 
           onChange={handleInputChange} 

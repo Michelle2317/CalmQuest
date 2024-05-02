@@ -167,8 +167,8 @@
 	max-height: 100%;
 }
 
-.nameBox {
-	width: 14.375rem;
+.nameInput {
+	width: 14rem;
 	height: 2.8125rem;
 	left: 6.37rem;
 	top: 38.62rem;
@@ -176,24 +176,13 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
 	border: 0.15rem solid var(--black);
-	color: var(--dark-grey);
+	color: var(--black);
 	border-radius: 0.5rem;
 	background-color: var(--white);
 	font-size: var(--headingFive);
 	font-family: var(--nunito);
-	word-wrap: break-word;
-}
-
-#nameInput {
-	height: 100%;
-	border: none;
-	background: transparent;
-	font-size: inherit;
-	font-family: inherit;
-	outline: none;
-	padding: 0 10px;
-	box-sizing: border-box;
 }
 
 .iconContainer {
