@@ -1,16 +1,14 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import ButtonPrimary from "@/components/ButtonPrimary";
-import ButtonSecondary from "@/components/ButtonSecondary";
 import Image from "next/image";
 import { useState } from "react";
-import Link from "next/link";
 
 export default function Onboarding() {
   const [currentScreen, setCurrentScreen] = useState(0);
-
-  const [chosenIcon, setChosenIcon] = useState(null);
+  const [chosenIcon, setChosenIcon] = useState("/images/onboarding/option3.svg");
   const [inputName, setInputName] = useState('');
+  const [nameValid, setNameValid] = useState('');
 
   const getStartedClick = () => {
     setCurrentScreen(1);
@@ -19,118 +17,37 @@ export default function Onboarding() {
   const nextClick = () => {
     if (currentScreen < 4) {
       setCurrentScreen(currentScreen + 1);
+    } else if (currentScreen === 4) {
+      if (!inputName.trim()) {
+        setNameValid('Please enter your name');
+      } else {
+        setNameValid('');
+      }
     }
   };
+
+  const perfectClick = () => {
+    if (!inputName.trim()) {
+      setNameValid('Please enter your name');
+    } else {
+      setNameValid('');
+      window.location.href = "/"; 
+    }
+  }
 
   const handleIconClick = (icon) => {
     setChosenIcon(icon);
   };
 
   const handleInputChange = (e) => {
-    setInputName(e.target.value);
+    setInputName(e.target.value.slice(0, 40)); //limit input to 40 characters
+    if (!e.target.value.trim()) {
+      setNameValid('Please enter your name');
+    } else {
+      setNameValid('');
+    }
   };
 
-  const screen1 = () => (
-    <div>
-      <Image 
-        src={`/images/onboarding/personalize.svg`} 
-        alt="personalize icon" 
-        width={150} 
-        height={150} 
-        className={styles.personalizeIcon}
-      />
-      <h2 className={styles.features}>Personalize your experience</h2>
-      <p className={styles.featuresText}>Select and unlock special <br /> icons, and frames</p>
-    </div>
-  );
-
-  const screen2 = () => (
-    <div>
-      <Image 
-        src={`/images/onboarding/brain.svg`} 
-        alt="brain icon" 
-        width={150} 
-        height={150} 
-        className={styles.brainIcon}
-      />
-      <h2 className={styles.featuresBrain}>Mindfulness and<br />Meditation Exercises</h2>
-      <p className={styles.featuresTextBrain}>Explore quick and calming <br />  mindfulness and meditation exercises</p>
-    </div>
-  );
-
-  const screen3 = () => (
-    <div>
-      <Image 
-        src={`/images/onboarding/calendar.svg`} 
-        alt="calendar icon" 
-        width={150} 
-        height={150} 
-        className={styles.calendarIcon}
-      />
-      <h2 className={styles.featuresCalendar}>Check-In and Rewards</h2>
-      <p className={styles.featuresTextCalendar}>Check in on your mental health and <br /> unlock rewards</p>
-    </div>
-  );
-
-  const screen4 = () => (
-    <div className={styles.createProfilecontainer}>
-      <div className={styles.createProfile}>Create Profile</div>
-      <div className={styles.selectIcon}>Select an Icon Below</div>
-      <div className={styles.chosenIcon}>
-        {chosenIcon && (
-          <Image 
-            src={chosenIcon} 
-            alt="Chosen Icon" 
-            width={150} 
-            height={150} 
-            className={styles.onboardingIcon}
-          />
-        )}
-      </div>
-      <div className={styles.iconContainer}>
-        <div className={styles.iconBox} onClick={() => handleIconClick(`/images/onboarding/option1.svg`)}>
-          <Image 
-            src={`/images/onboarding/option1.svg`} 
-            alt="Option 1" 
-            width={150} 
-            height={150} 
-            className={styles.onboardingIcon}
-          />
-        </div>
-        <div className={styles.iconBox} onClick={() => handleIconClick(`/images/onboarding/option2.svg`)}>
-          <Image 
-            src={`/images/onboarding/option2.svg`} 
-            alt="Option 2" 
-            width={150} 
-            height={150} 
-            className={styles.onboardingIcon}
-          />
-        </div>
-        <div className={styles.iconBox} onClick={() => handleIconClick(`/images/onboarding/option3.svg`)}>
-          <Image 
-            src={`/images/onboarding/option3.svg`} 
-            alt="Option 3" 
-            width={150} 
-            height={150} 
-            className={styles.onboardingIcon}
-          />
-        </div>
-      </div>
-      <div onClick={() => document.getElementById('inputName').focus()}>
-        <input 
-          id="inputName" 
-          className={styles.nameInput}
-          type="text" 
-          value={inputName} 
-          onChange={handleInputChange} 
-          placeholder="Enter your name" 
-        />
-      </div>
-      <Link href="/">
-        <ButtonPrimary className={styles.perfectButton} title="Perfect"></ButtonPrimary>
-      </Link>  
-    </div>
-  );
   return (
     <>
       <Head>
@@ -140,32 +57,127 @@ export default function Onboarding() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main}`}>
-      <div className={`${styles.mainContainer} ${styles.onboardingContainer}`}>
+        <div className={`${styles.mainContainer} ${styles.onboardingContainer}`}>
           {currentScreen === 0 && (
-            <Image
-              src={`/images/onboarding/verticalLogo.svg`}
-              alt="vertical logo"
-              width={258}
-              height={220}
-              className={styles.verticalLogo}
-            />
+            <>
+              <Image
+                src={`/images/onboarding/verticalLogo.svg`}
+                alt="vertical logo"
+                width={258}
+                height={220}
+                className={styles.verticalLogo}
+              />
+              <ButtonPrimary className={styles.getStartedButton} onClick={getStartedClick} title="Get Started"></ButtonPrimary>
+            </>
           )}
-          {currentScreen === 0 && (
-            <ButtonPrimary className={styles.getStartedButton} onClick={getStartedClick} title="Get Started"></ButtonPrimary>
+          {currentScreen === 1 && (
+            <div>
+              <Image 
+                src={`/images/onboarding/personalize.svg`} 
+                alt="personalize icon" 
+                width={150} 
+                height={150} 
+                className={styles.personalizeIcon}
+              />
+              <h2 className={styles.features}>Personalize your experience</h2>
+              <p className={styles.featuresText}>Select and unlock special <br /> icons, and frames</p>
+            </div>
           )}
-          {currentScreen === 1 && screen1()}
-          {currentScreen === 2 && screen2()}
-          {currentScreen === 3 && screen3()}
-          {currentScreen === 4 && screen4()}
+          {currentScreen === 2 && (
+            <div>
+              <Image 
+                src={`/images/onboarding/brain.svg`} 
+                alt="brain icon" 
+                width={150} 
+                height={150} 
+                className={styles.brainIcon}
+              />
+              <h2 className={styles.featuresBrain}>Mindfulness and<br />Meditation Exercises</h2>
+              <p className={styles.featuresTextBrain}>Explore quick and calming <br />  mindfulness and meditation exercises</p>
+            </div>
+          )}
+          {currentScreen === 3 && (
+            <div>
+              <Image 
+                src={`/images/onboarding/calendar.svg`} 
+                alt="calendar icon" 
+                width={150} 
+                height={150} 
+                className={styles.calendarIcon}
+              />
+              <h2 className={styles.featuresCalendar}>Check-In and Rewards</h2>
+              <p className={styles.featuresTextCalendar}>Check in on your mental health and <br /> unlock rewards</p>
+            </div>
+          )}
+          {currentScreen === 4 && (
+            <div className={styles.createProfilecontainer}>
+              <div className={styles.createProfile}>Create Profile</div>
+              <div className={styles.selectIconText}>Select an Icon Below</div>
+              <div className={styles.chosenIcon}>
+                <Image 
+                  src={chosenIcon} 
+                  alt="Chosen Icon" 
+                  width={150} 
+                  height={150} 
+                  className={styles.onboardingIcon}
+                />
+                <div className={styles.chosenIconCircleOutline}></div>
+              </div>
+              <div className={styles.iconContainer}>
+              <div className={`${styles.iconBox} ${chosenIcon === "/images/onboarding/option1.svg" ? styles.selectedIcon : ""}`} onClick={() => handleIconClick("/images/onboarding/option1.svg")}>
+                  <Image 
+                    src={`/images/onboarding/option1.svg`} 
+                    alt="Option 1" 
+                    width={150} 
+                    height={150} 
+                    className={styles.onboardingIcon}
+                  />
+                </div>
+                <div className={`${styles.iconBox} ${chosenIcon === "/images/onboarding/option2.svg" ? styles.selectedIcon : ""}`} onClick={() => handleIconClick("/images/onboarding/option2.svg")}>
+                  <Image 
+                    src={`/images/onboarding/option2.svg`} 
+                    alt="Option 2" 
+                    width={150} 
+                    height={150} 
+                    className={styles.onboardingIcon}
+                  />
+                </div>
+                <div className={`${styles.iconBox} ${chosenIcon === "/images/onboarding/option3.svg" ? styles.selectedIcon : ""}`} onClick={() => handleIconClick("/images/onboarding/option3.svg")}>
+                  <Image 
+                    src={`/images/onboarding/option3.svg`} 
+                    alt="Option 3" 
+                    width={150} 
+                    height={150} 
+                    className={styles.onboardingIcon}
+                  />
+                </div>
+              </div>
+              <div>
+                <input 
+                  id="inputName" 
+                  className={styles.nameInput}
+                  type="text" 
+                  value={inputName} 
+                  onChange={handleInputChange} 
+                  placeholder="Enter your name" 
+                />
+                {nameValid && <p className={styles.requiredName}>*{nameValid}</p>}
+              </div>
+                <ButtonPrimary 
+                  className={styles.perfectButton} 
+                  onClick={perfectClick} 
+                  disabled={!inputName.trim()}
+                  title="Perfect"
+                ></ButtonPrimary>
+            </div>
+          )}
           {currentScreen > 0 && currentScreen < 4 && (
             <ButtonPrimary className={styles.getStartedButton} onClick={nextClick} title="Next"></ButtonPrimary>
           )}
           {currentScreen === 6 && (
-            <Link href="/">
-              <ButtonPrimary className={styles.getStartedButton} title="Let's Go!"></ButtonPrimary>
-            </Link>
+            <ButtonPrimary className={styles.getStartedButton} title="Let's Go!"></ButtonPrimary>
           )}
-        </div>        
+        </div> 
       </main>
     </>
   )

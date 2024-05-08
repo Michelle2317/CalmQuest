@@ -33,7 +33,7 @@
 
 /* Onboarding */
 .onboardingContainer {
-	background-color: var(--ombre);
+	background-color: var(--old-blue);
 }
 
 .verticalLogo {
@@ -42,34 +42,18 @@
 
 .getStartedButton {
 	color: var(--white);
-	font-size: var(--regularButton);
-	font-family: var(--nunito);
-	font-weight: 400;
+	font: var(--regularButton) var(--nunito) 400;
 	width: 160px;
 	height: 48px;
 	background: var(--dark-turquoise);
-	border: 1px var(--dark-turquoise) solid;
+	border: 1px solid var(--dark-turquoise);
 	border-radius: 20px;
-	justify-content: center;
-	align-items: center;
-	margin-left: 0.5rem;
 	display: inline-flex;
 	margin-bottom: 15rem;
 }
 
 .getStartedButton:hover {
-	color: var(--dark-turquoise);
-	font-size: var(--regularButton);
-	font-family: var(--nunito);
-	font-weight: 400;
-	width: 160px;
-	height: 48px;
 	background: var(--light-blue);
-	border: 1px var(--dark-turquoise) solid;
-	border-radius: 20px;
-	justify-content: center;
-	align-items: center;
-	display: inline-flex;
 }
 
 .personalizeIcon {
@@ -141,7 +125,7 @@
 	font-family: var(--merriweather);
 }
 
-.selectIcon {
+.selectIconText {
 	width: 14.56rem;
 	height: 1.9085rem;
 	left: 6rem;
@@ -155,18 +139,11 @@
 }
 
 .chosenIcon {
-	width: 13.75rem;
-	height: 13.75rem;
 	border-radius: 50%;
 	margin-top: 11.38rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-.onboardingIcon {
-	max-width: 100%;
-	max-height: 100%;
 }
 
 .nameInput {
@@ -201,7 +178,6 @@
 .iconBox {
 	width: 150px;
 	height: 150px;
-	border-radius: 10px;
 	padding-right: 2.5rem;
 	margin-top: -2rem;
 	display: flex;
@@ -212,11 +188,22 @@
 .onboardingIcon {
 	width: 13.75rem;
 	height: 13.75rem;
+	max-width: 100%;
+	max-height: 100%;
 }
 
 .perfectButton {
 	margin-top: 20rem;
 	margin-left: 2rem;
+}
+
+.requiredName {
+	color: var(--red);
+	font-size: var(--bodyRegular);
+	font-family: var(--nunito);
+	margin-top: 17rem;
+	position: absolute;
+	padding-left: 1.5rem;
 }
 
 /* home page */
@@ -260,7 +247,7 @@
 .checkInText {
 	font-family: var(--nunito);
 	font-size: var(--bodyRegular);
-	padding-top: 1.6rem;
+	padding-top: 1.5rem;
 	padding-left: 1.5rem;
 	width: 45%;
 }
