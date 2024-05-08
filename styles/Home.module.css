@@ -28,6 +28,9 @@
 	flex-direction: row;
 }
 
+.animationContainer {
+}
+
 /* Onboarding */
 .onboardingContainer {
 	background-color: var(--ombre);
