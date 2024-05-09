@@ -5,36 +5,10 @@ import Tabbar from "@/components/Tabbar";
 import Image from "next/image";
 import Link from "next/link"
 import ButtonPrimary from "@/components/ButtonPrimary";
-import { useState, createRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
-// import Lottie from "lottie-web";
 
 export default function Home() {
-  const [showButton, setShowButton] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowButton(true);
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, []);
-  
-  // let animationContainer = createRef();
-
-  // useEffect(() => {
-  //   const anim = Lottie.loadAnimation({
-  //     container: animationContainer.current,
-  //     renderer: "svg",
-  //     loop: true,
-  //     autoplay: true,
-  //     path: "/animations/calmquest-logo.json"
-  //   })
-    
-  //   return () => anim.destroy();
-  // }, [])
-
-
   const [data, setData] = useState();
 
   var apiKey = process.env.NEXT_PUBLIC_API;
@@ -67,10 +41,6 @@ export default function Home() {
       </Head>
       <main className={`${styles.main}`}>
         <div className={styles.mainContainer}>
-          {/* <div className={styles.animationContainer} ref={animationContainer}></div>
-          {showButton && (
-          <ButtonPrimary className={styles.getStartedButton} title="Get Started"></ButtonPrimary>
-          )} */}
           <Navbar />
           <div className={styles.mainContent}>
             <Image
