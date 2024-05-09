@@ -610,10 +610,117 @@
 }
 
 /* Profile */
+.mascotProfilePage {
+	position: absolute;
+	margin-top: 42rem;
+	padding-left: 5rem;
+}
 
-.profileMainSection {
-	margin-left: -60%;
-	margin-top: -40%;
+.profileIcon {
+	margin-right: 1rem;
+}
+
+.profileContainer {
+	display: flex;
+	align-items: center;
+	margin-top: -32rem;
+	margin-left: -4rem;
+}
+
+.nameContainer {
+	display: flex;
+	align-items: center;
+}
+
+.name {
+	margin-top: -2rem;
+}
+
+.editName {
+	position: absolute;
+	margin-top: 2rem;
+	margin-left: 9rem;
+}
+
+.customizeButton {
+	position: absolute;
+	margin-top: 4rem;
+	margin-left: -16.5rem;
+	width: 103px;
+	height: 36px;
+}
+
+/* ChangeProfile page */
+.customizeContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+}
+
+.currentImage {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.imageWithFrame {
+	position: relative;
+	width: 112px;
+	height: 112px;
+}
+
+.frame {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 112px;
+	height: 112px;
+	z-index: 1;
+}
+
+.avatar {
+	position: absolute;
+	top: 9px;
+	left: 9px;
+	width: 94px;
+	height: 94px;
+	z-index: 2;
+}
+
+.imageGrid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.imageItem {
+	cursor: pointer;
+	margin: 5px;
+}
+
+.customizeSelected {
+	border: 2px solid red;
+}
+
+.customizeButtons {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.popup {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+	padding: 20px;
+	border-radius: 5px;
+	z-index: 9999;
+}
+
+.popupContent {
+	text-align: center;
 }
 
 /*Exercise*/
@@ -676,7 +783,7 @@
 }
 
 .goBackExerciseContainer {
-	position: absolute;;
+	position: absolute;
 	left: 16px;
 	top: 89px;
 }

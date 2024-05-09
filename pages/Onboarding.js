@@ -3,8 +3,10 @@ import styles from "@/styles/Home.module.css";
 import ButtonPrimary from "@/components/ButtonPrimary";
 import Image from "next/image";
 import { useState } from "react";
+import { useRouter } from 'next/router';
 
 export default function Onboarding() {
+  const router = useRouter();
   const [currentScreen, setCurrentScreen] = useState(0);
   const [chosenIcon, setChosenIcon] = useState("/images/onboarding/option3.svg");
   const [inputName, setInputName] = useState('');
@@ -31,7 +33,10 @@ export default function Onboarding() {
       setNameValid('Please enter your name');
     } else {
       setNameValid('');
-      window.location.href = "/"; 
+      router.push({
+        pathname: '/',
+        query: { name: inputName, icon: chosenIcon },
+      });
     }
   }
 
