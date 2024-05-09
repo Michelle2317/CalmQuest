@@ -7,8 +7,11 @@ import Link from "next/link"
 import ButtonPrimary from "@/components/ButtonPrimary";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { useRouter } from "next/router";
 
 export default function Home() {
+  const router = useRouter();
+  const { name } = router.query;
   const [data, setData] = useState();
 
   var apiKey = process.env.NEXT_PUBLIC_API;
@@ -53,7 +56,7 @@ export default function Home() {
           </div>
           <div className={styles.helloContainer}>
             <div className={styles.helloContainerLeft}>
-              <h1 className={styles.mainHello}>Hello Lorem</h1>
+              <h1 className={styles.mainHello}>Hello {name}</h1>
               <div className={styles.mainQuote}>
                 {
                   data && data.map((d,index) => {
