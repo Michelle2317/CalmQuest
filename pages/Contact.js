@@ -19,14 +19,15 @@ export default function Contact() {
                 <div className={styles.mainContainer}>
                 <Navbar/>
                     <div>
-                        <div className={styles.goBackContainer}>
-                            <Link href="/" className={styles.goBackLink}>
+                        <div className={styles.goBackContactUs}>
+                            <Link href="/About" className={styles.goBackLink}>
                                 <img src="/images/leftArrow.svg" className={styles.leftArrow}></img>
                                 Go Back
                             </Link>
                         </div>
                         
-                            <h2>Contact Us</h2><div className={styles.contactUs}>
+                            <h2 className={styles.contactUsH2}>Contact Us</h2>
+                            <div className={styles.contactUs}>
                             <p>
                             We’re here to help and answer any questions you might have.
                             </p>

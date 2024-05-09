@@ -18,9 +18,9 @@ export default function LearnMore () {
                 <div className={styles.mainContainer}>
                 <Navbar/>
                     <div className={styles.aboutUsContainer}>
-                        <div className={styles.goBackContainer}>
+                    <div className={styles.goBackContactUs}>
                             <Link href="/About" className={styles.goBackLink}>
-                                <img src="/images/icons/left arrow.svg" className={styles.leftArrow}></img>
+                                <img src="/images/leftArrow.svg" className={styles.leftArrow}></img>
                                 Go Back
                             </Link>
                         </div>

@@ -1,0 +1,85 @@
+.formContainer {
+    width: 310px;
+    margin-top: 10%;
+    padding: 20px;
+    margin-right: 6%;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.nameContainer {
+    display: flex;
+}
+
+.nameField {
+    margin-bottom: 10px;
+}
+
+.labelName {
+    display: flex;
+    font-weight: bold;
+    margin-bottom: 5px;
+    justify-content: left;
+    padding-left: 12%;
+}
+
+.labelPhone,
+.labelEmail,
+.labelMessage {
+    display:flex;
+    font-weight: bold;
+    margin-bottom: 5px;
+    justify-content: left;
+    padding-left: 7%;
+}
+
+.firstInput {
+    width: 65%;
+    padding: 8px;
+    margin-bottom: 5%;
+    border: 1px solid var(--black);
+    border-radius: 4px;
+}
+
+.phoneInput,
+.emailInput, 
+.messageTextarea {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 5%;
+    border: 1px solid var(--black);
+    
+}
+
+.submitButton {
+    width: 50%;
+    cursor: pointer;
+    /* transition: background-color 0.3s ease; */
+}
+
+.messageTextarea {
+    overflow-y: auto;
+    max-height: 200px;
+    max-width: 80%;
+    min-width: 80%;
+    
+}
+
+.successfulMessage {
+    width: 310px;
+    margin-top: 10%;
+    padding: 20px;
+    margin-right: 6%;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    align-content: center;
+    height:400px;
+}
+
+.checkConfirm {
+    width: 50px;
+}

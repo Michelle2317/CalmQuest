@@ -864,3 +864,119 @@
 .blueBackground {
 	background-color: var(--light-blue);
 }
+
+/* Contact Us */
+.contactUs {
+	padding-left: 10%;
+	padding-right: 5%;
+}
+
+.contactUsH2 {
+	margin-left: 10%;
+	margin-bottom: 10%;
+	/* font-family: var("Nunito";); */
+}
+
+.goBackContactUs {
+	padding-bottom: 10%;
+	margin-left: 8%;
+
+}
+
+/* Languages */
+
+.goBackLanguages {
+	margin-right: 69%;
+	padding-bottom: 10%;
+	margin-top: -54%;
+}
+
+.languagesH2 {
+	font-family: var(--merriweather);
+	font-size: var(--headingTwo);
+	font-weight: lighter;
+	margin-bottom: 15%;
+	margin-top: -150%;
+}
+
+.langSetContainer {
+	text-align: center;
+	padding-right: 45%;
+	
+}
+
+.buttonText {
+	font-family: var(--nunito);
+	font-weight: bold;
+	font-size: var(--bodyLargeRegular);
+}
+
+.whichLang {
+	margin-bottom: 2%;
+	display: flex;
+	align-items: center;
+}
+
+.langType {
+	width: 40px;
+	height: 27px;
+    cursor: pointer;
+}
+
+.langStyling {
+	font-family: var(--nunito);
+	font-size: var(--bodyRegular);
+}
+
+/* Language French */
+
+.goBackFrench {
+	margin-top: -57%;
+	margin-left: -64%;
+}
+
+.frenchText {
+	width: 280px;
+	font-weight: bold;
+}
+
+.frenchText:hover {
+	width: 280px;
+	font-weight: bold;
+}
+
+.frenchParagraph {
+	margin-bottom: 10%;
+	font-family: var(--nunito);
+	font-weight: bold;
+	font-size: var(--bodyLargeRegular);
+	text-align: center;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.frenchSetContainer {
+	display: flex;
+	flex-direction: column;
+	margin-top: -20%;
+	align-items: center;
+}
+
+.frenchCheckConfirm {
+	display: flex;
+	width: 80px;
+	margin-bottom: 10%;
+	
+}
+
+.frenchMainContainer {
+	justify-content: center;
+}
+
+/* Settings */
+
+.changeLanguageContainer {
+	margin-top: -160%;
+	background-color: var(--dark-grey);
+	
+}
