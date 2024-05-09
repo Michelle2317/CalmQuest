@@ -840,3 +840,27 @@
 	top: 657px;
 	left: 96px;
 }
+
+.yellowBackground {
+	background-color: var(--light-yellow);
+}
+
+.greenBackground {
+	background-color: var(--light-green);
+}
+
+.purpleBackground {
+	background-color: var(--light-purple);
+}
+
+.redBackground {
+	background-color: var(--light-red);
+}
+
+.peachBackground {
+	background-color: var(--peach);
+}
+
+.blueBackground {
+	background-color: var(--light-blue);
+}

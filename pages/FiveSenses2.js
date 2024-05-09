@@ -29,7 +29,7 @@ export default function FiveSenses2() {
                 <h2 className={`${styles.fiveSenseText}`}>Five Senses Exercise</h2>
                 <div className={`${styles.fiveSenseList}`}>
 
-                    <div className={`${styles.exerciseBox}`}>
+                    <div className={`${styles.exerciseBox} ${styles.peachBackground}`}>
                         <Image 
                         src={`/images/icons/nose.svg`} 
                         alt="brown nose icon" 
@@ -43,7 +43,7 @@ export default function FiveSenses2() {
                             </div>
                         </div>
                     </div>
-                    <div className={`${styles.exerciseBox}`}>
+                    <div className={`${styles.exerciseBox} ${styles.redBackground}`}>
                         <Image 
                         src={`/images/icons/mouth.svg`} 
                         alt="red mouths icon" 
@@ -57,7 +57,7 @@ export default function FiveSenses2() {
                             </div>
                         </div>
                     </div>
-                    <div className={`${styles.exerciseBox}`}>
+                    <div className={`${styles.exerciseBox} ${styles.blueBackground}`}>
                         <p><span className={styles.exerciseBold}>Great work completing the exercise!</span>
                         </p>
                     </div>

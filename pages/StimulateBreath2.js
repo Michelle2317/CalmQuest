@@ -31,7 +31,7 @@ export default function StimulateBreath2() {
                 <div className={`${styles.fiveSenseList}`}>
 
 
-                    <div className={`${styles.exerciseBox}`}>
+                    <div className={`${styles.exerciseBox} ${styles.yellowBackground}`}>
                         <Image 
                         src={`/images/icons/1.svg`} 
                         alt="Number 1 Icon" 
@@ -45,7 +45,7 @@ export default function StimulateBreath2() {
                             </div>
                         </div>
                     </div>
-                    <div className={`${styles.exerciseBox}`}>
+                    <div className={`${styles.exerciseBox} ${styles.greenBackground}`}>
                         <Image 
                         src={`/images/icons/2.svg`} 
                         alt="Number 2 Icon" 
@@ -59,7 +59,7 @@ export default function StimulateBreath2() {
                             </div>
                         </div>
                     </div>
-                    <div className={`${styles.exerciseBox}`}>
+                    <div className={`${styles.exerciseBox} ${styles.purpleBackground}`}>
                         <Image 
                         src={`/images/icons/3.svg`} 
                         alt="Number 3 Icon" 
@@ -73,7 +73,7 @@ export default function StimulateBreath2() {
                             </div>
                         </div>
                     </div>
-                    <div className={`${styles.exerciseBox}`}>
+                    <div className={`${styles.exerciseBox} ${styles.peachBackground}`}>
                         <Image 
                         src={`/images/icons/4.svg`} 
                         alt="Number 4 Icon" 
@@ -87,7 +87,7 @@ export default function StimulateBreath2() {
                             </div>
                         </div>
                     </div>
-                    <div className={`${styles.exerciseBox}`}>
+                    <div className={`${styles.exerciseBox} ${styles.blueBackground}`}>
                         <p><span className={styles.exerciseIntroBold}>Great work completing the exercise! You should be feeling invigorated now!</span>
                         </p>
                     </div>

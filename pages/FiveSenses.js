@@ -32,12 +32,12 @@ export default function FiveSenses() {
                         <p><span className={styles.exerciseIntroBold}>This exercise provides guidelines on practising mindfulness quickly in nearly any situation. All that is needed is to notice something you are experiencing with each of the five senses.</span>
                         </p>
                     </div>
-                    <div className={`${styles.exerciseBox}`}>
+                    <div className={`${styles.exerciseBox} ${styles.blueBackground}`}>
                         <p><span className={styles.exerciseBold}>Follow these to practice the Five Senses:</span>
                         </p>
                     </div>
 
-                    <div className={`${styles.exerciseBox}`}>
+                    <div className={`${styles.exerciseBox} ${styles.yellowBackground}`}>
                         <Image 
                         src={`/images/icons/fiveSenseEye.svg`} 
                         alt="yellow eye icon" 
@@ -51,7 +51,7 @@ export default function FiveSenses() {
                             </div>
                         </div>
                     </div>
-                    <div className={`${styles.exerciseBox}`}>
+                    <div className={`${styles.exerciseBox} ${styles.greenBackground}`}>
                         <Image 
                         src={`/images/icons/hand.svg`} 
                         alt="green hand icon" 
@@ -65,7 +65,7 @@ export default function FiveSenses() {
                             </div>
                         </div>
                     </div>
-                    <div className={`${styles.exerciseBox}`}>
+                    <div className={`${styles.exerciseBox} ${styles.purpleBackground}`}>
                         <Image 
                         src={`/images/icons/ear.svg`} 
                         alt="purple ear icon" 
