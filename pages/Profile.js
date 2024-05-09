@@ -4,7 +4,7 @@ import Tabbar from "@/components/Tabbar";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import ButtonPrimary from "@/components/ButtonPrimary";
+import ButtonRegular from "@/components/ButtonRegular";
 
 export default function Profile() {
     const router = useRouter();
@@ -37,7 +37,7 @@ export default function Profile() {
                                 <div className={styles.editName}>Edit Name</div>
                             </div>
                         )}
-                        <ButtonPrimary className={styles.customizeButton} title="Customize" onClick={() => router.push('/ChangeProfile')}></ButtonPrimary>
+                        <ButtonRegular className={styles.customizeButton} title="Customize" onClick={() => router.push('/ChangeProfile')}></ButtonRegular>
                         <Image
                             src={`/images/mascots/mascotUWU.svg`}
                             alt="profile UWU mascot"
