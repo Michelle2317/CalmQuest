@@ -15,24 +15,21 @@ export default function ChangeProfile() {
         { id: 1, imageUrl: '/images/avatars/seed.svg' },
         { id: 2, imageUrl: '/images/avatars/sprout.svg' },
         { id: 3, imageUrl: '/images/avatars/sunflower.svg' },
-        { id: 4, imageUrl: '/images/avatars/seed.svg' },
-        { id: 5, imageUrl: '/images/avatars/seed.svg' },
-        { id: 6, imageUrl: '/images/avatars/seed.svg' },
-        { id: 7, imageUrl: '/images/avatars/seed.svg' },
-        { id: 8, imageUrl: '/images/avatars/seed.svg' },
-        { id: 9, imageUrl: '/images/avatars/seed.svg' }
+        { id: 4, imageUrl: '/images/avatars/crown.svg' },
+        { id: 5, imageUrl: '/images/avatars/clover.svg' },
+        { id: 6, imageUrl: '/images/avatars/glasses.svg' },
+        { id: 7, imageUrl: '/images/avatars/asl-love.svg' },
+        { id: 8, imageUrl: '/images/avatars/star.svg' },
+        { id: 9, imageUrl: '/images/avatars/tulip.svg' }
     ];
 
     const frames = [
-        { id: 1, imageUrl: '/images/avatars/sunflower.svg' },
-        { id: 2, imageUrl: '/images/avatars/sprout.svg' },
-        { id: 3, imageUrl: '/images/avatars/seed.svg' },
-        { id: 4, imageUrl: '/images/avatars/seed.svg' },
-        { id: 5, imageUrl: '/images/avatars/seed.svg' },
-        { id: 6, imageUrl: '/images/avatars/seed.svg' },
-        { id: 7, imageUrl: '/images/avatars/seed.svg' },
-        { id: 8, imageUrl: '/images/avatars/seed.svg' },
-        { id: 9, imageUrl: '/images/avatars/seed.svg' }
+        { id: 1, imageUrl: '/images/frames/redframe.svg' },
+        { id: 2, imageUrl: '/images/frames/yellowframe.svg' },
+        { id: 3, imageUrl: '/images/frames/greenframe.svg' },
+        { id: 4, imageUrl: '/images/frames/blueframe.svg' },
+        { id: 5, imageUrl: '/images/frames/purpleframe.svg' },
+        { id: 6, imageUrl: '/images/frames/brownframe.svg' }
     ];
 
     const handleAvatarSelect = (avatar) => {
