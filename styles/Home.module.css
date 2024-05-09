@@ -624,7 +624,7 @@
 	font-size: var(--headingTwo);
 	font-weight: 400;
 	position: absolute;
-	top: 442px;
+	top: 417px;
 	text-align: center;
 }
 
@@ -632,10 +632,11 @@
 	display: flex;
 	align-items: center;
 	justify-content: left;
-	background-color: var(--light-blue);
+	background-color: var(--lighter-blue);
 	width: 370px;
 	border-radius: 8px;
 	padding: 14px;
+	font-size: var(--bodySmall);
 }
 
 .exerciseBoxText {
@@ -659,18 +660,25 @@
 	gap: 24px;
 	position: absolute;
 	left: 16px;
-	top: 506px;
+	top: 481px;
 }
+
 .mascotExercise {
 	position: absolute;
 	left: 126px;
-	top: 131px;
+	top: 126px;
 }
 
 .exerciseBold {
 	color: 'black';
 	font-family: var(--nunito);
 	font-weight: 700;
+}
+
+.goBackExerciseContainer {
+	position: absolute;;
+	left: 16px;
+	top: 89px;
 }
 
 /* Five Sense */

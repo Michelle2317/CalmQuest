@@ -1,12 +1,12 @@
 .primaryButton {
 	text-align: center;
 	color: var(--white);
-	font-size: var(--bodyRegular);
+	font-size: 16px;
 	font-family: var(--nunito);
 	font-weight: 400;
 	word-wrap: break-word;
-	width: 160px;
-	height: 48px;
+	width: 120px;
+	height: 40px;
 	background: var(--dark-turquoise);
 	border: 1px var(--dark-turquoise) solid;
 	border-radius: 20px;

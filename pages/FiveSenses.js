@@ -4,7 +4,7 @@ import Tabbar from "@/components/Tabbar";
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
-import ButtonPrimary from "@/components/ButtonPrimary";
+import ButtonRegular from "@/components/ButtonRegular";
 
 export default function FiveSenses() {
     return(
@@ -18,7 +18,14 @@ export default function FiveSenses() {
             <main className={`${styles.main}`}>
             <div className={styles.mainContainer}>
                 <Navbar/>
-                
+
+                <div className={styles.goBackExerciseContainer}>
+                    <Link href="MindfulExercises" className={styles.goBackLink}>
+                        <img src="/images/leftArrow.svg" className={styles.leftArrow}></img>
+                        Go Back
+                    </Link>
+
+                </div>
                 <h2 className={`${styles.fiveSenseText}`}>Five Senses Exercise</h2>
                 <div className={`${styles.fiveSenseList}`}>
                     <div className={`${styles.exerciseBox}`}>
@@ -73,7 +80,7 @@ export default function FiveSenses() {
                         </div>
                     </div>
                 </div>
-                <Link href="/FiveSenses2"><ButtonPrimary title="Next" className={`${styles.fiveSenseButton}`}></ButtonPrimary>
+                <Link href="/FiveSenses2"><ButtonRegular title="Next" className={`${styles.fiveSenseButton}`}></ButtonRegular>
                 </Link>
             <Tabbar/>
             </div>
