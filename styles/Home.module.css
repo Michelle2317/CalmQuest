@@ -748,7 +748,6 @@
 	display: flex;
 	flex-direction: column;
 	padding-left: 16px;
-	gap: 8px;
 }
 
 .textAndArrow {
@@ -762,7 +761,7 @@
 .exerciseBoxList {
 	display: flex;
 	flex-direction: column;
-	gap: 24px;
+	gap: 20px;
 	position: absolute;
 	left: 16px;
 	top: 481px;
@@ -772,6 +771,12 @@
 	position: absolute;
 	left: 126px;
 	top: 126px;
+}
+
+.exerciseIntroBold {
+	font-family: var(--nunito);
+	font-weight: 700;
+	font-size: var(--bodyRegular);
 }
 
 .exerciseBold {
@@ -800,7 +805,7 @@
 .fiveSenseList {
 	display: flex;
 	flex-direction: column;
-	gap: 24px;
+	gap: 20px;
 	position: absolute;
 	top: 182px;
 	left: 16px;
@@ -808,30 +813,30 @@
 
 .mascotFiveSense {
 	position: absolute;
-	top: 330px;
+	top: 305px;
 	left: 127px;
 }
 
 .partyPopper {
 	position: absolute;
-	top: 366px;
+	top: 341px;
 	left: 16px;
 }
 
 .fiveSenseButton {
 	position: relative;
-	top: 350px;
+	top: 325px;
 	left: 125px;
 }
 
 .mascotBell {
 	position: absolute;
-	top: 131px;
+	top: 126px;
 	left: 126px;
 }
 
 .bellVideo {
 	position: absolute;
-	top: 682px;
+	top: 657px;
 	left: 96px;
 }

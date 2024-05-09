@@ -17,7 +17,14 @@ export default function MindfulBell() {
             <main className={`${styles.main}`}>
             <div className={styles.mainContainer}>
                 <Navbar/>
-                
+
+                <div className={styles.goBackExerciseContainer}>
+                    <Link href="MindfulExercises" className={styles.goBackLink}>
+                        <img src="/images/leftArrow.svg" className={styles.leftArrow}></img>
+                        Go Back
+                    </Link>
+                </div>
+
                 <Image
                     src={`/images/mascots/mascotHappy.svg`}
                     alt="profile very happy mascot"

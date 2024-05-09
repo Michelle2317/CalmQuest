@@ -24,12 +24,12 @@ export default function FiveSenses() {
                         <img src="/images/leftArrow.svg" className={styles.leftArrow}></img>
                         Go Back
                     </Link>
-
                 </div>
+                
                 <h2 className={`${styles.fiveSenseText}`}>Five Senses Exercise</h2>
                 <div className={`${styles.fiveSenseList}`}>
                     <div className={`${styles.exerciseBox}`}>
-                        <p><span className={styles.exerciseBold}>This exercise provides guidelines on practising mindfulness quickly in nearly any situation. All that is needed is to notice something you are experiencing with each of the five senses.</span>
+                        <p><span className={styles.exerciseIntroBold}>This exercise provides guidelines on practising mindfulness quickly in nearly any situation. All that is needed is to notice something you are experiencing with each of the five senses.</span>
                         </p>
                     </div>
                     <div className={`${styles.exerciseBox}`}>
