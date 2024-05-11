@@ -1,10 +1,10 @@
-.primaryButton {
+.buttonLong {
+	width: 330px;
+	height: 48px;
 	color: var(--white);
 	font-size: var(--regularButton);
-	font-family: var(--nunito);
 	font-weight: 400;
-	width: 160px;
-	height: 48px;
+	font-family: var(--nunito);
 	background: var(--dark-turquoise);
 	border: 1px var(--dark-turquoise) solid;
 	border-radius: 20px;
@@ -13,13 +13,13 @@
 	display: inline-flex;
 }
 
-.primaryButton:hover {
+.buttonLong:hover {
+	width: 330px;
+	height: 48px;
 	color: var(--dark-turquoise);
+	font-weight: 400;
 	font-size: var(--regularButton);
 	font-family: var(--nunito);
-	font-weight: 400;
-	width: 160px;
-	height: 48px;
 	background: var(--white);
 	border: 2px var(--dark-turquoise) solid;
 	border-radius: 20px;

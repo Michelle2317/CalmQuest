@@ -1,19 +1,15 @@
 .primaryButton {
-	text-align: center;
 	color: var(--white);
 	font-size: 16px;
 	font-family: var(--nunito);
 	font-weight: 400;
-	word-wrap: break-word;
 	width: 120px;
 	height: 40px;
 	background: var(--dark-turquoise);
 	border: 1px var(--dark-turquoise) solid;
 	border-radius: 20px;
-	overflow: hidden;
 	justify-content: center;
 	align-items: center;
-	gap: 10px;
 	display: inline-flex;
 }
 
@@ -21,4 +17,5 @@
 	color: var(--dark-turquoise);
 	background: var(--white);
 	border: 1px var(--dark-turquoise) solid;
+	font-weight: 400;
 }

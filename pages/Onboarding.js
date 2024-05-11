@@ -45,7 +45,7 @@ export default function Onboarding() {
   };
 
   const handleInputChange = (e) => {
-    setInputName(e.target.value.slice(0, 40)); //limit input to 40 characters
+    setInputName(e.target.value.slice(0, 20)); //limit input to 20 characters
     if (!e.target.value.trim()) {
       setNameValid('Please enter your name');
     } else {
