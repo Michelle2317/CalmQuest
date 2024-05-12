@@ -4,8 +4,8 @@ import Tabbar from "@/components/Tabbar";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import ButtonRegular from "@/components/ButtonRegular";
 import Link from "next/link";
+import ButtonPrimary from "@/components/ButtonPrimary";
 
 export default function Profile() {
     const router = useRouter();
@@ -37,7 +37,7 @@ export default function Profile() {
                                     <h1 className={styles.name}>{name}</h1>
                                 </div>
                             )}
-                            <ButtonRegular className={styles.editProfileButton} title="Edit Profile" onClick={() => router.push('/EditProfile')}></ButtonRegular>
+                            <ButtonPrimary className={styles.editProfile} title="Edit Profile" onClick={() => router.push('/EditProfile')}></ButtonPrimary>
                             <div className={styles.linkButtons}>
                                 <Link href="/Settings" className={styles.profileLinks}>
                                     <div className={styles.settingsContainer}>

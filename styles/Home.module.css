@@ -605,9 +605,9 @@
 	align-items: center;
 }
 
-.editProfileButton {
-	width: 185px;
-	height: 48px;
+.editProfile {
+	width: 11.5625rem;
+	height: 3rem;
 	position: absolute;
 	margin-top: 2rem;
 	margin-left: -6rem;
@@ -657,77 +657,66 @@
 	color: var(--black);
 }
 
-/* ChangeProfile page */
-.customizeContainer {
+/* Edit Profile */
+.profileInformation {
+	font-family: var(--nunito);
+	font-size: var(--bodyLargeRegular);
+	font-weight: bold;
+	margin-top: -3rem;
+}
+
+.editIcon {
+	margin-top: -6rem;
+	margin-bottom: 3rem;
+}
+
+.selectOptions {
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	gap: 1rem;
+	margin-top: -8rem;
+}
+
+.optionsButton {
+	width: 190px;
+	height: 45px;
+}
+
+.optionsButton:hover {
+	width: 190px;
+	height: 45px;
+}
+
+.changeNameContainer {
+	margin-top: -10rem;
+}
+
+.nameHeading {
+	font-family: var(--nunito);
+	font-size: var(--bodyLargeRegular);
+	font-weight: bold;
+	margin-left: -21rem;
+	margin-top: -7rem;
 	position: relative;
 }
 
-.currentImage {
-	position: relative;
-	margin-bottom: 20px;
+.editProfileNameInput {
+	width: 360px;
+	height: 45px;
+	text-align: left;
+	padding-left: 2rem;
+	margin-left: -2rem;
+	margin-top: -6rem;
 }
 
-.imageWithFrame {
-	position: relative;
-	width: 112px;
-	height: 112px;
+.editProfileSaveButton {
+	width: 396px;
+	height: 50px;
+	margin-top: 5rem;
 }
 
-.frame {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 112px;
-	height: 112px;
-	z-index: 1;
-}
-
-.avatar {
-	position: absolute;
-	top: 9px;
-	left: 9px;
-	width: 94px;
-	height: 94px;
-	z-index: 2;
-}
-
-.imageGrid {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
-.imageItem {
-	cursor: pointer;
-	margin: 5px;
-}
-
-.customizeSelected {
-	border: 2px solid var(--red);
-}
-
-.customizeButtons {
-	text-align: center;
-	margin-top: 20px;
-}
-
-.popup {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background-color: var(--black);
-	color: var(--white);
-	padding: 20px;
-	border-radius: 5px;
-	z-index: 9999;
-}
-
-.popupContent {
-	text-align: center;
+.editProfileSaveButton:hover {
+	width: 396px;
+	height: 50px;
 }
 
 /*Exercise*/
