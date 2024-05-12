@@ -29,6 +29,10 @@
 }
 
 /* Onboarding */
+.onboardingBackground {
+	background-color: var(--old-blue);
+}
+
 .animationGetStarted {
 	position: absolute;
 	margin-top: -20rem;
@@ -210,7 +214,8 @@
 
 /* home page */
 .mascotNormal {
-	margin-top: -1rem;
+	margin-top: 1rem;
+	margin-left: 10rem;
 }
 
 .helloContainer {

@@ -22,7 +22,7 @@ export default function Profile() {
                 <div className={styles.mainContainer}>
                     <Navbar/>
                     <div className={styles.profileContainer}>
-                        {icon && (
+                        {name && icon && (
                             <div className={styles.nameContainer}>
                                 <div className={styles.profileIcon}>
                                     <Image 

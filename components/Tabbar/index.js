@@ -16,9 +16,9 @@ export default function Tabbar() {
         <>
             <div className={styles.tabbar}>
                 <div className={styles.homeContainer}>
-                    <Link href="/" className={styles.linkStyling} passHref>
+                    <Link href="/HomePage" className={styles.linkStyling} passHref>
                         <Image
-                            src={selectedPage('/') ? `/images/homeSecondary.svg` : `/images/homePrimary.svg`}
+                            src={selectedPage('/HomePage') ? `/images/homeSecondary.svg` : `/images/homePrimary.svg`}
                             alt="home"
                             width={30}
                             height={30}
