@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import ButtonRegular from "@/components/ButtonRegular";
+import Link from "next/link";
 
 export default function Profile() {
     const router = useRouter();
@@ -22,29 +23,48 @@ export default function Profile() {
                 <div className={styles.mainContainer}>
                     <Navbar/>
                     <div className={styles.profileContainer}>
-                        {name && icon && (
-                            <div className={styles.nameContainer}>
-                                <div className={styles.profileIcon}>
-                                    <Image 
-                                        src={icon} 
-                                        alt="Profile Icon" 
-                                        width="112" 
-                                        height="112" 
-                                        className={styles.profileIcon} 
-                                    />
+                        <div className={styles.contentWrapper}>
+                            {name && icon && (
+                                <div className={styles.nameContainer}>
+                                    <div className={styles.profileIcon}>
+                                        <Image 
+                                            src={icon} 
+                                            alt="Profile Icon" 
+                                            width="185" 
+                                            height="185" 
+                                        />
+                                    </div>
+                                    <h1 className={styles.name}>{name}</h1>
                                 </div>
-                                <h1 className={styles.name}>{name}</h1>
-                                <div className={styles.editName}>Edit Name</div>
+                            )}
+                            <ButtonRegular className={styles.editProfileButton} title="Edit Profile" onClick={() => router.push('/EditProfile')}></ButtonRegular>
+                            <div className={styles.linkButtons}>
+                                <Link href="/Settings" className={styles.profileLinks}>
+                                    <div className={styles.settingsContainer}>
+                                        <Image 
+                                            src={`/images/settings.svg`} 
+                                            alt="settings icon" 
+                                            width={40} 
+                                            height={40} 
+                                            className={styles.profileSettingsIcon}
+                                        />
+                                        <div className={styles.settingsText}>Settings</div>
+                                    </div>
+                                </Link>
+                                <Link href="/About" className={styles.profileLinks}>
+                                    <div className={styles.settingsContainer}>
+                                        <Image 
+                                            src={`/images/about.svg`} 
+                                            alt="about icon" 
+                                            width={40} 
+                                            height={40} 
+                                            className={styles.profileSettingsIcon}
+                                        />
+                                        <div className={styles.settingsAboutText}>About</div>
+                                    </div>
+                                </Link>
                             </div>
-                        )}
-                        <ButtonRegular className={styles.customizeButton} title="Customize" onClick={() => router.push('/ChangeProfile')}></ButtonRegular>
-                        <Image
-                            src={`/images/mascots/mascotUWU.svg`}
-                            alt="profile UWU mascot"
-                            width="177"
-                            height="262"
-                            className={styles.mascotProfilePage}
-                        />
+                        </div>
                     </div>
                     <Tabbar/>
                 </div>

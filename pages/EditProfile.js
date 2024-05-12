@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-export default function ChangeProfile() {
+export default function EditProfile() {
     const [selectedAvatar, setSelectedAvatar] = useState(null);
     const [selectedFrame, setSelectedFrame] = useState(null);
     const [showAvatars, setShowAvatars] = useState(true); 

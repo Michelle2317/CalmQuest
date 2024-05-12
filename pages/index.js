@@ -1,7 +1,6 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import Image from "next/image";
-import ButtonPrimary from "@/components/ButtonPrimary";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import AnimationLogo from "@/components/AnimationLogo";
@@ -13,7 +12,6 @@ export default function Home() {
   const [inputName, setInputName] = useState('');
   const [nameValid, setNameValid] = useState('');
   const [chosenIcon, setChosenIcon] = useState("/images/onboarding/option3.svg");
-  const [data, setData] = useState([]);
   const [showGetStartedButton, setShowGetStartedButton] = useState(false);
   const [step, setStep] = useState(0);
 
