@@ -132,7 +132,7 @@ export default function Home() {
                     height={150} 
                     className={styles.logoIcon}
                   />
-                  <h2 className={styles.features}>Are you ready to start your journey?</h2>
+                  <h2 className={styles.startJourneyText}>Are you ready to start <br /> your journey?</h2>
                   <div>
                     <input 
                       id="inputName" 
@@ -154,8 +154,8 @@ export default function Home() {
               )}
               {step === 5 && (
                 <div className={styles.createProfilecontainer}>
-                  <div className={styles.createProfile}>Create Profile</div>
-                  <div className={styles.selectIconText}>Select an Icon Below</div>
+                  <div className={styles.createProfile}>Select a Profile Avatar</div>
+                  <div className={styles.yourName}>{inputName}</div>
                   <div className={styles.chosenIcon}>
                     <Image 
                       src={chosenIcon} 
@@ -164,10 +164,9 @@ export default function Home() {
                       height={150} 
                       className={styles.onboardingIcon}
                     />
-                    <div className={styles.chosenIconCircleOutline}></div>
                   </div>
                   <div className={styles.iconContainer}>
-                    <div className={`${styles.iconBox} ${chosenIcon === "/images/onboarding/option1.svg" ? styles.selectedIcon : ""}`} onClick={() => handleIconClick("/images/onboarding/option1.svg")}>
+                    <div className={styles.iconBox} onClick={() => handleIconClick("/images/onboarding/option1.svg")}>
                       <Image 
                         src={`/images/onboarding/option1.svg`} 
                         alt="Option 1" 
@@ -176,7 +175,7 @@ export default function Home() {
                         className={styles.onboardingIcon}
                       />
                     </div>
-                    <div className={`${styles.iconBox} ${chosenIcon === "/images/onboarding/option2.svg" ? styles.selectedIcon : ""}`} onClick={() => handleIconClick("/images/onboarding/option2.svg")}>
+                    <div className={styles.iconBox} onClick={() => handleIconClick("/images/onboarding/option2.svg")}>
                       <Image 
                         src={`/images/onboarding/option2.svg`} 
                         alt="Option 2" 
@@ -185,7 +184,7 @@ export default function Home() {
                         className={styles.onboardingIcon}
                       />
                     </div>
-                    <div className={`${styles.iconBox} ${chosenIcon === "/images/onboarding/option3.svg" ? styles.selectedIcon : ""}`} onClick={() => handleIconClick("/images/onboarding/option3.svg")}>
+                    <div className={styles.iconBox} onClick={() => handleIconClick("/images/onboarding/option3.svg")}>
                       <Image 
                         src={`/images/onboarding/option3.svg`} 
                         alt="Option 3" 

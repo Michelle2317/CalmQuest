@@ -53,7 +53,6 @@ export default function HomePage() {
               alt="mascot image"
               width="177"
               height="262"
-              className={styles.mascotNormal}
             />
           </div>
           <div className={styles.helloContainer}>
