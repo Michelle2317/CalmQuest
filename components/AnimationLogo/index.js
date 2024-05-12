@@ -1,20 +1,8 @@
 import styles from "./AnimationLogo.module.css"
 import Lottie from "lottie-web";
-import { useState, createRef, useEffect } from "react";
-import Link from "next/link";
-import ButtonLong from "@/components/ButtonLong";
+import { createRef, useEffect } from "react";
 
-export default function Animation() {
-        const [showButton, setShowButton] = useState(false);
-
-        useEffect(() => {
-        const timer = setTimeout(() => {
-        setShowButton(true);
-        }, 3000);
-
-        return () => clearTimeout(timer);
-        }, []);
-        
+export default function AnimationLogo() {
         let animationContainer = createRef();
 
         useEffect(() => {
@@ -31,12 +19,9 @@ export default function Animation() {
 
         return (
                 <>
-                        <div className={styles.animationContainer} ref={animationContainer}></div>
-                                {showButton && (
-                                <Link href="/Onboarding">
-                                        <ButtonLong className={styles.animationGetStarted} title="Get Started"></ButtonLong>
-                                </Link>
-                                )}    
+                        <div className={styles.animationBackground}>
+                                <div className={styles.animationContainer} ref={animationContainer}></div>
+                        </div>
                 </>
         )
 }

@@ -3,36 +3,102 @@ import styles from "@/styles/Home.module.css";
 import Navbar from "@/components/Navbar";
 import Tabbar from "@/components/Tabbar";
 import Image from "next/image";
-import Link from "next/link"
+import Link from "next/link";
 import ButtonPrimary from "@/components/ButtonPrimary";
+import ButtonLong from "@/components/ButtonLong";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
+import AnimationLogo from "@/components/AnimationLogo";
 
 export default function Home() {
   const router = useRouter();
-  const { name } = router.query;
-  const [data, setData] = useState();
+  const { name: queryName } = router.query;
+  const [currentScreen, setCurrentScreen] = useState(0);
+  const [chosenIcon, setChosenIcon] = useState("/images/onboarding/option3.svg");
+  const [inputName, setInputName] = useState('');
+  const [nameValid, setNameValid] = useState('');
+  const [data, setData] = useState([]);
+  const [showGetStartedButton, setShowGetStartedButton] = useState(false);
 
-  var apiKey = process.env.NEXT_PUBLIC_API;
-  var type = "inspirational";
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowGetStartedButton(true);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (queryName) {
+      setCurrentScreen(1);
+    }
+  }, [queryName]);
+  
+  const getStarted = () => {
+    setCurrentScreen(1);
+  }
+  
+  const nextClick = () => {
+    if (currentScreen < 4) {
+      setCurrentScreen(currentScreen + 1);
+    } else if (currentScreen === 3) {
+      setCurrentScreen(4);
+    }
+  };
+
+  const goClick = () => {
+    if(currentScreen === 4) {
+      if (!inputName.trim()) {
+        setNameValid('Please enter your name');
+      } else {
+        setNameValid('');
+        router.push({
+          pathname: '/',
+          query: { name: inputName, icon: chosenIcon },
+        });
+        setCurrentScreen(5);
+      }
+    }
+  }
+
+  const perfectClick = () => {
+    if (currentScreen === 5) {
+     setCurrentScreen(6);
+    }
+  }
+  
+  const handleIconClick = (icon) => {
+    setChosenIcon(icon);
+  };
+
+  const handleInputChange = (e) => {
+    setInputName(e.target.value.slice(0, 20)); //limit input to 20 characters
+    if (!e.target.value.trim()) {
+      setNameValid('Please enter your name');
+    } else {
+      setNameValid('');
+    }
+  };
+
+  const apiKey = process.env.NEXT_PUBLIC_API;
+  const type = "inspirational";
   const url = `https://api.api-ninjas.com/v1/quotes?category=${type}`;
-  const headers = {'X-Api-Key': `${apiKey}`}
+  const headers = { 'X-Api-Key': `${apiKey}` };
 
   const getInspiration = () => {
-      axios.get(url, { headers })
+    axios.get(url, { headers })
       .then((response) => {
-        // console.clear();
         setData(response.data);
-        console.log(response.data);
-      }).catch(err => {
-        console.log(err)
       })
-  }
+      .catch(err => {
+        console.log(err);
+      });
+  };
   
   useEffect (() => {
     getInspiration();
-  },[]);
+  }, []);
 
   return (
     <>
@@ -44,76 +110,211 @@ export default function Home() {
       </Head>
       <main className={`${styles.main}`}>
         <div className={styles.mainContainer}>
-          <Navbar />
-          <div className={styles.mainContent}>
-            <Image
-              src={`/images/mascots/mascotNormal.svg`}
-              alt="mascot image"
-              width="177"
-              height="262"
-              className={styles.mascotNormal}
-            />
+          <div className={styles.contentContainer}>
+            {currentScreen === 0 && (
+              <>
+                <AnimationLogo />
+                {showGetStartedButton && (
+                  <ButtonLong className={`${styles.animationGetStarted} ${styles.fadeIn}`} onClick={getStarted} title="Get Started"></ButtonLong>
+                )}
+              </>
+            )}
+            {currentScreen >= 1 && currentScreen <= 5 && (
+              <>
+                {currentScreen === 1 && (
+                  <div>
+                    <Image 
+                      src={`/images/onboarding/personalize.svg`} 
+                      alt="personalize icon" 
+                      width={150} 
+                      height={150} 
+                      className={styles.personalizeIcon}
+                    />
+                    <h2 className={styles.features}>Personalize your experience</h2>
+                    <p className={styles.featuresText}>Select and unlock special avatars and frames from completing daily check-ins</p>
+                  </div>
+                )}
+                {currentScreen === 2 && (
+                  <div>
+                    <Image 
+                      src={`/images/onboarding/brain.svg`} 
+                      alt="brain icon" 
+                      width={150} 
+                      height={150} 
+                      className={styles.brainIcon}
+                    />
+                    <h2 className={styles.featuresBrain}>Mindfulness and<br />Meditation Exercises</h2>
+                    <p className={styles.featuresTextBrain}>Explore quick and calming <br />  mindfulness and meditation exercises</p>
+                  </div>
+                )}
+                {currentScreen === 3 && (
+                  <div>
+                    <Image 
+                      src={`/images/onboarding/calendar.svg`} 
+                      alt="calendar icon" 
+                      width={150} 
+                      height={150} 
+                      className={styles.calendarIcon}
+                    />
+                    <h2 className={styles.featuresCalendar}>Check-In and Rewards</h2>
+                    <p className={styles.featuresTextCalendar}>Check in on your mental health and <br /> unlock rewards</p>
+                  </div>
+                )}               
+                {currentScreen === 4 && (
+                  <div>
+                    <Image 
+                      src={`/images/onboarding/logo.svg`} 
+                      alt="Logo icon" 
+                      width={150} 
+                      height={150} 
+                      className={styles.logoIcon}
+                    />
+                    <h2 className={styles.features}>Are you ready to start your journey?</h2>
+                    <div>
+                      <input 
+                        id="inputName" 
+                        className={styles.nameInput}
+                        type="text" 
+                        value={inputName} 
+                        onChange={handleInputChange} 
+                        placeholder="Enter your name" 
+                      />
+                      {nameValid && <p className={styles.requiredName}>*{nameValid}</p>}
+                    </div>
+                    <ButtonPrimary 
+                      className={styles.goButton} 
+                      onClick={goClick} 
+                      disabled={!inputName.trim()}
+                      title="Let's Go!"
+                    ></ButtonPrimary>
+                  </div>
+                )}
+                {currentScreen === 5 && (
+                  <div className={styles.createProfilecontainer}>
+                    <div className={styles.createProfile}>Create Profile</div>
+                    <div className={styles.selectIconText}>Select an Icon Below</div>
+                    <div className={styles.chosenIcon}>
+                      <Image 
+                        src={chosenIcon} 
+                        alt="Chosen Icon" 
+                        width={150} 
+                        height={150} 
+                        className={styles.onboardingIcon}
+                      />
+                      <div className={styles.chosenIconCircleOutline}></div>
+                  </div>
+                  <div className={styles.iconContainer}>
+                  <div className={`${styles.iconBox} ${chosenIcon === "/images/onboarding/option1.svg" ? styles.selectedIcon : ""}`} onClick={() => handleIconClick("/images/onboarding/option1.svg")}>
+                      <Image 
+                        src={`/images/onboarding/option1.svg`} 
+                        alt="Option 1" 
+                        width={150} 
+                        height={150} 
+                        className={styles.onboardingIcon}
+                      />
+                    </div>
+                    <div className={`${styles.iconBox} ${chosenIcon === "/images/onboarding/option2.svg" ? styles.selectedIcon : ""}`} onClick={() => handleIconClick("/images/onboarding/option2.svg")}>
+                      <Image 
+                        src={`/images/onboarding/option2.svg`} 
+                        alt="Option 2" 
+                        width={150} 
+                        height={150} 
+                        className={styles.onboardingIcon}
+                      />
+                    </div>
+                    <div className={`${styles.iconBox} ${chosenIcon === "/images/onboarding/option3.svg" ? styles.selectedIcon : ""}`} onClick={() => handleIconClick("/images/onboarding/option3.svg")}>
+                      <Image 
+                        src={`/images/onboarding/option3.svg`} 
+                        alt="Option 3" 
+                        width={150} 
+                        height={150} 
+                        className={styles.onboardingIcon}
+                      />
+                    </div>
+                  </div>
+                    <ButtonPrimary 
+                      className={styles.perfectButton} 
+                      onClick={perfectClick} 
+                      title="Perfect"
+                    ></ButtonPrimary>
+                    </div>
+                    )}
+                    {currentScreen >= 1 && currentScreen <= 3 && (
+                      <ButtonPrimary className={styles.getStartedButton} onClick={nextClick} title="Next"></ButtonPrimary>
+                    )}
+              </>
+            )}
           </div>
-          <div className={styles.helloContainer}>
-            <div className={styles.helloContainerLeft}>
-              <h1 className={styles.mainHello}>Hello {name}</h1>
-              <div className={styles.mainQuote}>
-                {
-                  data && data.map((d,index) => {
-                    return(
+          {currentScreen === 6 && (
+            <>
+              <Navbar />
+              <div className={styles.mainContent}>
+                <Image
+                  src={`/images/mascots/mascotNormal.svg`}
+                  alt="mascot image"
+                  width="177"
+                  height="262"
+                  className={styles.mascotNormal}
+                />
+              </div>
+              <div className={styles.helloContainer}>
+                <div className={styles.helloContainerLeft}>
+                  <h1 className={styles.mainHello}>Hello {inputName}</h1>
+                  <div className={styles.mainQuote}>
+                    {data.map((d, index) => (
                       <div key={index}>
                         <div>&#34;{d.quote}&#34;</div>
                         <div>&#126;{d.author}</div>
                       </div>
-                    )
-                  })
-                }
+                    ))}
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className={styles.checkInCard}>
-          <div className={styles.checkInText}>Take a moment to check on your mental health</div>
-          <div className={styles.checkInButtonContainer}>
-            <Link href="/ParentQuiz">
-              <ButtonPrimary title="Check-In" className={styles.checkInButton}>
-                <Image
-                  src={`/images/checkinPrimary.svg`}
-                  alt="check in image"
-                  width="25"
-                  height="25"
-                  className={styles.checkInIcon}
-                />
-              </ButtonPrimary>
-            </Link>
-          </div>
-          </div>
-            <h4 className={styles.explore}>Let's Explore</h4>
-            <div className={styles.exerciseCarousel}>
-              <Link href="/MindfulExercises" className={styles.exerciseLink}>
-                <div className={styles.exerciseCard}>
-                  <Image
-                  src={`/images/icons/mindfulPrimary.svg`}
-                  alt="mindfulness image"
-                  width="64"
-                  height="64"
-                  />
-                  <p>Mindfulness<br/>Exercises</p>
+              <div className={styles.checkInCard}>
+                <div className={styles.checkInText}>Take a moment to check on your mental health</div>
+                <div className={styles.checkInButtonContainer}>
+                  <Link href="/ParentQuiz">
+                    <ButtonPrimary title="Check-In" className={styles.checkInButton}>
+                      <Image
+                        src={`/images/checkinPrimary.svg`}
+                        alt="check in image"
+                        width="25"
+                        height="25"
+                        className={styles.checkInIcon}
+                      />
+                    </ButtonPrimary>
+                  </Link>
                 </div>
-              </Link>
-              <Link href="/MeditationExercises" className={styles.exerciseLink}>
-                <div className={styles.exerciseCard}>
-                  <Image
-                  src={`/images/icons/meditationPrimary.svg`}
-                  alt="meditation image"
-                  width="64"
-                  height="64"
-                  />
-                  <p>Meditation<br/>Exercises</p>
-                </div>
-              </Link>
-            </div>
-            <Tabbar />
-          </div>
+              </div>
+              <h4 className={styles.explore}>Let's Explore</h4>
+              <div className={styles.exerciseCarousel}>
+                <Link href="/MindfulExercises" className={styles.exerciseLink}>
+                  <div className={styles.exerciseCard}>
+                    <Image
+                      src={`/images/icons/mindfulPrimary.svg`}
+                      alt="mindfulness image"
+                      width="64"
+                      height="64"
+                    />
+                    <p>Mindfulness<br/>Exercises</p>
+                  </div>
+                </Link>
+                <Link href="/MeditationExercises" className={styles.exerciseLink}>
+                  <div className={styles.exerciseCard}>
+                    <Image
+                      src={`/images/icons/meditationPrimary.svg`}
+                      alt="meditation image"
+                      width="64"
+                      height="64"
+                    />
+                    <p>Meditation<br/>Exercises</p>
+                  </div>
+                </Link>
+              </div>
+              <Tabbar />
+            </>
+          )}
+        </div>
       </main>
     </>
   );

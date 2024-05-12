@@ -1,15 +1,10 @@
 .animationContainer {
-	width: 100%;
+	width: 93%;
+	padding-left: 1rem;
 }
 
-.animationGetStarted {
-	position: absolute;
-	margin-top: -15rem;
-	margin-left: -10rem;
-}
-
-.animationGetStarted:hover {
-	position: absolute;
-	margin-top: -15rem;
-	margin-left: -10rem;
+.animationBackground {
+	background-color: var(--old-blue);
+	width: 430px;
+	height: 100vh;
 }

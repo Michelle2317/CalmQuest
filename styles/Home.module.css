@@ -28,11 +28,23 @@
 	flex-direction: row;
 }
 
-.animationContainer {
-	position: relative;
+/* Onboarding */
+.animationGetStarted {
+	position: absolute;
+	margin-top: -20rem;
+	margin-left: 3rem;
 }
 
-/* Onboarding */
+.animationGetStarted:hover {
+	position: absolute;
+	margin-top: -20rem;
+	margin-left: 3rem;
+}
+
+.fadeIn {
+	transition: opacity 3s ease-in-out;
+}
+
 .onboardingContainer {
 	background-color: var(--old-blue);
 }
@@ -182,7 +194,7 @@
 	max-height: 100%;
 }
 
-.perfectButton {
+.goButton {
 	margin-top: 20rem;
 	margin-left: 2rem;
 }
@@ -868,7 +880,6 @@
 .goBackContactUs {
 	padding-bottom: 10%;
 	margin-left: 8%;
-
 }
 
 /* Languages */
@@ -889,7 +900,6 @@
 .langSetContainer {
 	text-align: center;
 	padding-right: 45%;
-	
 }
 
 .buttonText {
@@ -907,7 +917,7 @@
 .langType {
 	width: 40px;
 	height: 27px;
-    cursor: pointer;
+	cursor: pointer;
 }
 
 .langStyling {
@@ -952,7 +962,6 @@
 	display: flex;
 	width: 80px;
 	margin-bottom: 10%;
-	
 }
 
 .frenchMainContainer {
@@ -963,5 +972,4 @@
 .changeLanguageContainer {
 	margin-top: -160%;
 	background-color: var(--dark-grey);
-	
 }
