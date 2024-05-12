@@ -1,8 +1,13 @@
+.progressBarContainer {
+	display: flex;
+	justify-content: center;
+	margin-top: 5rem;
+}
+
 .progressBar {
 	display: flex;
 	justify-content: space-between;
 	width: 15%;
-	margin-bottom: 1.5rem;
 }
 
 .dot {

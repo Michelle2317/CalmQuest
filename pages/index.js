@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import AnimationLogo from "@/components/AnimationLogo";
 import ButtonLong from "@/components/ButtonLong";
+import DottedProgressBar from "@/components/DottedProgressBar";
 
 export default function Home() {
   const router = useRouter();
@@ -71,7 +72,7 @@ export default function Home() {
             <div className={styles.animationGetStarted}>
               <AnimationLogo />
               {showGetStartedButton && (
-                <ButtonLong className={`${styles.fadeIn}`} onClick={startOnboarding} title="Get Started"></ButtonLong>
+                <ButtonLong className={`${styles.getStartedButton}`} onClick={startOnboarding} title="Get Started"></ButtonLong>
               )}
             </div>
           )}
@@ -84,11 +85,12 @@ export default function Home() {
                     alt="personalize icon" 
                     width={150} 
                     height={150} 
-                    className={styles.personalizeIcon}
+                    className={styles.featureIcons}
                   />
                   <h2 className={styles.features}>Personalize your experience</h2>
                   <p className={styles.featuresText}>Select and unlock special avatars <br /> and frames from completing daily <br />check-ins</p>
-                  <ButtonPrimary className={styles.getStartedButton} onClick={() => setStep(2)} title="Next" />
+                  <DottedProgressBar currentStep={step} />
+                  <ButtonLong className={styles.nextButton} onClick={() => setStep(2)} title="Next" />
                 </>
               )}
               {step === 2 && (
@@ -98,11 +100,12 @@ export default function Home() {
                     alt="calendar icon" 
                     width={150} 
                     height={150} 
-                    className={styles.calendarIcon}
+                    className={styles.featureIcons}
                   />
-                  <h2 className={styles.featuresCalendar}>Check-In and Rewards</h2>
-                  <p className={styles.featuresTextCalendar}>Check in on your mental health <br /> and collect seeds to buy avatars <br /> and frames from the shop</p>
-                  <ButtonPrimary className={styles.getStartedButton} onClick={() => setStep(3)} title="Next" />
+                  <h2 className={styles.features}>Check-In and Rewards</h2>
+                  <p className={styles.featuresText}>Check in on your mental health <br /> and collect seeds to buy avatars <br /> and frames from the shop</p>
+                  <DottedProgressBar currentStep={step} />
+                  <ButtonLong className={styles.nextButton} onClick={() => setStep(3)} title="Next" />
                 </>
               )}
               {step === 3 && (
@@ -112,11 +115,12 @@ export default function Home() {
                     alt="brain icon" 
                     width={150} 
                     height={150} 
-                    className={styles.brainIcon}
+                    className={styles.featureIcons}
                   />
-                  <h2 className={styles.featuresBrain}>Mindfulness and<br />Meditation Exercises</h2>
-                  <p className={styles.featuresTextBrain}>Explore quick and calming <br />mindfulness and meditation <br /> exercises, links, and videos</p>
-                  <ButtonPrimary className={styles.getStartedButton} onClick={() => setStep(4)} title="Next" />
+                  <h2 className={styles.features}>Mindfulness and<br />Meditation Exercises</h2>
+                  <p className={styles.featuresText}>Explore quick and calming <br />mindfulness and meditation <br /> exercises, links, and videos</p>
+                  <DottedProgressBar currentStep={step} />
+                  <ButtonLong className={styles.nextButton} onClick={() => setStep(4)} title="Next" />
                 </>
               )}
               {step === 4 && (
@@ -140,7 +144,7 @@ export default function Home() {
                     />
                     {nameValid && <p className={styles.requiredName}>*{nameValid}</p>}
                   </div>
-                  <ButtonPrimary 
+                  <ButtonLong 
                     className={styles.goButton} 
                     onClick={goClick} 
                     disabled={!inputName.trim()}
@@ -191,7 +195,7 @@ export default function Home() {
                       />
                     </div>
                   </div>
-                  <ButtonPrimary className={styles.perfectButton} onClick={perfectClick} title="Perfect"></ButtonPrimary>
+                  <ButtonLong className={styles.perfectButton} onClick={perfectClick} title="Perfect"></ButtonLong>
                 </div>
               )}
             </div>

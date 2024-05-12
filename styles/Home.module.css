@@ -28,7 +28,7 @@
 	flex-direction: row;
 }
 
-/* Onboarding */
+/* index/onboarding page */
 .onboardingBackground {
 	background-color: var(--old-blue);
 }
@@ -45,24 +45,16 @@
 	margin-left: 3rem;
 }
 
-.fadeIn {
-	transition: opacity 3s ease-in-out;
-}
-
-.onboardingContainer {
-	background-color: var(--old-blue);
-}
-
-.verticalLogo {
-	padding-top: 15rem;
-}
-
 .getStartedButton {
-	display: inline-flex;
-	margin-bottom: 15rem;
+	transition: opacity 3s ease-in-out;
+	margin-left: 1.5rem;
 }
 
-.personalizeIcon {
+.nextButton {
+	margin-top: 2rem;
+}
+
+.featureIcons {
 	padding-left: 6rem;
 	padding-top: 14rem;
 	position: relative;
@@ -76,45 +68,7 @@
 }
 
 .featuresText {
-	padding-top: 2rem;
-	text-align: center;
-	font-size: var(--bodyLargeRegular);
-}
-
-.brainIcon {
-	padding-left: 6rem;
-	padding-top: 14rem;
-	position: relative;
-}
-
-.featuresBrain {
-	padding-top: 3rem;
-	text-align: center;
-	font-family: var(--merriweather);
-	font-size: var(--headingFour);
-}
-
-.featuresTextBrain {
-	padding-top: 1rem;
-	text-align: center;
-	font-size: var(--bodyLargeRegular);
-}
-
-.calendarIcon {
-	padding-left: 5rem;
-	padding-top: 14rem;
-	position: relative;
-}
-
-.featuresCalendar {
-	padding-top: 3rem;
-	text-align: center;
-	font-family: var(--merriweather);
-	font-size: var(--headingFour);
-}
-
-.featuresTextCalendar {
-	padding-top: 2rem;
+	padding-top: 1.5rem;
 	text-align: center;
 	font-size: var(--bodyLargeRegular);
 }
@@ -212,7 +166,7 @@
 	padding-left: 1.5rem;
 }
 
-/* home page */
+/* HomePage */
 .mascotNormal {
 	margin-top: 1rem;
 	margin-left: 10rem;
