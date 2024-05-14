@@ -5,15 +5,25 @@ import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import ButtonRegular from "@/components/ButtonRegular";
+import { useState, useEffect} from "react";
 
 export default function FiveSenses2() {
+    const [exerciseComplete, setExerciseComplete] = useState(false);
+
+    useEffect(() => {
+      if (exerciseComplete) {
+        const audio = new Audio("/sounds/quizComplete.mp3");
+        audio.play();
+      }
+    }, [exerciseComplete]);
+
     return(
         <>
             <Head>
-            <title>CalmQuest</title>
-            <meta name="description" content="Five Senses Exercises" />
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <link rel="icon" href="/favicon.ico" />
+                <title>CalmQuest</title>
+                <meta name="description" content="Five Senses Exercises" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className={`${styles.main}`}>
             <div className={styles.mainContainer}>
@@ -62,23 +72,28 @@ export default function FiveSenses2() {
                         </p>
                     </div>
                     <Image
-                    src={`/images/mascots/mascotUWU.svg`}
-                    alt="profile very happy mascot"
-                    width="177"
-                    height="262"
-                    className={styles.mascotFiveSense}
+                        src={`/images/mascots/mascotUWU.svg`}
+                        alt="profile very happy mascot"
+                        width="177"
+                        height="262"
+                        className={styles.mascotFiveSense}
                     />
                     <Image
-                    src={`/images/icons/partyPopper.svg`}
-                    alt="party popper"
-                    width="134"
-                    height="134"
-                    className={styles.partyPopper}
+                        src={`/images/icons/partyPopper.svg`}
+                        alt="party popper"
+                        width="134"
+                        height="134"
+                        className={styles.partyPopper}
                     />
                 </div>
-                <Link href="/MindfulExercises"><ButtonRegular title="Finish" className={`${styles.fiveSenseButton}`}></ButtonRegular>
+                <Link href="/MindfulExercises">
+                    <ButtonRegular 
+                        title="Finish" 
+                        className={`${styles.fiveSenseButton}`}
+                        onClick={() => setExerciseComplete(true)}
+                        ></ButtonRegular>
                 </Link>
-            <Tabbar/>
+                <Tabbar/>
             </div>
         </main>
         </>

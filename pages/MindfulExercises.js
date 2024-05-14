@@ -9,11 +9,11 @@ export default function MindfulExercises() {
     return(
         <>
             <Head>
-		<title>CalmQuest</title>
-		<meta name="description" content="Mindful Exercises" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="icon" href="/favicon.ico" />
-	</Head>
+                <title>CalmQuest</title>
+                <meta name="description" content="Mindful Exercises" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="icon" href="/favicon.ico" />
+	        </Head>
             <main className={`${styles.main}`}>
             <div className={styles.mainContainer}>
                 <Navbar/>

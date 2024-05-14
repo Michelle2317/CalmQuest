@@ -4,7 +4,7 @@ import ChildQuestions from './ChildQuestions';
 import Navbar from '@/components/Navbar';
 import Tabbar from '@/components/Tabbar';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import DottedProgressBarQuiz from '@/components/DottedProgressBarQuiz';
 import ButtonPrimary from '@/components/ButtonPrimary';
 import ButtonSecondary from '@/components/ButtonSecondary';
@@ -18,7 +18,7 @@ export default function ParentQuiz() {
   const [outcome, setOutcome] = useState('');
   const [seedsClaimed, setSeedsClaimed] = useState(false);
   const [answerSelected, setAnswerSelected] = useState(false);
-
+  
   const handleAnswerSelect = (answer) => {
     let points = 0;
 
@@ -121,6 +121,13 @@ export default function ParentQuiz() {
     calculateOutcome();
   };
 
+  useEffect(() => {
+    if (quizComplete) {
+      const audio = new Audio('/sounds/quizComplete.mp3');
+      audio.play();
+    }
+  }, [quizComplete]);
+  
   return (
     <>
       <Head>

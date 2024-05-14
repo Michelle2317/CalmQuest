@@ -5,17 +5,26 @@ import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import ButtonRegular from "@/components/ButtonRegular";
-
+import { useState, useEffect } from "react";
 
 export default function StimulateBreath2() {
+    const [exerciseComplete, setExerciseComplete] = useState(false);
+
+    useEffect(() => {
+      if (exerciseComplete) {
+        const audio = new Audio("/sounds/quizComplete.mp3");
+        audio.play();
+      }
+    }, [exerciseComplete]);
+
     return(
         <>
             <Head>
-		<title>CalmQuest</title>
-		<meta name="description" content="Meditation Exercises" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="icon" href="/favicon.ico" />
-	     </Head>
+                <title>CalmQuest</title>
+                <meta name="description" content="Meditation Exercises" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="icon" href="/favicon.ico" />
+	        </Head>
             <main className={`${styles.main}`}>
             <div className={styles.mainContainer}>
                 <Navbar/>
@@ -92,9 +101,14 @@ export default function StimulateBreath2() {
                         </p>
                     </div>
                 </div>
-            <Link href="/MeditationExercises"><ButtonRegular title="Finish" className={`${styles.fiveSenseButton}`}></ButtonRegular>
+                <Link href="/MeditationExercises">
+                    <ButtonRegular
+                        title="Finish"
+                        className={`${styles.fiveSenseButton}`}
+                        onClick={() => setExerciseComplete(true)}
+                    />
                 </Link>
-            <Tabbar/>
+                <Tabbar/>
             </div>
         </main>
         </>
