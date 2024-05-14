@@ -22,7 +22,7 @@ export default function Navbar() {
 							className={styles.hamburgerMenuIcon}
 						/>
 					</div>
-				<Link href="/" className={styles.calmQuest}><div>CalmQuest</div></Link>
+				<Link href="/HomePage" className={styles.calmQuest}><div>CalmQuest</div></Link>
 			</div>
 			{isDropdownOpen && (
 				<>

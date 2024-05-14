@@ -2,7 +2,7 @@ import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import Tabbar from "@/components/Tabbar";
 import Navbar from "@/components/Navbar";
-import ButtonLong from "@/components/ButtonLong";
+import ButtonSave from "@/components/ButtonSave";
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
@@ -103,7 +103,7 @@ export default function ChangeAvatar() {
                     </div>
                     {currentAvatar && (
                         <Link href="/EditProfile">
-                            <ButtonLong title="Save" className={styles.avatarSaveButton}></ButtonLong>
+                            <ButtonSave title="Save" className={styles.avatarSaveButton}></ButtonSave>
                         </Link>
                     )}
                     <Tabbar />

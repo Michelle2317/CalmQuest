@@ -691,8 +691,8 @@
 	font-family: var(--nunito);
 	font-size: var(--bodyLargeRegular);
 	font-weight: bold;
-	margin-left: -21rem;
-	margin-top: -7rem;
+	margin-left: -20.5rem;
+	margin-top: -6rem;
 	position: relative;
 }
 
@@ -701,19 +701,12 @@
 	height: 45px;
 	text-align: left;
 	padding-left: 1rem;
-	margin-left: -2rem;
+	margin-left: -1.5rem;
 	margin-top: -6rem;
 }
 
 .editProfileSaveButton {
-	width: 396px;
-	height: 50px;
 	margin-top: 5rem;
-}
-
-.editProfileSaveButton:hover {
-	width: 24.75rem;
-	height: 3.125rem;
 }
 
 /* Change Avatar */

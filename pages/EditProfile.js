@@ -3,7 +3,7 @@ import styles from "@/styles/Home.module.css";
 import Tabbar from "@/components/Tabbar";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
-import ButtonLong from "@/components/ButtonLong";
+import ButtonSave from "@/components/ButtonSave";
 import Link from "next/link";
 import ButtonProfile from "@/components/ButtonProfile";
 
@@ -43,7 +43,7 @@ export default function EditProfile() {
                                     placeholder="Enter new name" 
                                 />
                             <Link href="/Profile">
-                                <ButtonLong title="Save" className={styles.editProfileSaveButton}></ButtonLong>
+                                <ButtonSave title="Save" className={styles.editProfileSaveButton}></ButtonSave>
                             </Link>
                         <Tabbar/>
                 </div>
