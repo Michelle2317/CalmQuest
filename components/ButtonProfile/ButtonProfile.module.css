@@ -1,6 +1,6 @@
-.buttonLong {
-	width: 330px;
-	height: 48px;
+.profileButton {
+	width: 11.5625rem;
+	height: 3rem;
 	color: var(--white);
 	font-size: var(--bodyLargeRegular);
 	font-weight: 400;
@@ -13,9 +13,9 @@
 	display: inline-flex;
 }
 
-.buttonLong:hover {
-	width: 330px;
-	height: 48px;
+.profileButton:hover {
+        width: 11.5625rem;
+	height: 3rem;
 	color: var(--dark-turquoise);
 	font-weight: 400;
 	font-size: var(--bodyLargeRegular);

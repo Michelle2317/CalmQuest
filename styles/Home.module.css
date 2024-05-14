@@ -606,12 +606,9 @@
 }
 
 .editProfile {
-	width: 11.5625rem;
-	height: 3rem;
 	position: absolute;
 	margin-top: 2rem;
 	margin-left: -6rem;
-	font-size: var(--bodyLargeRegular);
 }
 
 .linkButtons {
@@ -703,7 +700,7 @@
 	width: 360px;
 	height: 45px;
 	text-align: left;
-	padding-left: 2rem;
+	padding-left: 1rem;
 	margin-left: -2rem;
 	margin-top: -6rem;
 }

@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import ButtonLong from "@/components/ButtonLong";
 import Link from "next/link";
-import ButtonPrimary from "@/components/ButtonPrimary";
+import ButtonProfile from "@/components/ButtonProfile";
 
 export default function EditProfile() {
     return (
@@ -29,10 +29,10 @@ export default function EditProfile() {
                             />
                             <div className={styles.selectOptions}>
                                 <Link href="/ChangeAvatar">
-                                    <ButtonPrimary title="Select Avatar" className={styles.optionsButton}></ButtonPrimary>
+                                    <ButtonProfile title="Select Avatar" className={styles.optionsButton}></ButtonProfile>
                                 </Link>
                                 <Link href="/ChangeFrame">
-                                    <ButtonPrimary title="Select Frame" className={styles.optionsButton}></ButtonPrimary>
+                                    <ButtonProfile title="Select Frame" className={styles.optionsButton}></ButtonProfile>
                                 </Link>
                             </div>
                             <div className={styles.nameHeading}>Name</div>
