@@ -37,8 +37,11 @@ export default function Profile() {
             <div className={styles.contentWrapper}>
               {name && icon && (
                 <div className={styles.nameContainer}>
-                  <div className={styles.profileIcon}>
-                    <Image src={icon} alt="Profile Icon" width="185" height="185" />
+                  <div className={styles.currentFrame}>
+                    <Image src="/images/frames/whiteframe.svg" alt="Profile Frame" width="185" height="185" />
+                    <div className={styles.currentIcon}>
+                      <Image src={icon} alt="Profile Icon" width="153" height="153" />
+                    </div>
                   </div>
                   <h1 className={styles.name}>{name}</h1>
                 </div>

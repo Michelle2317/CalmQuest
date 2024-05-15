@@ -4,15 +4,25 @@ import Tabbar from "@/components/Tabbar";
 import Navbar from "@/components/Navbar";
 import ButtonSave from "@/components/ButtonSave";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import ButtonProfile from "@/components/ButtonProfile";
 import { useRouter } from "next/router";
 
 export default function EditProfile() {
     const [name, setName] = useState('');
+    const [chosenIcon, setChosenIcon] = useState('');
     const router = useRouter();
     
+    useEffect(() => {
+        const storedName = localStorage.getItem('inputName');
+        const storedIcon = localStorage.getItem('chosenIcon');
+        if (storedName && storedIcon) {
+            setName(storedName);
+            setChosenIcon(storedIcon);
+        }
+    }, []);
+
     const handleNameChange = (e) => {
         setName(e.target.value);
     };
@@ -35,13 +45,15 @@ export default function EditProfile() {
                     <Navbar />
                     <div className={styles.profileInformation}>Profile Information</div>
                     <div className={styles.profileIcon}>
-                        <Image 
-                            src="/images/avatars/sunflower.svg"
-                            alt="Profile Icon" 
-                            width="100" 
-                            height="100"
-                            className={styles.editIcon} 
-                        />
+                        {chosenIcon && 
+                            <Image 
+                                src={chosenIcon}
+                                alt="Profile Icon" 
+                                width="100" 
+                                height="100"
+                                className={styles.editIcon} 
+                            />
+                        }
                     </div>
                     <div className={styles.selectOptions}>
                         <Link href="/ChangeAvatar">
