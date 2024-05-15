@@ -45,7 +45,7 @@ export default function Languages() {
                             Vous avez maintenant réussi à passer au français 
                             </p>
                             
-                            <Link href="/" className={styles.frenchGoBack}>
+                            <Link href="/HomePage" className={styles.frenchGoBack}>
                                 <ButtonSecondary 
                                     type="submit" 
                                     title="Retournez à la page d'accueil" 
