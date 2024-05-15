@@ -558,17 +558,13 @@
 	height: 15px;
 }
 
-.goBackContainer {
-	margin-top: -10%;
-	margin-left: 7%;
-}
-
 .h2AboutUs {
 	text-align: center;
-	margin-top: 7%;
+	margin-top: 5%;
 	margin-bottom: 5%;
 	font-family: var(--merriweather);
 	font-size: var(--headingOne);
+	font-weight: normal;
 }
 
 .aboutUsParagraph {
@@ -609,6 +605,8 @@
 	margin-bottom: 5%;
 	font-family: var(--merriweather);
 	font-size: var(--headingOne);
+	font-weight: normal;
+	margin-left: -8%;
 }
 
 .learnMoreParagraph {
@@ -721,6 +719,12 @@
 	font-size: var(--bodyLargeRegular);
 	font-weight: bold;
 	margin-top: -6rem;
+}
+
+.editProfileGoBack {
+	margin-top: -6.25rem;
+	margin-bottom: -3rem;
+	margin-left: -18.47rem;
 }
 
 .profileFrame {
@@ -1024,13 +1028,16 @@
 
 .contactUsH2 {
 	margin-left: 10%;
-	margin-bottom: 10%;
-	/* font-family: var("Nunito";); */
+	margin-bottom: 2.5%;
+	font-family: var(--merriweather);
+	font-size: var(--headingTwo);
+	font-weight: lighter;
 }
 
 .goBackContactUs {
-	padding-bottom: 10%;
-	margin-left: 8%;
+	margin-top: -3rem;
+	padding-bottom: 7.7%;
+	margin-left: 6.8%;
 }
 
 /* Languages */
@@ -1084,12 +1091,12 @@
 
 .frenchText {
 	width: 280px;
-	font-weight: bold;
 }
 
 .frenchText:hover {
 	width: 280px;
 	font-weight: bold;
+	border-width: 2px;
 }
 
 .frenchParagraph {
@@ -1121,8 +1128,43 @@
 
 /* Settings */
 .changeLanguageContainer {
-	margin-top: -160%;
-	background-color: var(--dark-grey);
+	background-color: var(--old-blue);
+	width: 75%;
+	height: 7%;
+	align-content: center;
+	padding-left: 7.5%;
+	text-decoration: none;
+	margin-top: -135%;
+	margin-bottom: 40%;
+	border-radius: 10px;
+}
+
+.changeLanguageContainer:hover {
+	border-radius: 10px;
+	border-color: var(--dark-turquoise);
+	border-style: solid;
+	border-width: 1.5px;
+}
+
+.changeLangH3 {
+	font-size: var(--bodyRegular);
+	color: var(--black);
+}
+
+.h2Settings {
+	margin-top: -220%;
+	margin-left: -130%;
+	font-family: var(--merriweather);
+}
+
+.headingContainer {
+	margin-bottom: 5%;
+	margin-top: -30%;
+}
+
+.goBackProfile {
+	margin-top: -85.2%;
+	margin-right: 69%;
 }
 
 /* Shop */

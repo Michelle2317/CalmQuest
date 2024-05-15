@@ -11,6 +11,7 @@
 	justify-content: center;
 	align-items: center;
 	display: inline-flex;
+	cursor: pointer;
 }
 
 .primaryButton:hover {
@@ -18,4 +19,5 @@
 	background: var(--white);
 	border: 1px var(--dark-turquoise) solid;
 	font-weight: 400;
+	cursor: pointer;
 }

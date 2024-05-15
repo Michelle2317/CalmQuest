@@ -19,12 +19,6 @@ export default function About () {
                 <div className={styles.mainContainer}>
                 <Navbar/>
                     <div>
-                        <div className={styles.goBackContainer}>
-                            <Link href="/" className={styles.goBackLink}>
-                                <img src="/images/leftArrow.svg" className={styles.leftArrow}></img>
-                                Go Back
-                            </Link>
-                        </div>
                         <h2 className={styles.h2AboutUs}>About Us</h2>
                         <div className={styles.aboutUsParagraph}>
                             <p>

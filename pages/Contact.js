@@ -4,6 +4,7 @@ import Link from "next/link";
 import styles from '@/styles/Home.module.css';
 import Head from "next/head";
 import Form from "@/components/Form";
+import Image from "next/image";
 
 
 export default function Contact() {
@@ -21,7 +22,7 @@ export default function Contact() {
                     <div>
                         <div className={styles.goBackContactUs}>
                             <Link href="/About" className={styles.goBackLink}>
-                                <img src="/images/leftArrow.svg" className={styles.leftArrow}></img>
+                                <Image src="/images/leftArrow.svg" className={styles.leftArrow} width={15} height={15}/>
                                 Go Back
                             </Link>
                         </div>

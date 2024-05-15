@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css';
 import Head from "next/head";
 import ButtonPrimary from "@/components/ButtonPrimary";
 import { useState } from 'react';
+import Image from "next/image";
 
 
 export default function Languages() {
@@ -29,7 +30,7 @@ export default function Languages() {
                             <Navbar/>
                                 <div className={styles.goBackLanguages}>
                                     <Link href="/Settings" className={styles.goBackLink}>
-                                        <img src="/images/leftArrow.svg" className={styles.leftArrow}></img>
+                                        <Image src="/images/leftArrow.svg" className={styles.leftArrow} width={15} height={15}/>
                                         Go Back
                                     </Link>
                                 </div>

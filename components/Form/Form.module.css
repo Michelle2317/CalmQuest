@@ -7,6 +7,8 @@
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    position: relative;
+    height: 450px;
 }
 
 .nameContainer {
@@ -56,15 +58,18 @@
 .submitButton {
     width: 50%;
     cursor: pointer;
-    /* transition: background-color 0.3s ease; */
+    margin-top: 140px;
 }
 
 .messageTextarea {
     overflow-y: auto;
-    max-height: 200px;
-    max-width: 80%;
-    min-width: 80%;
-    
+    max-height: 100px;
+    max-width: 71%;
+    min-width: 71%;
+    min-height: 30px;
+    right: 40px;
+    margin-bottom: 5%;
+    position: absolute;
 }
 
 .successfulMessage {

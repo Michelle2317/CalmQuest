@@ -3,6 +3,7 @@ import Tabbar from "@/components/Tabbar";
 import Link from "next/link";
 import styles from '@/styles/Home.module.css';
 import Head from "next/head";
+import Image from "next/image";
 
 
 export default function Contact() {
@@ -17,12 +18,20 @@ export default function Contact() {
             <main className={`${styles.main}`}>
                 <div className={styles.mainContainer}>
                     <Navbar/>
-                    <div className={styles.changeLanguageContainer}>
-                        <Link href="/Languages">
-                            <h2 className={styles.langSettings}>Change Language</h2>
-                        </Link>
-                        
+                    <div className={styles.goBackProfile}>
+                            <Link href="/Profile" className={styles.goBackLink}>
+                                <Image src="/images/leftArrow.svg" className={styles.leftArrow} width={15} height={15}/>
+                                Go Back
+                            </Link>
+                        </div>
+                    <div className={styles.headingContainer}>
+                        <h2 className={styles.h2Settings}>
+                        Settings 
+                        </h2>
                     </div>
+                    <Link href="/Languages" className={styles.changeLanguageContainer}>
+                        <h3 className={styles.changeLangH3}>Change Language</h3>
+                    </Link>
                 <Tabbar/>
                 </div>
             </main>

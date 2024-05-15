@@ -20,6 +20,7 @@
 	align-items: flex-start;
 	display: flex;
 	margin-left: 60%;
+	cursor: pointer;
 }
 
 .calmQuest {

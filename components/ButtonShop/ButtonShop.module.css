@@ -11,10 +11,12 @@
 	justify-content: center;
 	align-items: center;
 	display: inline-flex;
+	cursor: pointer;
 }
 
 .shopButton:hover {
 	color: var(--white);
 	background: var(--dark-turquoise);
 	border: 1px var(--dark-turquoise) solid;
+	cursor: pointer;
 }

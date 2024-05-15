@@ -3,9 +3,9 @@ import Tabbar from "@/components/Tabbar";
 import Link from "next/link";
 import styles from '@/styles/Home.module.css';
 import Head from "next/head";
-import ButtonPrimary from "@/components/ButtonPrimary";
 import { useState } from 'react';
 import ButtonSecondary from "@/components/ButtonSecondary";
+import Image from "next/image";
 
 
 export default function Languages() {
@@ -33,10 +33,9 @@ export default function Languages() {
             <main className={`${styles.main}`}>
                         <div className={styles.mainContainer}>
                             <Navbar/>
-                            
                                 <div className={styles.goBackFrench}>
                                     <Link href="/Languages" className={styles.goBackLink}>
-                                        <img src="/images/leftArrow.svg" className={styles.leftArrow}></img>
+                                        <Image src="/images/leftArrow.svg" className={styles.leftArrow} width={15} height={15}/>
                                         Retourner
                                     </Link>
                                 </div>
@@ -50,13 +49,10 @@ export default function Languages() {
                                 <ButtonSecondary 
                                     type="submit" 
                                     title="Retournez à la page d'accueil" 
-                                    className={styles.frenchText} 
+                                    className={`${styles.frenchText} customButtonSize`}
                                 />
                             </Link>
-                                
                             </div> 
-                                
-                        
                     <Tabbar/>
                 </div>
             </main>
