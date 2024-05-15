@@ -1,22 +1,23 @@
-import Head from "next/head";
-import styles from "@/styles/Home.module.css";
-import Navbar from "@/components/Navbar";
-import Tabbar from "@/components/Tabbar";
-import Image from "next/image";
-import Link from "next/link";
-import ButtonPrimary from "@/components/ButtonPrimary";
-import { useState, useEffect } from "react";
-import axios from "axios";
-import { useRouter } from "next/router";
+import { useEffect, useState } from 'react';
+import Head from 'next/head';
+import styles from '@/styles/Home.module.css';
+import Navbar from '@/components/Navbar';
+import Tabbar from '@/components/Tabbar';
+import Image from 'next/image';
+import Link from 'next/link';
+import ButtonPrimary from '@/components/ButtonPrimary';
+import axios from 'axios';
+import { useRouter } from 'next/router';
 
 export default function HomePage() {
   const [data, setData] = useState([]);
+  const [name, setName] = useState('');
+  const [step, setStep] = useState(0);
   const router = useRouter();
-  const { name, icon } = router.query;
 
   useEffect(() => {
     const apiKey = process.env.NEXT_PUBLIC_API;
-    const type = "inspirational";
+    const type = 'inspirational';
     const url = `https://api.api-ninjas.com/v1/quotes?category=${type}`;
     const headers = { 'X-Api-Key': apiKey };
 
@@ -28,13 +29,37 @@ export default function HomePage() {
         console.log(error);
       }
     };
-
     getInspiration();
+
+    const storedName = localStorage.getItem('inputName');
+    if (storedName) {
+      setName(storedName);
+      setStep(1);
+    }
+
+    return () => {
+      setName('');
+      setStep(0);
+    };
   }, []);
 
   const handleCheckInClick = () => {
-    router.push("/ParentQuiz");
+    router.push('/ParentQuiz');
   };
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      if (url === '/') {
+        setStep(0);
+      }
+    };
+
+    router.events.on('routeChangeStart', handleRouteChange);
+
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChange);
+    };
+  }, [router]);
 
   return (
     <>
@@ -44,70 +69,53 @@ export default function HomePage() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main}`}>
+      <main className={styles.main}>
         <div className={styles.mainContainer}>
           <Navbar />
-          <div className={styles.mainContent}>
-            <Image
-              src={`/images/mascots/mascotNormal.svg`}
-              alt="mascot image"
-              width="177"
-              height="262"
-            />
-          </div>
-          <div className={styles.helloContainer}>
-            <div className={styles.helloContainerLeft}>
-              <h1 className={styles.mainHello}>Hello {name}</h1>
-              <div className={styles.mainQuote}>
-                {data.map((d, index) => (
-                  <div key={index}>
-                    <div>&#34;{d.quote}&#34;</div>
-                    <div>&#126;{d.author}</div>
+          {step > 0 && (
+            <>
+              <div className={styles.mainContent}>
+                <Image src={`/images/mascots/mascotNormal.svg`} alt="mascot image" width="177" height="262" />
+              </div>
+              <div className={styles.helloContainer}>
+                <div className={styles.helloContainerLeft}>
+                  <h1 className={styles.mainHello}>Hello {name}</h1>
+                  <div className={styles.mainQuote}>
+                    {data.map((d, index) => (
+                      <div key={index}>
+                        <div>&#34;{d.quote}&#34;</div>
+                        <div>&#126;{d.author}</div>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
-            </div>
-          </div>
-          <div className={styles.checkInCard}>
-            <div className={styles.checkInText}>Take a moment to check on your mental health</div>
-            <div className={styles.checkInButtonContainer}>
-              <ButtonPrimary onClick={handleCheckInClick} title="Check-In">
-                <Image
-                  src={`/images/checkinPrimary.svg`}
-                  alt="check in image"
-                  width="25"
-                  height="25"
-                  className={styles.checkInIcon}
-                />
-              </ButtonPrimary>
-            </div>
-          </div>
-          <h4 className={styles.explore}>Let's Explore</h4>
-          <div className={styles.exerciseCarousel}>
-            <Link href="/MindfulExercises" className={styles.exerciseLink}>
-              <div className={styles.exerciseCard}>
-                <Image
-                  src={`/images/icons/mindfulPrimary.svg`}
-                  alt="mindfulness image"
-                  width="64"
-                  height="64"
-                />
-                <p>Mindfulness<br/>Exercises</p>
+              <div className={styles.checkInCard}>
+                <div className={styles.checkInText}>Take a moment to check on your mental health</div>
+                <div className={styles.checkInButtonContainer}>
+                  <ButtonPrimary onClick={handleCheckInClick} title="Check-In">
+                    <Image src={`/images/checkinPrimary.svg`} alt="check in image" width="25" height="25" className={styles.checkInIcon} />
+                  </ButtonPrimary>
+                </div>
               </div>
-            </Link>
-            <Link href="/MeditationExercises" className={styles.exerciseLink}>
-              <div className={styles.exerciseCard}>
-                <Image
-                  src={`/images/icons/meditationPrimary.svg`}
-                  alt="meditation image"
-                  width="64"
-                  height="64"
-                />
-                <p>Meditation<br/>Exercises</p>
+              <h4 className={styles.explore}>Let's Explore</h4>
+              <div className={styles.exerciseCarousel}>
+                <Link href="/MindfulExercises" className={styles.exerciseLink}>
+                  <div className={styles.exerciseCard}>
+                    <Image src={`/images/icons/mindfulPrimary.svg`} alt="mindfulness image" width="64" height="64" />
+                    <p>Mindfulness<br />Exercises</p>
+                  </div>
+                </Link>
+                <Link href="/MeditationExercises" className={styles.exerciseLink}>
+                  <div className={styles.exerciseCard}>
+                    <Image src={`/images/icons/meditationPrimary.svg`} alt="meditation image" width="64" height="64" />
+                    <p>Meditation<br />Exercises</p>
+                  </div>
+                </Link>
               </div>
-            </Link>
-          </div>
-        <Tabbar />
+            </>
+          )}
+          <Tabbar />
         </div>
       </main>
     </>

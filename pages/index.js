@@ -23,6 +23,17 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    setInputName('');
+    const storedName = localStorage.getItem('inputName');
+    const storedIcon = localStorage.getItem('chosenIcon');
+    if (storedName && storedIcon) {
+      setInputName('');      
+      setChosenIcon(storedIcon);
+      setStep(0);
+    }
+  }, []);
+
   const handleInputChange = (e) => {
     setInputName(e.target.value.slice(0, 20));
     if (!e.target.value.trim()) {
@@ -41,17 +52,26 @@ export default function Home() {
       setNameValid('Please enter your name');
     } else {
       setNameValid('');
+      localStorage.setItem('inputName', inputName);
+      localStorage.setItem('chosenIcon', chosenIcon);
       setStep(5);
     }
   };
   
   const perfectClick = () => {
-    router.push({
-      pathname: '/HomePage',
-      query: { name: inputName, icon: chosenIcon },
-    });
-  }
-
+    if (!inputName.trim()) {
+      setNameValid('Please enter your name');
+    } else {
+      setNameValid('');
+      localStorage.setItem('inputName', inputName);
+      localStorage.setItem('chosenIcon', chosenIcon);
+      router.push({
+        pathname: '/HomePage',
+        query: { name: inputName, icon: chosenIcon },
+      });
+    }
+  };
+  
   const startOnboarding = () => {
     setStep(1);
   }
