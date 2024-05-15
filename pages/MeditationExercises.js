@@ -20,7 +20,11 @@ export default function MeditationExercises() {
 
                 <div className={styles.goBackExerciseContainer}>
                     <Link href="Exercise" className={styles.goBackLink}>
-                        <img src="/images/leftArrow.svg" className={styles.leftArrow}></img>
+                        <Image src="/images/leftArrow.svg" 
+                            className={styles.leftArrow} 
+                            width={"12"}
+                            height={"22"}
+                        />
                         Go Back
                     </Link>
                 </div>
