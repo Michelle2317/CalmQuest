@@ -61,6 +61,9 @@ export default function ChangeAvatar() {
             <main className={`${styles.main}`}>
                 <div className={styles.mainContainer}>
                     <Navbar />
+                    <Link href="/EditProfile" className={styles.frameBackButton}>
+                        <Image src="/images/leftArrow.svg" className={styles.profileLeftArrow} width={15} height={15}></Image>Go Back
+                    </Link>
                     <div className={styles.currentAvatarContainer}>
                         <Image
                             src={currentAvatar}

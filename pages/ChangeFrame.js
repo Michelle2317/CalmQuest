@@ -1,10 +1,11 @@
+import { useState } from "react";
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import Tabbar from "@/components/Tabbar";
 import Navbar from "@/components/Navbar";
 import ButtonSave from "@/components/ButtonSave";
+import ButtonProfile from "@/components/ButtonProfile";
 import Link from "next/link";
-import { useState } from "react";
 import Image from "next/image";
 
 export default function ChangeFrame() {
@@ -20,7 +21,7 @@ export default function ChangeFrame() {
         { id: 5, imageUrl: '/images/frames/blueframe.svg', owned: true },
         { id: 6, imageUrl: '/images/frames/purpleframe.svg', owned: false },
     ]);
-    
+
     const originalFrames = [
         { id: 1, imageUrl: '/images/frames/redframe.svg', owned: true },
         { id: 2, imageUrl: '/images/frames/brownframe.svg', owned: false },
@@ -46,6 +47,10 @@ export default function ChangeFrame() {
         setFrames(filteredFrames);
     };
 
+    const saveFrame = () => {
+        localStorage.setItem('chosenFrame', currentFrame);
+    };
+
     return (
         <>
             <Head>
@@ -57,6 +62,9 @@ export default function ChangeFrame() {
             <main className={`${styles.main}`}>
                 <div className={styles.mainContainer}>
                     <Navbar />
+                    <Link href="/EditProfile" className={styles.frameBackButton}>
+                        <Image src="/images/leftArrow.svg" className={styles.profileLeftArrow} width={15} height={15}></Image>Go Back
+                    </Link>
                     <div className={styles.currentFrameContainer}>
                         <Image
                             src={currentFrame}
@@ -98,9 +106,9 @@ export default function ChangeFrame() {
                         </div>
                     </div>
                     {isNewFrameSelected && (
-                        <Link href="/EditProfile">
-                            <ButtonSave title="Save" className={styles.avatarSaveButton}></ButtonSave>
-                        </Link>
+                          <Link href="/EditProfile">
+                            <ButtonSave title="Save" className={styles.avatarSaveButton} onClick={saveFrame}></ButtonSave>
+                          </Link>
                     )}
                     <Tabbar />
                 </div>

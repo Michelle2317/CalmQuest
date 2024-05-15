@@ -43,17 +43,25 @@ export default function EditProfile() {
             <main className={styles.main}>
                 <div className={styles.mainContainer}>
                     <Navbar />
+                    <Link href="/Profile" className={styles.profileBackButton}>
+                        <Image src="/images/leftArrow.svg" className={styles.profileLeftArrow} width={15} height={15}></Image>Go Back
+                    </Link>
                     <div className={styles.profileInformation}>Profile Information</div>
-                    <div className={styles.profileIcon}>
-                        {chosenIcon && 
-                            <Image 
-                                src={chosenIcon}
-                                alt="Profile Icon" 
-                                width="100" 
-                                height="100"
-                                className={styles.editIcon} 
-                            />
-                        }
+                    <div className={styles.profilePictureContainer}>
+                        <div className={styles.profileFrame}>
+                            <Image src="/images/frames/whiteframe.svg" alt="Profile Frame" width="120" height="120" />
+                                <div className={styles.profileIcon}>
+                                    {chosenIcon && 
+                                        <Image 
+                                            src={chosenIcon}
+                                            alt="Profile Icon" 
+                                            width="100" 
+                                            height="100"
+                                            className={styles.editIcon} 
+                                        />
+                                    }
+                                </div>
+                        </div>
                     </div>
                     <div className={styles.selectOptions}>
                         <Link href="/ChangeAvatar">

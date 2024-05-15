@@ -593,6 +593,13 @@
 	margin-top: -25rem;
 }
 
+.profileBackButton {
+	text-decoration: none;
+	color: var(--black);
+	margin-top: -6rem;
+	margin-left: -18rem;
+}
+
 .contentWrapper {
 	display: flex;
 	flex-direction: column;
@@ -677,12 +684,23 @@
 	font-family: var(--nunito);
 	font-size: var(--bodyLargeRegular);
 	font-weight: bold;
-	margin-top: -3rem;
+	margin-top: -6rem;
 }
 
-.editIcon {
+.profileFrame {
+	position: relative;
+}
+
+.profileIcon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.profilePictureContainer {
 	margin-top: -6rem;
-	margin-bottom: 3rem;
+	margin-bottom: 2rem;
 }
 
 .selectOptions {
@@ -727,7 +745,7 @@
 	margin-top: 5rem;
 }
 
-/* Change Avatar */
+/* Change Avatar/Frame */
 .avatarContainer {
 	position: relative;
 	display: flex;
@@ -811,6 +829,12 @@
 	margin-top: 32rem;
 	position: relative;
 	z-index: 1;
+}
+
+.frameBackButton {
+	text-decoration: none;
+	color: var(--black);
+	margin-left: -18rem;
 }
 
 /*Exercise*/
