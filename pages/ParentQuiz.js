@@ -107,7 +107,7 @@ export default function ParentQuiz() {
   };
 
   const toShop = () => {
-    window.location.href = '/Shop';
+    window.location.href = '/ShopAvatar';
   };
 
   const handlePreviousStep = () => {
