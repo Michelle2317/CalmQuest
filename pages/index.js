@@ -135,8 +135,8 @@ export default function Home() {
                     height={150} 
                     className={styles.featureIcons}
                   />
-                  <h2 className={styles.features}>Mindfulness and<br />Meditation Exercises</h2>
-                  <p className={styles.featuresText}>Explore quick and calming <br />mindfulness and meditation <br /> exercises, links, and videos</p>
+                  <h2 className={styles.features2}>Mindfulness and<br />Meditation Exercises</h2>
+                  <p className={styles.featuresText2}>Explore quick and calming <br />mindfulness and meditation <br /> exercises, links, and videos</p>
                   <DottedProgressBar currentStep={step} />
                   <ButtonLong className={styles.nextButton} onClick={() => setStep(4)} title="Next" />
                 </>

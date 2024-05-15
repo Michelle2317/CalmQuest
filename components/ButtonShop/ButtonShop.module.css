@@ -1,0 +1,20 @@
+.shopButton {
+	width: 190px;
+	height: 45px;
+	color: var(--dark-turquoise);
+	font-weight: 400;
+	font-size: var(--bodyLargeRegular);
+	font-family: var(--nunito);
+	background: var(--white);
+	border: 2px var(--dark-turquoise) solid;
+	border-radius: 20px;
+	justify-content: center;
+	align-items: center;
+	display: inline-flex;
+}
+
+.shopButton:hover {
+	color: var(--white);
+	background: var(--dark-turquoise);
+	border: 1px var(--dark-turquoise) solid;
+}

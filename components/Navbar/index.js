@@ -31,7 +31,7 @@ export default function Navbar() {
 							<ul className={styles.ulDropdownMenu}>
 								<button className={styles.dropMenuButton}>
 									<li className={styles.dropMenuListStyle}>
-										<Link href="/Shop" className={styles.dropMenuLink}>
+										<Link href="/ShopAvatar" className={styles.dropMenuLink}>
 												<Image 
 													src={`/images/shopPrimary.svg`} 
 													alt="shop bag icon" 

@@ -4,6 +4,7 @@ import Link from "next/link";
 import styles from '@/styles/Home.module.css';
 import Head from "next/head";
 import StressChart from "@/components/StressChart"
+import Image from "next/image";
 
 export default function LearnMore () {
     return(
@@ -17,15 +18,19 @@ export default function LearnMore () {
             <main className={`${styles.main}`}>
                 <div className={styles.mainContainer}>
                 <Navbar/>
-                    <div className={styles.aboutUsContainer}>
-                    <div className={styles.goBackContactUs}>
+                    <div className={styles.learnMoreContainer}>
+                    <div className={styles.learnMoreBack}>
                             <Link href="/About" className={styles.goBackLink}>
-                                <img src="/images/leftArrow.svg" className={styles.leftArrow}></img>
+                                <Image src="/images/leftArrow.svg" 
+                                className={styles.leftArrow} 
+                                width={"12"}
+                                height={"22"}
+                                />
                                 Go Back
                             </Link>
                         </div>
-                            <h2 className={styles.h2AboutUs}>About Stress</h2>
-                            <div className={styles.aboutUsParagraph}>
+                            <h2 className={styles.h2LearnMore}>About Stress</h2>
+                            <div className={styles.learnMoreParagraph}>
                             <p>
                             Everyone experiences stress as part of their everyday life. How we handle stress varies for each person. The graph below depicts the number of people with perceived life stress by age groups and how it changes throughout the years.
                             </p>

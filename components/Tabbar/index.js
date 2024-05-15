@@ -28,9 +28,9 @@ export default function Tabbar() {
                     </Link>
                 </div>
                 <div className={styles.shopContainer}>
-                    <Link href="/Shop" className={styles.linkStyling} passHref>
+                    <Link href="/ShopAvatar" className={styles.linkStyling} passHref>
                         <Image
-                            src={selectedPage('/Shop') ? `/images/shopSecondary.svg` : `/images/shopPrimary.svg`}
+                            src={selectedPage('/ShopAvatar') ? `/images/shopSecondary.svg` : `/images/shopPrimary.svg`}
                             alt="shop icon"
                             width={30}
                             height={30}
