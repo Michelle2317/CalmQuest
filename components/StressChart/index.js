@@ -27,7 +27,7 @@ export default function StressChart() {
 
         useEffect(() => {
                 setChartData({
-                        labels: ["65 years and over", "50 to 64 years", "35 to 49 years", "12 to 17 years", "12 to 17 years"],
+                        labels: ["65 years and over", "50 to 64 years", "35 to 49 years", "18 to 34 years", "12 to 17 years"],
                         datasets: [
                                 {
                                         label: '2020',
